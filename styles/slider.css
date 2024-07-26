@@ -1,0 +1,89 @@
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.prev,
+.next {
+  position: absolute;
+  bottom: 4px;
+  background: radial-gradient(
+    147.52% 147.52% at 70.79% -41.32%,
+    rgb(111, 229, 237) 0%,
+    rgb(86, 203, 210) 100%
+  );
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+
+.next::before {
+  content: url(../assets/imgs/arrow.svg);
+}
+
+.prev::before {
+  content: url(../assets/imgs/arrow.svg);
+}
+
+.prev {
+  right: 165px;
+}
+
+.next {
+  right: 3px;
+  transform: rotate(180deg);
+}
+
+.next:hover {
+  background: #67dde4;
+}
+
+.prev:hover {
+  background: #67dde4;
+}
+
+@media screen and (max-width: 1160px) {
+  .prev,
+  .next {
+    width: 70px;
+    height: 70px;
+  }
+
+  .prev {
+    right: 85px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .prev,
+  .next {
+    width: 72px;
+    height: 72px;
+  }
+
+  .prev {
+    right: 80 px;
+  }
+
+  .slides img {
+    height: 250px;
+  }
+}

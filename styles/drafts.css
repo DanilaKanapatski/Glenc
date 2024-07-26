@@ -1,0 +1,156 @@
+.drafts {
+  margin-top: 150px;
+
+  a {
+    margin-top: 45px;
+    background-color: #0d0d0d;
+    display: inline-block;
+    padding: 25px 0 24px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    transition: 0.2s ease;
+  }
+}
+
+.drafts-link:hover {
+  background-color: #ffffff;
+
+  outline: 2px solid #0d0d0d;
+  color: #0d0d0d;
+}
+
+.drafts-imgs {
+  gap: 20px;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(448px, 1fr));
+  grid-template-rows: 500px 130px 500px;
+  grid-template-areas:
+    "one two three"
+    "one four three"
+    "five four six";
+}
+
+.drafts-img:first-child {
+  grid-area: one;
+}
+.drafts-img:nth-child(2) {
+  grid-area: two;
+}
+.drafts-img:nth-child(3) {
+  grid-area: three;
+}
+.drafts-img:nth-child(4) {
+  grid-area: five;
+}
+.drafts-img:nth-child(5) {
+  grid-area: four;
+}
+.drafts-img:nth-child(6) {
+  grid-area: six;
+}
+
+/* .drafts-img:nth-child(5) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .drafts-img:nth-child(6) {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  
+  .drafts-img:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+  } */
+
+.drafts-img {
+  position: relative;
+}
+
+.drafts-img__text {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  background-color: #56cbd2;
+  display: inline-block;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #fff;
+}
+
+/* .drafts-img img {
+    max-width: 448px;
+    width: 100%;
+  } */
+
+.drafts-imgs__mob {
+  display: none;
+}
+
+@media screen and (max-width: 1460px) {
+  .drafts {
+    display: block;
+    margin-top: 70px;
+
+    a {
+      margin-top: 20px;
+    }
+  }
+
+  .drafts-imgs {
+    display: none;
+  }
+
+  .drafts-imgs__mob {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .drafts-img {
+    width: 49%;
+
+    img {
+      background-size: contain;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .drafts {
+    display: block;
+    margin-top: 45px;
+
+    a {
+      margin-top: 25px;
+      font-size: 16px;
+    }
+  }
+
+  .drafts-imgs {
+    display: none;
+  }
+
+  .drafts-imgs__mob {
+    margin-top: 25px;
+    gap: 0px 0px;
+  }
+
+  .drafts-img {
+    width: 49%;
+
+    img {
+      background-size: contain;
+      width: 100%;
+    }
+  }
+}

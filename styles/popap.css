@@ -1,0 +1,152 @@
+.overlay {
+    position: fixed; /* Изменено на fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Скрыто по умолчанию */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Добавляем z-index */
+  }
+  
+  .popup {
+    background: #fff;
+    padding: 70px 117px 96px;
+    max-width: 916px;
+    width: 100%;
+    position: fixed; /* Изменено на fixed */
+    top: 50%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвиг для центрирования */
+    text-align: center;
+    display: none; /* Скрыто по умолчанию */
+    z-index: 1001; /* Добавляем z-index */
+  }
+  
+  .popup h2 {
+    margin: 0 auto 60px;
+    font-size: 40px;
+    line-height: 1.3;
+    max-width: 603px;
+    font-weight: 400;
+  }
+  
+  .popup form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .popup input {
+    padding-bottom: 13px;
+    margin-bottom: 40px;
+    border: none;
+    border-bottom: 1px solid #989898;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  
+  .popup input::placeholder {
+    font-size: 18px;
+    color: #989898;
+  }
+  
+  .popup button {
+    background: #56cbd2;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    padding: 33px 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  
+  .popup button:hover {
+    background: #67dde4;
+  }
+  
+  .popup p {
+    font-size: 12px;
+  }
+  
+  .popup a {
+    color: #00c6d7;
+    text-decoration: none;
+  }
+  
+  .popup .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 41px;
+    height: 41px;
+    font-size: 20px;
+    cursor: pointer;
+    background-image: url(assets/imgs/close.svg);
+  }
+  
+  #orderCall {
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: underline;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 30px;
+    line-height: 1.4;
+    gap: 10px;
+  }
+  
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkbox-container .checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: #f0f0f0;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .checkbox-container input:checked + .checkmark {
+    background-color: #56cbd2;
+  }
+  
+  .checkbox-container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-container input:checked + .checkmark:after {
+    display: block;
+  }
+  
+  .checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  
+  .checkbox-container a {
+    text-decoration: underline;
+    color: #0d0d0d;
+  }

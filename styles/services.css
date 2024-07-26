@@ -1,0 +1,182 @@
+.services {
+  margin-top: 150px;
+
+  h2 {
+    max-width: 1033px;
+  }
+}
+
+.services-imgs__wrapper {
+  position: relative;
+}
+
+.services-imgs__text {
+  position: absolute;
+  top: 125px;
+  left: 50px;
+
+  h3 {
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: 400;
+  }
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #56cbd2;
+    padding-bottom: 5px;
+  }
+
+  a::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    border: 2px solid #56cbd2;
+    width: 181px;
+  }
+}
+
+.first-service {
+  max-width: 357px;
+}
+
+.second-service {
+  max-width: 408px;
+}
+
+.third-service {
+  max-width: 237px;
+}
+
+.fourth-service {
+  max-width: 361px;
+
+  p {
+    max-width: 321px;
+  }
+}
+
+.services-link:hover {
+  color: #67dde4;
+}
+
+.services-link:hover::before {
+  border: 2px solid #67dde4;
+}
+
+.services-imgs {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px 10px;
+}
+
+.services-imgs__wrapper {
+  flex-grow: 1;
+
+  img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .services {
+    margin-top: 70px;
+
+    h2 {
+      max-width: 637px;
+    }
+  }
+
+  .services-imgs {
+    margin-top: 35px;
+    gap: 15px;
+  }
+
+  .services-imgs__wrapper {
+    flex-grow: 1;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .services-imgs__text h3 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    margin-top: 45px;
+
+    h2 {
+      max-width: 637px;
+    }
+  }
+
+  .services-imgs {
+    margin-top: 25px;
+    gap: 10px;
+  }
+
+  .services-imgs__wrapper {
+    flex-grow: 1;
+
+    img {
+      width: 100%;
+      height: 260px;
+    }
+  }
+
+  .services-imgs__text h3 {
+    font-size: 20px;
+  }
+
+  .services-imgs__text p {
+    font-size: 16px;
+    margin: 15px 0;
+  }
+
+  .services-imgs__text a {
+    font-size: 18px;
+  }
+
+  .services-imgs__text {
+    position: absolute;
+    top: 57px;
+    left: 10px;
+  }
+
+  .first-service {
+    max-width: 242px;
+  }
+  
+  .second-service {
+    max-width: 288px;
+  }
+  
+  .third-service {
+    max-width: 211px;
+  }
+  
+  .fourth-service {
+    max-width: 361px;
+  
+    p {
+      max-width: 251px;
+    }
+  }
+}
