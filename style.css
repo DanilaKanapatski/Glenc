@@ -52,6 +52,17 @@ body {
   line-height: 1.3;
   color: #878787;
 }
+
+.pages-link {
+  font-weight: 400;
+  font-size: 14px;
+  color: #7b7b7b;
+}
+
+.pages-link:hover {
+  text-decoration: underline;
+}
+
 /* 
 .mail {
   font-size: 20px;
@@ -86,5 +97,9 @@ body {
 
   .section-subtitle {
     left: 20px;
+  }
+
+  .pages-link {
+    font-size: 12px;
   }
 }

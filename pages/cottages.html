@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glens</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/popap.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/cottages-page.css" />
+    <link rel="stylesheet" href="../styles/slider.css" />
+  </head>
+  <body>
+    <header class="header-desc">
+      <div class="container">
+        <nav class="main-nav">
+          <a class="header-logo" href="../index.html">
+            <img src="../assets/imgs/logo.jpg" alt="logo" />
+          </a>
+          <p class="address">
+            г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб.
+            10.00-15.00
+          </p>
+          <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          <div class="overlay" id="overlay"></div>
+          <div class="popup" id="popup">
+            <span class="close" id="closePopup"></span>
+            <h2>Оставьте свой номер телефона, мы вам перезвоним</h2>
+            <form action="form-handler.php" method="post">
+              <input type="text" placeholder="Ваш номер телефона" />
+              <button type="submit">Отправить</button>
+              <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Нажимая кнопку вы соглашаетесь с условиями <a href="#">Политики конфиденциальности</a>
+            </label>
+            </form>
+          </div>
+          <button id="orderCall">Заказать звонок</button>
+      </div>
+        </nav>
+      <nav class="header-links">
+        <div class="container">
+          <ul>
+            <li>
+              <a class="header-link" href="">Окна</a>
+              <div class="dropdown-content">
+                <a href="#">Окна ПВХ</a>
+                <a href="#">Окна алюминиевые</a>
+              </div>
+            </li>
+            <li>
+              <a class="header-link" href="">Двери</a>
+              <div class="dropdown-content">
+                <a href="#">Двери ПВХ</a>
+                <a href="#">Двери алюминиевые</a>
+              </div>
+            </li>
+            <li><a class="header-link" href="">Раздвижные двери</a></li>
+            <li><a class="header-link" href="">Коттеджи</a></li>
+            <li><a class="header-link" href="">Услуги</a></li>
+            <li><a class="header-link" href="">Вдохновляющие примеры</a></li>
+            <li><a class="header-link" href="">Интерьерные решения</a></li>
+            <li>
+              <a class="header-link" href="">Дизайнерам и архитекторам</a>
+            </li>
+            <li><a class="header-link" href="/pages/contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <header class="header-mob">
+      <div class="container">
+        <div class="header-container">
+          <div class="logo">
+              <a href="../index.html"><img src="../assets/imgs/logo-mob.jpg" alt="Glens"></a>
+          </div>
+          <div class="contact-info">
+              <p class="address">г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00</p>
+          </div>
+          <div class="call-button">
+            <button id="orderCall">Заказать звонок</button>
+          </div>
+          <div>
+            <a class="header-tel tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          </div>
+          <div class="menu-icon" onclick="toggleMenu(this)">
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="dropdown-menu" class="hidden">
+          <ul>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown('dropdown-1')">Окна</a>
+              <ul id="dropdown-1" class="dropdown-content__mob hidden">
+                  <li><a href="#">Окна ПВХ</a></li>
+                  <li><a href="#">Окна алюминиевые</a></li>
+            </ul>
+          </li>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown('dropdown-2')">Двери</a>
+              <ul id="dropdown-2" class="dropdown-content__mob hidden">
+                  <li><a href="#">Двери ПВХ</a></li>
+                  <li><a href="#">Двери алюминиевые</a></li>
+              </ul>
+            </li>
+              <li><a href="#">Раздвижные двери</a></li>
+              <li><a href="#">Коттеджи</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Вдохновляющие примеры</a></li>
+              <li><a href="#">Интерьерные решения</a></li>
+              <li><a href="#">Дизайнерам и архитекторам</a></li>
+              <li><a href="/pages/contacts.html">Контакты</a></li>
+              <li><a class="btn-header__mob" href="#">Рассчитать стоимость</a></li>
+          </ul>
+      </nav>
+    </div>
+    </header>
+    <main>
+        <section class="cottages-main">
+            <div class="container">
+                <div>
+                    <a class="pages-link" href="">Главная</a>
+                    <span>
+                        <img src="../assets/imgs/arrow-link.svg" alt="">
+                    </span>
+                    <a class="pages-link" href="">Коттеджи</a>
+                </div>
+                <h1 class="cottages-main__title">Коттеджи</h1>
+                <p class="cottages-main__desc">Ваш дом - это источник уюта и комфорта. Место где вы отдыхаете и принимаете гостей. От правильно подобранных окон в доме зависит микроклимат и уровень естественного освещения. Мы предлагаем широкий выбор оконных решений, которые будут идеально сочетаться с любым дизайном и обеспечат вашему коттеджу неповторимый шарм и индивидуальность. Благодаря высококачественным материалам и современным технологиям, вы сможете наслаждаться теплыми вечерами у камина, наблюдая за звездами в небе через чистые и прозрачные окна. Создайте свой уголок счастья с нашими оконными системами для коттеджей</p>
+            </div>
+        </section>
+        <section class="options">
+            <div class="container">
+                <h2 class="options-title">Предлагаем все варианты оконных конструкций для частного дома</h2>
+                <div class="options-imgs">
+                    <picture>
+                        <source srcset="../assets/imgs/cottages-1.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/cottages-1.1.png" media="(max-width: 1160px)">
+                        <img class="options-img" src="../assets/imgs/cottages-1.png" alt="">
+                      </picture>
+                    <picture class="options-1">
+                        <source srcset="../assets/imgs/cottages-9.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/cottages-9.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/cottages-9.png" alt="">
+                      </picture>
+                    <picture class="options-2">
+                        <source srcset="../assets/imgs/cottages-10.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/cottages-10.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/cottages-10.png" alt="">
+                      </picture>
+                    <picture class="options-3">
+                        <source srcset="../assets/imgs/cottages-11.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/cottages-11.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/cottages-11.png" alt="">
+                      </picture>
+                    <picture class="options-4">
+                        <source srcset="../assets/imgs/cottages-12.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/cottages-12.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/cottages-12.png" alt="">
+                      </picture>
+                    <picture class="options-5">
+                        <source srcset="../assets/imgs/cottages-13.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/cottages-13.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/cottages-13.png" alt="">
+                      </picture>
+                    <picture class="options-6">
+                        <source srcset="../assets/imgs/cottages-14.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/cottages-14.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/cottages-14.png" alt="">
+                      </picture>
+                </div>
+            </div>
+        </section>
+        <section class="examples">
+            <div class="container">
+                <h2 class="examples-title">Вдохновляющие примеры остекления коттеджей</h2>
+                <p class="examples-desc">Остекление частного дома часто требует нестандартных решений и индивидуального подхода. Конструкции должны соотвествовать стандартам качества и иметь высокие технические характеристики, чтобы обеспечить комфорт и уют в вашем доме. Мы выполним индивидуальное проектирование, подберём для вас оптимальный вариант остекления</p>
+                <div class="examples-imgs">
+                  <picture>
+                    <source srcset="../assets/imgs/cottages-2.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/cottages-2.1.png" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/cottages-2.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="../assets/imgs/cottages-3.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/cottages-3.1.png" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/cottages-3.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="../assets/imgs/cottages-4.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/cottages-4.1.png" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/cottages-4.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="../assets/imgs/cottages-5.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/cottages-5.1.png" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/cottages-5.png" alt="">
+                  </picture>
+                  <picture >
+                    <source srcset="../assets/imgs/cottages-6.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/cottages-6.1.png" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/cottages-6.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="../assets/imgs/cottages-7.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/cottages-7.1.png" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/cottages-7.png" alt="">
+                  </picture>
+                </div>
+            </div>
+        </section>
+        <section class="office">
+            <div class="container">
+              <h2 class="section-title">Центр индивидуального остекления</h2>
+              <p class="office-text">
+                Среди всех оконных компаний, Гленс является создателем уникальных пространств остекления для индивидуального комфорта, потому что мы СЛЫШИМ ваши желания и воплощаем их на практике. У нас самый большой, современный и красивый выставочный зал с образцами материалов. Наши грамотные специалисты помогут подобрать вариант остекления с учётом ваших пожеланий. Мы гарантируем нашим заказчикам не только высокий уровень качества и надёжности конструкций, но и высокий уровень сервиса от консультации и монтажа до гарантийного обслуживания
+              </p>
+              <div class="slider">
+                <div class="slides">
+                  <div class="slide">
+                    <img src="../assets/imgs/office.jpg" alt="Image 1" />
+                  </div>
+                  <div class="slide">
+                    <img src="../assets/imgs/office-2.jpg" alt="Image 1" />
+                  </div>
+                  <div class="slide">
+                    <img src="../assets/imgs/office-3.jpg" alt="Image 1" />
+                  </div>
+                  <div class="slide">
+                    <img src="../assets/imgs/office-4.jpg" alt="Image 1" />
+                  </div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)"></button>
+                <button class="next" onclick="moveSlide(1)"></button>
+              </div>
+              <script src="../script.js"></script>
+            </div>
+          </section>
+        <section class="examples-form">
+            <div class="container">
+              <div class="form-wrapper">
+                <h3 class="contacts-form__title">
+                    Нужна наша консультация или помощь в выборе?
+                </h3>
+                <p class="contacts-form__desc">Оставьте контактные данные, мы свяжемся с вами и ответим на все интересующие вопросы</p>
+                <form action="form-handler.php" method="post">
+                  <input class="contacts-input" name="fullname" type="text" placeholder="Ваше имя" />
+                  <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" />
+                  <button class="contacts-button" type="submit" name="submit">Отправить</button>
+                  <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Нажимая кнопку вы соглашаетесь с условиями <a href="#">Политики конфиденциальности</a>
+                    </label>
+                </form>
+                <p class="connection">Связаться с нами напрямую</p>
+                <div class="contacts-links">
+                    <a class="tel" href="">+7 (4012) 97-15-10</a>
+                    <a class="contacts-links__whatsup" href="#">Написать в WhatsApp</a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-links">
+            <a class="footer-logo" href="index.html">
+              <img src="../assets/imgs/logo.jpg" alt=""/>
+            </a>
+            <div class="footer-main__links">
+              <a class="mail" href="">okna@glens39.ru</a>
+              <a class="tel" href="">+7 (4012) 97-15-10</a>
+              <a class="money" href="">Расчёт проекта</a>
+            </div>
+          </div>
+          <div class="footer-wrapper">
+            <div class="footer-address">
+              <p class="footer-address__street">
+                  г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00
+              </p>
+              <a class="whatsapp" href="#"><img src="../assets/imgs/whatsapp.svg" alt="" /></a>
+              <a class="politics" href="">Политика конфиденциальности</a>
+            </div>
+            <nav class="footer-nav">
+              <div>
+                <h4 class="footer-nav__title">Продукция</h4>
+                <ul class="footer-nav__list">
+                  <li><a class="footer-nav__list-link" href="">Окна</a></li>
+                  <li><a class="footer-nav__list-link" href="">Двери</a></li>
+                  <li><a class="footer-nav__list-link" href="">Раздвижные двери</a></li>
+                  <li><a class="footer-nav__list-link" href="">Коттеджи</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="footer-nav__title">Услуги</h4>
+                <ul class="footer-nav__list">
+                  <li><a class="footer-nav__list-link" href="">Замер</a></li>
+                  <li><a class="footer-nav__list-link" href="">Консультация</a></li>
+                  <li><a class="footer-nav__list-link" href="">Монтаж</a></li>
+                  <li><a class="footer-nav__list-link" href="">Гарантия</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="footer-nav__title">Другие разделы</h4>
+                <ul class="footer-nav__list">
+                  <li><a class="footer-nav__list-link" href="">Вдохновляющие примеры</a></li>
+                  <li><a class="footer-nav__list-link" href="">Дизайнерам и архитекторам</a></li>
+                  <li><a class="footer-nav__list-link" href="/pages/contacts.html">Контакты</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+    </footer>
+    <footer class="footer-mob">
+        <div class="container">
+          <div class="footer-wrapper">
+            <div>
+              <a href=""><img src="../assets/imgs/logo-mob.jpg" alt=""></a>
+              <p class="footer-address__street">
+                г. Калининград ул. 9 Апреля, 88А (второй этаж) <br/> пн-пт 9.00-18.00 сб. 10.00-15.00
+              </p>
+              <a class="tel" href="">+7 (4012) 97-15-10</a>
+              <a class="mail" href="">okna@glens39.ru</a>
+            </div>
+            <a class="money" href="">Расчёт проекта</a>
+          </div>
+          <a class="politics" href="">Политика конфиденциальности</a>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>

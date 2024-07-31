@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glens</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/popap.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/examples-page.css" />
+  </head>
+  <body>
+    <header class="header-desc">
+      <div class="container">
+        <nav class="main-nav">
+          <a class="header-logo" href="../index.html">
+            <img src="../assets/imgs/logo.jpg" alt="logo" />
+          </a>
+          <p class="address">
+            г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб.
+            10.00-15.00
+          </p>
+          <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          <div class="overlay" id="overlay"></div>
+          <div class="popup" id="popup">
+            <span class="close" id="closePopup"></span>
+            <h2>Оставьте свой номер телефона, мы вам перезвоним</h2>
+            <form action="form-handler.php" method="post">
+              <input type="text" placeholder="Ваш номер телефона" />
+              <button type="submit">Отправить</button>
+              <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Нажимая кнопку вы соглашаетесь с условиями <a href="#">Политики конфиденциальности</a>
+            </label>
+            </form>
+          </div>
+          <button id="orderCall">Заказать звонок</button>
+      </div>
+        </nav>
+      <nav class="header-links">
+        <div class="container">
+          <ul>
+            <li>
+              <a class="header-link" href="">Окна</a>
+              <div class="dropdown-content">
+                <a href="#">Окна ПВХ</a>
+                <a href="#">Окна алюминиевые</a>
+              </div>
+            </li>
+            <li>
+              <a class="header-link" href="">Двери</a>
+              <div class="dropdown-content">
+                <a href="#">Двери ПВХ</a>
+                <a href="#">Двери алюминиевые</a>
+              </div>
+            </li>
+            <li><a class="header-link" href="">Раздвижные двери</a></li>
+            <li><a class="header-link" href="/pages/cottages.html">Коттеджи</a></li>
+            <li><a class="header-link" href="">Услуги</a></li>
+            <li><a class="header-link" href="">Вдохновляющие примеры</a></li>
+            <li><a class="header-link" href="">Интерьерные решения</a></li>
+            <li>
+              <a class="header-link" href="">Дизайнерам и архитекторам</a>
+            </li>
+            <li><a class="header-link" href="/pages/contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <header class="header-mob">
+      <div class="container">
+        <div class="header-container">
+          <div class="logo">
+              <a href="../index.html"><img src="../assets/imgs/logo-mob.jpg" alt="Glens"></a>
+          </div>
+          <div class="contact-info">
+              <p class="address">г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00</p>
+          </div>
+          <div class="call-button">
+            <button id="orderCall">Заказать звонок</button>
+          </div>
+          <div>
+            <a class="header-tel tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          </div>
+          <div class="menu-icon" onclick="toggleMenu(this)">
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="dropdown-menu" class="hidden">
+          <ul>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown('dropdown-1')">Окна</a>
+              <ul id="dropdown-1" class="dropdown-content__mob hidden">
+                  <li><a href="#">Окна ПВХ</a></li>
+                  <li><a href="#">Окна алюминиевые</a></li>
+            </ul>
+          </li>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown('dropdown-2')">Двери</a>
+              <ul id="dropdown-2" class="dropdown-content__mob hidden">
+                  <li><a href="#">Двери ПВХ</a></li>
+                  <li><a href="#">Двери алюминиевые</a></li>
+              </ul>
+            </li>
+              <li><a href="#">Раздвижные двери</a></li>
+              <li><a href="/pages/cottages.html">Коттеджи</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Вдохновляющие примеры</a></li>
+              <li><a href="#">Интерьерные решения</a></li>
+              <li><a href="#">Дизайнерам и архитекторам</a></li>
+              <li><a href="/pages/contacts.html">Контакты</a></li>
+              <li><a class="btn-header__mob" href="#">Рассчитать стоимость</a></li>
+          </ul>
+      </nav>
+    </div>
+    </header>
+    <main>
+        <section class="examples-main">
+            <div class="container">
+                <div>
+                    <a class="pages-link" href="">Главная</a>
+                    <span>
+                        <img src="../assets/imgs/arrow-link.svg" alt="">
+                    </span>
+                    <a class="pages-link" href="">Вдохновляющие примеры</a>
+                </div>
+                <h1 class="examples-main__title">Актуальные примеры реализованных проектов нашей компанией</h1>
+                <p class="examples-main__desc">Мы тщательно и внимательно подходим к каждой задаче, учитывая индивидуальные потребности и требования заказчика. Каждый проект для нас — это уникальная история, в которой мы уделяем внимание всем нюансам. Наша компания стремится создать решение, которое идеально подходит именно вашим потребностям</p>
+            </div>
+        </section>
+        <section class="examples first-example">
+            <div class="container">
+                <div class="examples-text">
+                    <div>
+                        <h2 class="examples-title">Семейный дом в Сокольниках</h2>
+                        <p class="examples-subtitle">Дизайнер: Татьяна Воеводина</p>
+                    </div>
+                    <p class="examples-desc">Для остекления дома мы использовали профиль всемирно известного производителя РЕХАУ. Заказчик выбрал самый тёплый и тихий вариант — систему Рехау INTELIO. Это система умного комфорта, которая создаёт в доме оптимальный микроклимат и максимально повышает уровень теплосбережения и звукоизоляции. В наших погодных условиях это позволяет существенно экономить на отоплении.</p>
+                </div>
+                <div class="examples-imgs">
+                  <picture>
+                    <source srcset="../assets/imgs/examples-1.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/examples-1.1.png" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/examples-1.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="../assets/imgs/examples-2.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/examples-2.1.png" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/examples-2.png" alt="">
+                  </picture>
+                  <picture class="minsize">
+                    <source srcset="../assets/imgs/examples-3.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/examples-3.1.png" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/examples-3.png" alt="">
+                  </picture>
+                  <picture class="minsize">
+                    <source srcset="../assets/imgs/examples-4.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/examples-4.1.png" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/examples-4.png" alt="">
+                  </picture>
+                  <picture>
+                    <img src="../assets/imgs/examples-5.png" alt="">
+                  </picture>
+                </div>
+            <div>
+        </section>
+        <section class="examples second-example">
+            <div class="container">
+                <div class="examples-text">
+                    <div>
+                        <h2 class="examples-title">Уютная квартира в Светлогорске</h2>
+                        <p class="examples-subtitle">Дизайнер: Татьяна Воеводина</p>
+                    </div>
+                    <p class="examples-desc">Перед дизайнером стояла задача, сделать интерьер максимально эргономичным и функциональным. Отличным решением было установить вместо стандартной балконной двери ПСК портал РЕХАУ DELIGHT. Это удобная раздвижная система, с лёгким открыванием и отличными характеристиками по сопротивлению тепло — водопроницаемости</p>
+                </div>
+                <div class="examples-imgs">
+                  <picture>
+                    <source srcset="../assets/imgs/examples-6.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/examples-6.1.png" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/examples-6.png" alt="">
+                  </picture>
+                  <picture>
+                    <source srcset="../assets/imgs/examples-7.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/examples-7.1.png" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/examples-7.png" alt="">
+                  </picture>
+                </div>
+            </div>
+        </section>
+        <section class="examples-form">
+            <div class="container">
+              <div class="form-wrapper">
+                <h3 class="contacts-form__title">
+                    Поможем найти лучшее решение для вашего проекта!
+                </h3>
+                <p class="contacts-form__desc">Оставьте контактные данные, мы свяжемся с вами и ответим на все интересующие вопросы, предложим современные технологии и варианты остекления</p>
+                <form action="form-handler.php" method="post">
+                  <input class="contacts-input" name="fullname" type="text" placeholder="Ваше имя" />
+                  <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" />
+                  <button class="contacts-button" type="submit" name="submit">Отправить</button>
+                  <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Нажимая кнопку вы соглашаетесь с условиями <a href="#">Политики конфиденциальности</a>
+                    </label>
+                </form>
+                <p class="connection">Связаться с нами напрямую</p>
+                <div class="contacts-links">
+                    <a class="tel" href="">+7 (4012) 97-15-10</a>
+                    <a class="contacts-links__whatsup" href="#">Написать в WhatsApp</a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-links">
+            <a class="footer-logo" href="index.html">
+              <img src="../assets/imgs/logo.jpg" alt=""/>
+            </a>
+            <div class="footer-main__links">
+              <a class="mail" href="">okna@glens39.ru</a>
+              <a class="tel" href="">+7 (4012) 97-15-10</a>
+              <a class="money" href="">Расчёт проекта</a>
+            </div>
+          </div>
+          <div class="footer-wrapper">
+            <div class="footer-address">
+              <p class="footer-address__street">
+                  г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00
+              </p>
+              <a class="whatsapp" href="#"><img src="../assets/imgs/whatsapp.svg" alt="" /></a>
+              <a class="politics" href="">Политика конфиденциальности</a>
+            </div>
+            <nav class="footer-nav">
+              <div>
+                <h4 class="footer-nav__title">Продукция</h4>
+                <ul class="footer-nav__list">
+                  <li><a class="footer-nav__list-link" href="">Окна</a></li>
+                  <li><a class="footer-nav__list-link" href="">Двери</a></li>
+                  <li><a class="footer-nav__list-link" href="">Раздвижные двери</a></li>
+                  <li><a class="footer-nav__list-link" href="/pages/cottages.html">Коттеджи</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="footer-nav__title">Услуги</h4>
+                <ul class="footer-nav__list">
+                  <li><a class="footer-nav__list-link" href="">Замер</a></li>
+                  <li><a class="footer-nav__list-link" href="">Консультация</a></li>
+                  <li><a class="footer-nav__list-link" href="">Монтаж</a></li>
+                  <li><a class="footer-nav__list-link" href="">Гарантия</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="footer-nav__title">Другие разделы</h4>
+                <ul class="footer-nav__list">
+                  <li><a class="footer-nav__list-link" href="">Вдохновляющие примеры</a></li>
+                  <li><a class="footer-nav__list-link" href="">Дизайнерам и архитекторам</a></li>
+                  <li><a class="footer-nav__list-link" href="/pages/contacts.html">Контакты</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+    </footer>
+    <footer class="footer-mob">
+        <div class="container">
+          <div class="footer-wrapper">
+            <div>
+              <a href=""><img src="../assets/imgs/logo-mob.jpg" alt=""></a>
+              <p class="footer-address__street">
+                г. Калининград ул. 9 Апреля, 88А (второй этаж) <br/> пн-пт 9.00-18.00 сб. 10.00-15.00
+              </p>
+              <a class="tel" href="">+7 (4012) 97-15-10</a>
+              <a class="mail" href="">okna@glens39.ru</a>
+            </div>
+            <a class="money" href="">Расчёт проекта</a>
+          </div>
+          <a class="politics" href="">Политика конфиденциальности</a>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>

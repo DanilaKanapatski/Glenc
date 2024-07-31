@@ -156,6 +156,7 @@ header {
   }
 
   .header-mob {
+    top: 0;
     display: block;
     z-index: 10000;
     width: 100%;

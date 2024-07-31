@@ -1,14 +1,44 @@
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $phone = $_POST['phone'];
-    
-    $to = "your-email@example.com"; // Замените на ваш адрес электронной почты
-    $subject = "Новый запрос на звонок";
-    $message = "Номер телефона: " . $phone;
-    $headers = "From: no-reply@example.com"; // Замените на ваш адрес электронной почты
+<?php
 
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Сообщение успешно отправлено.";
-    } else {
-        echo "Ошибка при отправке сообщения.";
-    }
+require_once ('phpmailer/PHPMailerAutoload.php');
+
+$mail = new PHPMailer;
+$mail->CharSet = 'utf-8';
+
+$name = $_POST['fullname'];
+$phone = $_POST['phone'];
+// $file = $_POST['file'];
+
+// $email = $_POST['user_email'];
+
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.yandex.com';  																							// Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'danila.konopatscky@yandex.ru'; // Ваш логин от почты с которой будут отправляться письма
+$mail->Password = 'dankv12345kon'; // Ваш пароль от почты с которой будут отправляться письма
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
+
+$mail->setFrom('Glens.39@yandex.ru'); // от кого будет уходить письмо?
+$mail->addAddress('danilakonv@gmail.com');     // Кому будет уходить письмо 
+//$mail->addAddress('ellen@example.com');               // Name is optional
+//$mail->addReplyTo('info@example.com', 'Information');
+//$mail->addCC('cc@example.com');
+//$mail->addBCC('bcc@example.com');
+//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+$mail->isHTML(true);                                  // Set email format to HTML
+
+$mail->Subject = 'Заявка с Glens.com';
+$mail->Body = '' . $name . ' оставил заявку, его телефон ' . $phone . '.';
+// $mail->AltBody = $file;
+$mail->headerLine('From: ', 'glens.com');
+
+try {
+    $mail->send();
+    echo "heer";
+} catch (phpmailerException $e) {
+    echo "error";
 }

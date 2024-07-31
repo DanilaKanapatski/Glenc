@@ -29,7 +29,7 @@
             10.00-15.00
           </p>
           <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
-          <a class="tel" href="tel:+74012971510">+7 4012 97-15-10</a>
+          <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
           <div class="overlay" id="overlay"></div>
           <div class="popup" id="popup">
             <span class="close" id="closePopup"></span>
@@ -65,14 +65,14 @@
               </div>
             </li>
             <li><a class="header-link" href="">Раздвижные двери</a></li>
-            <li><a class="header-link" href="">Коттеджи</a></li>
+            <li><a class="header-link" href="pages/cottages.html">Коттеджи</a></li>
             <li><a class="header-link" href="">Услуги</a></li>
-            <li><a class="header-link" href="">Вдохновляющие примеры</a></li>
+            <li><a class="header-link" href="pages/examples.html">Вдохновляющие примеры</a></li>
             <li><a class="header-link" href="">Интерьерные решения</a></li>
             <li>
               <a class="header-link" href="">Дизайнерам и архитекторам</a>
             </li>
-            <li><a class="header-link" href="">Контакты</a></li>
+            <li><a class="header-link" href="pages/contacts.html">Контакты</a></li>
           </ul>
         </div>
       </nav>
@@ -90,7 +90,7 @@
             <button id="orderCall">Заказать звонок</button>
           </div>
           <div>
-            <a class="header-tel tel" href="tel:+74012971510">+7 4012 97-15-10</a>
+            <a class="header-tel tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
           </div>
           <div class="menu-icon" onclick="toggleMenu(this)">
               <div class="menu-line"></div>
@@ -117,12 +117,12 @@
               </ul>
             </li>
               <li><a href="#">Раздвижные двери</a></li>
-              <li><a href="#">Коттеджи</a></li>
+              <li><a href="pages/cottages.html">Коттеджи</a></li>
               <li><a href="#">Услуги</a></li>
-              <li><a href="#">Вдохновляющие примеры</a></li>
+              <li><a href="pages/examples.html">Вдохновляющие примеры</a></li>
               <li><a href="#">Интерьерные решения</a></li>
               <li><a href="#">Дизайнерам и архитекторам</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="pages/contacts.html">Контакты</a></li>
               <li><a class="btn-header__mob" href="#">Рассчитать стоимость</a></li>
           </ul>
       </nav>
@@ -236,7 +236,7 @@
                 <img src="assets/imgs/proj-4.jpg" alt="" />
                 <div class="overlay">
                   <a href="#" class="img-button">Посмотреть подробнее</a>
-                  <a href="#" class="img-button">Коттеджи</a>
+                  <a href="pages/cottages.html" class="img-button">Коттеджи</a>
                 </div>
               </div>
               <p>Коттеджи</p>
@@ -399,17 +399,17 @@
               Оставьте контактные данные, мы свяжемся с вами и подберём удобное
               время для выезда мастера на дом
             </p>
-            <form action="">
-              <input class="contacts-input" type="text" placeholder="Ваше имя" />
-              <input class="contacts-input" type="tel" placeholder="Телефон" />
+            <form action="form-handler.php" method="post">
+              <input class="contacts-input" name="fullname" type="text" placeholder="Ваше имя" />
+              <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" />
               <div class="file-input-wrapper">
                 <label for="file-upload" class="custom-file-upload">
                     <span class="file-icon"><img src="assets/imgs/file.svg" alt=""></span>
                     <span class="file-label">Добавить макет/проект/рисунок</span>
-                    <input id="file-upload" type="file"/>
+                    <input id="file-upload" name="file" type="file"/>
                 </label>
               </div>
-              <button class="contacts-button"  type="submit">Отправить</button>
+              <button class="contacts-button" type="submit" name="submit">Отправить</button>
               <label class="checkbox-container">
                 <input type="checkbox">
                 <span class="checkmark"></span>
@@ -417,7 +417,7 @@
             </label>
             </form>
             <div class="contacts-links">
-              <a class="tel" href="">+7 4012 97-15-10</a>
+              <a class="tel" href="">+7 (4012) 97-15-10</a>
               <a class="contacts-links__whatsup" href="#">Написать в WhatsApp</a>
             </div>
           </div>
@@ -432,7 +432,7 @@
           </a>
           <div class="footer-main__links">
             <a class="mail" href="">okna@glens39.ru</a>
-            <a class="tel" href="">+7 4012 97-15-10</a>
+            <a class="tel" href="">+7 (4012) 97-15-10</a>
             <a class="money" href="">Расчёт проекта</a>
           </div>
         </div>
@@ -451,7 +451,7 @@
                 <li><a class="footer-nav__list-link" href="">Окна</a></li>
                 <li><a class="footer-nav__list-link" href="">Двери</a></li>
                 <li><a class="footer-nav__list-link" href="">Раздвижные двери</a></li>
-                <li><a class="footer-nav__list-link" href="">Коттеджи</a></li>
+                <li><a class="footer-nav__list-link" href="pages/cottages.html">Коттеджи</a></li>
               </ul>
             </div>
             <div>
@@ -466,9 +466,9 @@
             <div>
               <h4 class="footer-nav__title">Другие разделы</h4>
               <ul class="footer-nav__list">
-                <li><a class="footer-nav__list-link" href="">Вдохновляющие примеры</a></li>
+                <li><a class="footer-nav__list-link" href="pages/examples.html">Вдохновляющие примеры</a></li>
                 <li><a class="footer-nav__list-link" href="">Дизайнерам и архитекторам</a></li>
-                <li><a class="footer-nav__list-link" href="">Контакты</a></li>
+                <li><a class="footer-nav__list-link" href="pages/contacts.html">Контакты</a></li>
               </ul>
             </div>
           </nav>
@@ -481,9 +481,9 @@
           <div>
             <a href=""><img src="assets/imgs/logo-mob.jpg" alt=""></a>
             <p class="footer-address__street">
-              г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00
+              г. Калининград ул. 9 Апреля, 88А (второй этаж) <br/> пн-пт 9.00-18.00 сб. 10.00-15.00
             </p>
-            <a class="tel" href="">+7 4012 97-15-10</a>
+            <a class="tel" href="">+7 (4012) 97-15-10</a>
             <a class="mail" href="">okna@glens39.ru</a>
           </div>
           <a class="money" href="">Расчёт проекта</a>

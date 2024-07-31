@@ -1,0 +1,403 @@
+.examples-main {
+  margin-top: 30px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.examples-main__title {
+  margin: 60px 0 30px;
+  font-weight: 400;
+  font-size: clamp(
+    23px,
+    calc((100vw - 360px) / (1900 - 360) * (55 - 23) + 23px),
+    55px
+  );
+  line-height: 1.3;
+  color: #0d0d0d;
+  max-width: 1024px;
+}
+
+.examples-main__desc {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.3;
+  color: #0d0d0d;
+  max-width: 916px;
+}
+
+.examples {
+  padding-top: 70px;
+}
+
+.first-example {
+  padding-bottom: 80px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.examples-title {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 1.3;
+  color: #0d0d0d;
+}
+
+.examples-subtitle {
+  margin-top: 25px;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 1.3;
+  color: #0d0d0d;
+  position: relative;
+  padding-left: 16px;
+}
+
+.examples-subtitle::before {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: #56cbd2;
+}
+
+.examples-desc {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #0d0d0d;
+  max-width: 639px;
+}
+
+.examples-text {
+  display: flex;
+  padding-right: 43px;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.examples-imgs {
+  margin-top: 60px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  picture {
+    flex-grow: 1;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.second-example {
+  padding-bottom: 150px;
+}
+
+.examples-form {
+  background-image: url("../assets/imgs/examples-8.png");
+}
+
+.contacts-form__title {
+  padding-top: 109px;
+  font-weight: 400;
+  font-size: clamp(
+    23px,
+    calc((100vw - 360px) / (1900 - 360) * (45 - 23) + 23px),
+    45px
+  );
+  line-height: 1.3;
+  color: #0d0d0d;
+  max-width: 643px;
+}
+
+.contacts-form__desc {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #0d0d0d;
+  max-width: 628px;
+  margin-top: 20px;
+}
+
+form {
+  margin-top: 55px;
+  max-width: 682px;
+
+  .contacts-button {
+    background: #56cbd2;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding: 33px 0;
+    border: none;
+    margin-top: 35px;
+    cursor: pointer;
+  }
+}
+
+.contacts-button:hover {
+  background: #67dde4;
+}
+
+.contacts-input {
+  margin-top: 40px;
+  display: block;
+  width: 100%;
+  padding-bottom: 13px;
+  border: none;
+  border-bottom: 1px solid #989898;
+  color: #989898;
+  background-color: transparent;
+  font-size: 20px;
+  line-height: 1.3;
+  color: #0d0d0d;
+}
+
+.contacts-input::placeholder {
+  color: #989898;
+  font-size: 18px;
+}
+
+.contacts-links {
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+  padding-bottom: 80px;
+
+  .tel {
+    color: #0d0d0d;
+  }
+}
+
+.contacts-links__whatsup {
+  font-size: 20px;
+  color: #28d146;
+  position: relative;
+  display: inline-block;
+  padding-left: 24px;
+  padding-bottom: 3px;
+}
+
+.contacts-links__whatsup::before {
+  content: "";
+  background-image: url(../assets/imgs/whatsapp.svg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  height: 18px;
+  width: 18px;
+}
+
+.contacts-links__whatsup::after {
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  background-color: #28d146;
+  content: "";
+  bottom: 0;
+  left: 24px;
+}
+
+.contacts-links__whatsup:hover::after {
+  display: none;
+}
+
+.connection {
+  margin-top: 45px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #0d0d0d;
+}
+
+@media screen and (max-width: 1160px) {
+  .examples-main {
+    padding-top: 90px;
+    margin-top: 50px;
+    padding-bottom: 45px;
+  }
+
+  .examples-main__title {
+    margin: 10px 0 15px;
+    max-width: 1024px;
+  }
+
+  .examples {
+    padding-top: 45px;
+  }
+
+  .first-example {
+    padding-bottom: 45px;
+  }
+
+  .examples-title {
+    font-size: 30px;
+  }
+
+  .examples-subtitle {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .examples-text {
+    flex-wrap: wrap;
+    padding-right: 49px;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .examples-imgs {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+   
+  }
+
+  .second-example {
+    padding-bottom: 70px;
+  }
+
+  .examples-form {
+    background-image: none;
+  }
+
+  .contacts-form__title {
+    padding-top: 0px;
+    max-width: 491px;
+  }
+
+  .contacts-form__desc {
+    max-width: 566px;
+    margin-top: 15px;
+  }
+
+  form {
+    margin-top: 40px;
+    max-width: 2000px;
+    width: 100%;
+  }
+
+  .contacts-links {
+    margin-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .connection {
+    margin-top: 40px;
+  }
+
+  .examples-imgs :nth-child(5) {
+    display: none;
+  }
+
+  .examples-imgs .minsize {
+    width: 48.9%;
+    flex-grow: initial;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .examples-main {
+    padding-top: 80px;
+    margin-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  .examples-main__title {
+    margin: 25px 0 15px;
+  }
+
+  .examples-main__desc {
+    font-size: 16px;
+  }
+
+  .examples {
+    padding-top: 25px;
+  }
+
+  .first-example {
+    padding-bottom: 25px;
+  }
+
+  .examples-title {
+    font-size: 22px;
+  }
+
+  .examples-subtitle {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  .examples-desc {
+    font-size: 16px;
+  }
+
+  .examples-text {
+    flex-wrap: wrap;
+    padding-right: 0px;
+    gap: 15px;
+  }
+
+  .examples-imgs {
+    margin-top: 20px;   
+  }
+
+  .second-example {
+    padding-bottom: 45px;
+  }
+
+  .contacts-form__title {
+    padding-top: 0px;
+    max-width: 491px;
+  }
+
+  .contacts-form__desc {
+    max-width: 566px;
+    font-size: 16px;
+  }
+
+  form {
+    margin-top: 35px;
+    max-width: 2000px;
+    width: 100%;
+
+    .contacts-button {
+      padding: 24px 0;
+      font-size: 16px;
+    }
+  }
+
+  .contacts-links {
+    margin-top: 20px;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .checkbox-container {
+    flex-wrap: wrap;
+  }
+
+  .checkbox-container a{
+    padding-left: 30px;
+  }
+
+  .connection {
+    margin-top: 30px;
+  }
+
+  .examples-imgs :nth-child(5) {
+    display: none;
+  }
+
+  .examples-imgs .minsize {
+    width: 100%;
+    flex-grow: 1;
+  }
+}

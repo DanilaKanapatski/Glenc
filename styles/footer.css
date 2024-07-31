@@ -204,6 +204,11 @@ footer {
     padding-top: 30px;
     padding-bottom: 80px;
 
+    p {
+      max-width: 280px;
+      font-size: 16px;
+    }
+
     .money {
       margin-top: 0;
       width: 100%;
