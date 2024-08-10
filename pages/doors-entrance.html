@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glens</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/popap.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/doorsEntrance-page.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon.png">
+  </head>
+  <body>
+    <header class="header-desc">
+      <div class="container">
+        <nav class="main-nav">
+          <a class="header-logo" href="../index.html">
+            <img src="../assets/imgs/logo.svg" alt="logo" />
+          </a>
+          <p class="address">
+            г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб.
+            10.00-15.00
+          </p>
+          <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          <div class="overlay" id="overlay"></div>
+          <div class="popup" id="popup">
+            <span class="close" id="closePopup"></span>
+            <h2>Оставьте свой номер телефона, мы вам перезвоним</h2>
+            <form action="../form-handler.php" method="post">
+              <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+              <button type="submit">Отправить</button>
+              <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+            </label>
+            </form>
+          </div>
+          <button id="orderCall">Заказать звонок</button>
+      </div>
+        </nav>
+      <nav class="header-links">
+        <div class="container">
+          <ul>
+            <li>
+              <a class="header-link" href="">Окна</a>
+              <div class="dropdown-content">
+                <a href="../pages/windows-pvx.html">Окна ПВХ</a>
+                <a href="../pages/windows-all.html">Окна алюминиевые</a>
+              </div>
+            </li>
+            <li>
+              <a class="header-link" href="">Двери</a>
+              <div class="dropdown-content">
+                <a href="../pages/doors-pvx.html">Двери ПВХ</a>
+                <a href="../pages/doors-all.html">Двери алюминиевые</a>
+              </div>
+            </li>
+            <li><a class="header-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+            <li><a class="header-link" href="../pages/cottages.html">Коттеджи</a></li>
+            <li><a class="header-link" href="../pages/services.html">Услуги</a></li>
+            <li><a class="header-link" href="../pages/examples.html">Вдохновляющие примеры</a></li>
+            <li><a class="header-link" href="../pages/interior.html">Интерьерные решения</a></li>
+            <li>
+              <a class="header-link" href="../pages/designers.html">Дизайнерам и архитекторам</a>
+            </li>
+            <li><a class="header-link" href="../pages/contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <header class="header-mob">
+      <div class="container">
+        <div class="header-container">
+          <div class="logo">
+            <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt="Glens"></a>
+          </div>
+          <div class="contact-info">
+              <p class="address">г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00</p>
+          </div>
+          <div class="call-button">
+            <a href="#write" id="orderCall">Заказать звонок</a>
+          </div>
+          <div>
+            <a class="header-tel tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          </div>
+          <div class="menu-icon" onclick="toggleMenu(this)">
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="dropdown-menu" class="hidden">
+          <ul>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown('dropdown-1')">Окна</a>
+              <ul id="dropdown-1" class="dropdown-content__mob hidden">
+                  <li><a href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                  <li><a href="../pages/windows-all.html">Окна алюминиевые</a></li>
+            </ul>
+          </li>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown('dropdown-2')">Двери</a>
+              <ul id="dropdown-2" class="dropdown-content__mob hidden">
+                  <li><a href="../pages/doors-pvx.html">Двери ПВХ</a></li>
+                  <li><a href="../pages/doors-all.html">Двери алюминиевые</a></li>
+              </ul>
+            </li>
+              <li><a href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+              <li><a href="../pages/cottages.html">Коттеджи</a></li>
+              <li><a href="../pages/services.html">Услуги</a></li>
+              <li><a href="../pages/examples.html">Вдохновляющие примеры</a></li>
+              <li><a href="../pages/interior.html">Интерьерные решения</a></li>
+              <li><a href="../pages/designers.html">Дизайнерам и архитекторам</a></li>
+              <li><a href="../pages/contacts.html">Контакты</a></li>
+              <li><a class="btn-header__mob" href="#write">Рассчитать стоимость</a></li>
+          </ul>
+      </nav>
+    </div>
+    </header>
+    <main>
+        <section class="main">
+            <div class="container">
+                <div class="contacts-info__links">
+                    <a class="pages-link" href="../index.html">Главная</a>
+                    <span><img src="../assets/imgs/arrow-link.svg" alt=""></span>
+                    <a class="pages-link" href="../pages/doors-pvx.html">Двери ПВХ</a>
+                    <span><img src="../assets/imgs/arrow-link.svg" alt=""></span>
+                    <a class="pages-link" href="../pages/doors-entrance.html">Входные, межофисные и межкомнатные двери</a>
+                </div>
+                <h1 class="main-title">Входные двери</h1>
+                <p class="main-desc">Входные двери — это надёжное и практичное решение для вашего дома или офиса. Двери разработаны на основе современных материалов и технических разработок, что позволяет им обеспечивать высокую теплоизоляцию, звукоизоляцию, высокий уровень защиты от взлома и проникновения. Практичность пластиковых дверей и появление широкого ассортимента ламинированного профиля расширило сферы применения этой продукции. Ее используют во входных группах в частный дом или коммерческие помещения. Элегантные ПВХ двери прекрасно вписываются в любой интерьер от классики до хайтека.</p>
+            </div>
+        </section>
+        <section class="windows">
+            <div class="container">
+                <nav class="windows-nav">
+                    <a class="windows-nav__link" href="#glass">Описание</a>
+                    <a class="windows-nav__link" href="#glass-2">Портфолио</a>
+                    <a class="windows-nav__link" href="#guarantee">Аксессуары</a>
+                </nav>
+                <div class="menu-container">
+                  <div class="menu-header" id="menu-header">
+                    <a href="#glass">Описание</a>
+                      <span class="arrow"><img src="../assets/imgs/arr-nav.svg" alt=""></span>
+                  </div>
+                  <ul class="dropdown-menu-1" id="dropdown-menu-1">
+                      <li><a href="#glass-2">Портфолио</a></li>
+                      <li><a href="#guarantee">Аксессуары</a></li>
+                  </ul>
+              </div>
+                <div class="window" id="glass">
+                    <div class="window-wrapper">
+                        <div class="window-text">
+                            <h2 class="window-title">Дверные системы 80 мм</h2>
+                            <ul class="window-list">
+                                <li class="window-list__item">Системная глубина: 80 мм</li>
+                                <li class="window-list__item">Количество камер: 6/5 </li>
+                                <li class="window-list__item">Приведённое сопротивление теплопередаче R₀ = 0,89 м2∙°С/Вт со стальным армированием</li>
+                                <li class="window-list__item">Материал: RAU-PVC, с использованием кальций-цинковых стабилизаторов</li>
+                                <li class="window-list__item">Улучшенная теплотехника за счёт 5-ти камерного строения профиля</li>
+                                <li class="window-list__item">Конкурентная цена за счёт обновлённой геометрии и локализации производства</li>
+                                <li class="window-list__item">Совместимость с коробками системной глубины 80 мм и типовое армирование</li>
+                                <li class="window-list__item">Не требует дополнительных инвестиций. Дверные конструкции из профиля PEXAY 80 мм можно изготавливать на существующей производственной базе</li>
+                            </ul>
+                            <h3 class="window-subtitle">Строительные решения</h3>
+                            <p class="window-desc">Система дверных профилей PEXAY 70 мм идеально подходит для административных, офисных и торговых зданий, а также объектов частного строительства. Новая дверная система PEXAY 80 может уберечь жильцов не только от непрошенного вторжения, но и от климатических воздействий. Этому способствует 5 воздушных камер и 2 контура уплотнений, выполненных из качественного синтетического каучука (по 6/8 мм снаружи и внутри). Дверные профили 80 мм способны сохранять тепло внутри помещения, позволяя создать комфортный микроклимат и экономя энергию на отопление</p>
+                            <picture class="window-img">
+                                <source srcset="../assets/imgs/doorsEntrance-1.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-1.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-1.png" alt="">
+                            </picture>
+                        </div>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-2.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-2.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-2.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="window-tablet">
+                    <h2 class="window-title">Дверные системы 80 мм</h2>
+                    <div class="window-imgs">
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-1.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-1.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-1.png" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-2.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-2.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-2.png" alt="">
+                        </picture>
+                    </div>
+                    <ul class="window-list">
+                        <li class="window-list__item">Системная глубина: 80 мм</li>
+                        <li class="window-list__item">Количество камер: 6/5 </li>
+                        <li class="window-list__item">Приведённое сопротивление теплопередаче R₀ = 0,89 м2∙°С/Вт со стальным армированием</li>
+                        <li class="window-list__item">Материал: RAU-PVC, с использованием кальций-цинковых стабилизаторов</li>
+                        <li class="window-list__item">Улучшенная теплотехника за счёт 5-ти камерного строения профиля</li>
+                        <li class="window-list__item">Конкурентная цена за счёт обновлённой геометрии и локализации производства</li>
+                        <li class="window-list__item">Совместимость с коробками системной глубины 80 мм и типовое армирование</li>
+                        <li class="window-list__item">Не требует дополнительных инвестиций. Дверные конструкции из профиля PEXAY 80 мм можно изготавливать на существующей производственной базе</li>
+                    </ul>
+                    <h3 class="window-subtitle">Строительные решения</h3>
+                    <p class="window-desc">Система дверных профилей PEXAY 70 мм идеально подходит для административных, офисных и торговых зданий, а также объектов частного строительства. Новая дверная система PEXAY 80 может уберечь жильцов не только от непрошенного вторжения, но и от климатических воздействий. Этому способствует 5 воздушных камер и 2 контура уплотнений, выполненных из качественного синтетического каучука (по 6/8 мм снаружи и внутри). Дверные профили 80 мм способны сохранять тепло внутри помещения, позволяя создать комфортный микроклимат и экономя энергию на отопление</p>
+                </div>
+                <div class="window-mob">
+                    <h2 class="window-title">Дверные системы 80 мм</h2>
+                    <div class="slider">
+                        <div class="slides">
+                          <div class="slide">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsEntrance-1.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-1.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-1.png" alt="">
+                            </picture>
+                          </div>
+                          <div class="slide">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsEntrance-2.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-2.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-2.png" alt="">
+                            </picture>
+                          </div>
+                        </div>
+                        <button class="prev" onclick="moveSlide(-1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                        <button class="next" onclick="moveSlide(1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                      </div>
+                      <script src="../script.js"></script>
+                      <ul class="window-list">
+                        <li class="window-list__item">Системная глубина: 80 мм</li>
+                        <li class="window-list__item">Количество камер: 6/5 </li>
+                        <li class="window-list__item">Приведённое сопротивление теплопередаче R₀ = 0,89 м2∙°С/Вт со стальным армированием</li>
+                        <li class="window-list__item">Материал: RAU-PVC, с использованием кальций-цинковых стабилизаторов</li>
+                        <li class="window-list__item">Улучшенная теплотехника за счёт 5-ти камерного строения профиля</li>
+                        <li class="window-list__item">Конкурентная цена за счёт обновлённой геометрии и локализации производства</li>
+                        <li class="window-list__item">Совместимость с коробками системной глубины 80 мм и типовое армирование</li>
+                        <li class="window-list__item">Не требует дополнительных инвестиций. Дверные конструкции из профиля PEXAY 80 мм можно изготавливать на существующей производственной базе</li>
+                    </ul>
+                    <h3 class="window-subtitle">Строительные решения</h3>
+                    <p class="window-desc">Система дверных профилей PEXAY 70 мм идеально подходит для административных, офисных и торговых зданий, а также объектов частного строительства. Новая дверная система PEXAY 80 может уберечь жильцов не только от непрошенного вторжения, но и от климатических воздействий. Этому способствует 5 воздушных камер и 2 контура уплотнений, выполненных из качественного синтетического каучука (по 6/8 мм снаружи и внутри). Дверные профили 80 мм способны сохранять тепло внутри помещения, позволяя создать комфортный микроклимат и экономя энергию на отопление</p>
+                </div>
+                <div class="window">
+                    <div class="window-wrapper">
+                        <div class="window-text">
+                            <h2 class="window-title">Дверные системы 70 мм</h2>
+                            <ul class="window-list">
+                                <li class="window-list__item">Системная глубина: 70 мм</li>
+                                <li class="window-list__item">Количество камер: 4/5 </li>
+                                <li class="window-list__item">Приведённое сопротивление теплопередаче R₀ = 0,70 м2∙°С/Вт со стальным армированием</li>
+                                <li class="window-list__item">Материал: RAU-PVC, с использованием кальций-цинковых стабилизаторов</li>
+                                <li class="window-list__item">Улучшенная теплотехника за счёт 4-х камерного строения профиля</li>
+                                <li class="window-list__item">Конкурентная цена за счёт обновлённой геометрии и локализации производства</li>
+                                <li class="window-list__item">Совместимость с коробками системной глубины 70 мм и типовое армирование</li>
+                                <li class="window-list__item">Не требует дополнительных инвестиций. Дверные конструкции из профиля PEXAY 70 мм можно изготавливать на существующей производственной базе</li>
+                            </ul>
+                            <h3 class="window-subtitle">Строительные решения</h3>
+                            <p class="window-desc">Входные двери для административных, офисных и торговых зданий, а также объектов частного строительства. Одностворчатые входные двери с открыванием внутрь и наружу, в том числе с глухими боковыми частями. Двустворчатые входные двери с открыванием внутрь и наружу. Входные двери с фрамужными частями.Другие конструктивные варианты исполнения входных дверей</p>
+                            <picture class="window-img">
+                                <source srcset="../assets/imgs/doorsEntrance-3.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-3.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-3.png" alt="">
+                            </picture>
+                        </div>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-4.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-4.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-4.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="window-tablet">
+                    <h2 class="window-title">Дверные системы 70 мм</h2>
+                    <div class="window-imgs">
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-3.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-3.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-3.png" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-4.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-4.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-4.png" alt="">
+                        </picture>
+                    </div>
+                    <ul class="window-list">
+                        <li class="window-list__item">Системная глубина: 70 мм</li>
+                        <li class="window-list__item">Количество камер: 4/5 </li>
+                        <li class="window-list__item">Приведённое сопротивление теплопередаче R₀ = 0,70 м2∙°С/Вт со стальным армированием</li>
+                        <li class="window-list__item">Материал: RAU-PVC, с использованием кальций-цинковых стабилизаторов</li>
+                        <li class="window-list__item">Улучшенная теплотехника за счёт 4-х камерного строения профиля</li>
+                        <li class="window-list__item">Конкурентная цена за счёт обновлённой геометрии и локализации производства</li>
+                        <li class="window-list__item">Совместимость с коробками системной глубины 70 мм и типовое армирование</li>
+                        <li class="window-list__item">Не требует дополнительных инвестиций. Дверные конструкции из профиля PEXAY 70 мм можно изготавливать на существующей производственной базе</li>
+                    </ul>
+                    <h3 class="window-subtitle">Строительные решения</h3>
+                    <p class="window-desc">Входные двери для административных, офисных и торговых зданий, а также объектов частного строительства. Одностворчатые входные двери с открыванием внутрь и наружу, в том числе с глухими боковыми частями. Двустворчатые входные двери с открыванием внутрь и наружу. Входные двери с фрамужными частями.Другие конструктивные варианты исполнения входных дверей</p>
+                </div>
+                <div class="window-mob">
+                    <h2 class="window-title">Дверные системы 70 мм</h2>
+                    <div class="slider-1">
+                        <div class="slides-1">
+                          <div class="slide-1">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsEntrance-3.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-3.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-3.png" alt="">
+                            </picture>
+                          </div>
+                          <div class="slide-1">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsEntrance-4.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-4.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-4.png" alt="">
+                            </picture>
+                          </div>
+                        </div>
+                        <button class="prev" onclick="moveSlide1(-1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                        <button class="next" onclick="moveSlide1(1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                      </div>
+                      <script src="../script.js"></script>
+                      <ul class="window-list">
+                        <li class="window-list__item">Системная глубина: 70 мм</li>
+                        <li class="window-list__item">Количество камер: 4/5 </li>
+                        <li class="window-list__item">Приведённое сопротивление теплопередаче R₀ = 0,70 м2∙°С/Вт со стальным армированием</li>
+                        <li class="window-list__item">Материал: RAU-PVC, с использованием кальций-цинковых стабилизаторов</li>
+                        <li class="window-list__item">Улучшенная теплотехника за счёт 4-х камерного строения профиля</li>
+                        <li class="window-list__item">Конкурентная цена за счёт обновлённой геометрии и локализации производства</li>
+                        <li class="window-list__item">Совместимость с коробками системной глубины 70 мм и типовое армирование</li>
+                        <li class="window-list__item">Не требует дополнительных инвестиций. Дверные конструкции из профиля PEXAY 70 мм можно изготавливать на существующей производственной базе</li>
+                    </ul>
+                    <h3 class="window-subtitle">Строительные решения</h3>
+                    <p class="window-desc">Входные двери для административных, офисных и торговых зданий, а также объектов частного строительства. Одностворчатые входные двери с открыванием внутрь и наружу, в том числе с глухими боковыми частями. Двустворчатые входные двери с открыванием внутрь и наружу. Входные двери с фрамужными частями.Другие конструктивные варианты исполнения входных дверей</p>
+                </div>
+                <div class="window">
+                    <div class="window-wrapper window-last">
+                        <div class="window-text">
+                            <h2 class="window-title">Дверные системы 60 мм</h2>
+                            <p class="window-doptext">Дверная система PEXAY 60 мм сочетает в себе отличные показатели по теплоизоляции, высокое качество профиля и элегантный дизайн. При помощи дверей из профильной системы PEXAY 60 мм вы можете добиться желанной тишины, покоя и уюта в помещении</p>
+                            <ul class="window-list">
+                                <li class="window-list__item">Системная глубина: 60 мм</li>
+                                <li class="window-list__item">Количество камер: 2 (створка) / 4 (коробка)</li>
+                                <li class="window-list__item">Максимальная толщина заполнения: 33 мм</li>
+                                <li class="window-list__item">Поверхность: гладкая и лёгкая в уходе</li>
+                                <li class="window-list__item">Взломобезопасность: до 3 класса</li>
+                                <li class="window-list__item">Звукоизоляция: до 4 класса</li>
+                            </ul>
+                            <h3 class="window-subtitle">Строительные решения</h3>
+                    <p class="window-desc">Входные двери для административных, офисных и торговых зданий, а также объектов частного строительства. Одностворчатые входные двери с открыванием внутрь и наружу, в том числе с глухими боковыми частями. Двустворчатые входные двери с открыванием внутрь и наружу. Входные двери с фрамужными частями. Другие конструктивные варианты исполнения входных дверей</p>
+                    <picture class="window-img">
+                        <source srcset="../assets/imgs/doorsEntrance-5.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/doorsEntrance-5.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/doorsEntrance-5.png" alt="">
+                    </picture>
+                        </div>
+                        <picture class="last-pic">
+                            <source srcset="../assets/imgs/doorsEntrance-6.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-6.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-6.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="window-tablet  window-last">
+                    <h2 class="window-title">Дверные системы 60 мм</h2>
+                    <div class="window-imgs">
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-5.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-5.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-5.png" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-6.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-6.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-6.png" alt="">
+                        </picture>
+                    </div>
+                    <p class="window-doptext">Дверная система PEXAY 60 мм сочетает в себе отличные показатели по теплоизоляции, высокое качество профиля и элегантный дизайн. При помощи дверей из профильной системы PEXAY 60 мм вы можете добиться желанной тишины, покоя и уюта в помещении</p>
+                            <ul class="window-list">
+                                <li class="window-list__item">Системная глубина: 60 мм</li>
+                                <li class="window-list__item">Количество камер: 2 (створка) / 4 (коробка)</li>
+                                <li class="window-list__item">Максимальная толщина заполнения: 33 мм</li>
+                                <li class="window-list__item">Поверхность: гладкая и лёгкая в уходе</li>
+                                <li class="window-list__item">Взломобезопасность: до 3 класса</li>
+                                <li class="window-list__item">Звукоизоляция: до 4 класса</li>
+                            </ul>
+                            <h3 class="window-subtitle">Строительные решения</h3>
+                    <p class="window-desc">Входные двери для административных, офисных и торговых зданий, а также объектов частного строительства. Одностворчатые входные двери с открыванием внутрь и наружу, в том числе с глухими боковыми частями. Двустворчатые входные двери с открыванием внутрь и наружу. Входные двери с фрамужными частями. Другие конструктивные варианты исполнения входных дверей</p>
+                </div>
+                <div class="window-mob  window-last">
+                    <h2 class="window-title">Дверные системы 60 мм</h2>
+                    <div class="slider-2">
+                        <div class="slides-2">
+                          <div class="slide-2">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsEntrance-5.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-5.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-5.png" alt="">
+                            </picture>
+                          </div>
+                          <div class="slide-2">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsEntrance-6.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-6.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-6.png" alt="">
+                            </picture>
+                          </div>
+                        </div>
+                        <button class="prev" onclick="moveSlide2(-1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                        <button class="next" onclick="moveSlide2(1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                      </div>
+                      <script src="../script.js"></script>
+                      <p class="window-doptext">Дверная система PEXAY 60 мм сочетает в себе отличные показатели по теплоизоляции, высокое качество профиля и элегантный дизайн. При помощи дверей из профильной системы PEXAY 60 мм вы можете добиться желанной тишины, покоя и уюта в помещении</p>
+                      <ul class="window-list">
+                          <li class="window-list__item">Системная глубина: 60 мм</li>
+                          <li class="window-list__item">Количество камер: 2 (створка) / 4 (коробка)</li>
+                          <li class="window-list__item">Максимальная толщина заполнения: 33 мм</li>
+                          <li class="window-list__item">Поверхность: гладкая и лёгкая в уходе</li>
+                          <li class="window-list__item">Взломобезопасность: до 3 класса</li>
+                          <li class="window-list__item">Звукоизоляция: до 4 класса</li>
+                      </ul>
+                      <h3 class="window-subtitle">Строительные решения</h3>
+              <p class="window-desc">Входные двери для административных, офисных и торговых зданий, а также объектов частного строительства. Одностворчатые входные двери с открыванием внутрь и наружу, в том числе с глухими боковыми частями. Двустворчатые входные двери с открыванием внутрь и наружу. Входные двери с фрамужными частями. Другие конструктивные варианты исполнения входных дверей</p>
+                </div>
+            </div>
+        </section>
+        <section class="main-1">
+            <div class="container">
+                <h1 class="main-title">Межофисные и межкомнатные двери</h1>
+                <p class="main-desc">Межофисные и межкомнатные двери - устанавливаются только внутри помещений. Пластиковые межофисные двери применяются в частном и коммерческом строительстве. Их широко используют в торговых комплексах, где они являются частью систем перегородок, в офисных помещениях. Облегчённые межкомнатные/межофисные пластиковые двери являются популярным и удобным решением для интерьера дома или офиса. Дверная створка с облегченной оконной рамой, позволяют расширить пространство за счет уменьшения конструкции</p>
+            </div>
+        </section>
+        <section class="windows-1" id="glass1">
+            <div class="container">
+              <nav class="windows-nav">
+                <a class="windows-nav__link" href="#glass1">Описание</a>
+                <a class="windows-nav__link" href="#glass-1">Особенности</a>
+                <a class="windows-nav__link" href="#glass-2">Портфолио</a>
+                <a class="windows-nav__link" href="#guarantee">Аксессуары</a>
+            </nav>
+                <div class="menu-container">
+                  <div class="menu-header" id="menu-header-1">
+                    <a href="#glass1">Описание</a>
+                      <span class="arrow"><img src="../assets/imgs/arr-nav.svg" alt=""></span>
+                  </div>
+                  <ul class="dropdown-menu-1" id="dropdown-menu-2">
+                      <li><a href="#glass-1">Особенности</a></li>
+                      <li><a href="#glass-2">Портфолио</a></li>
+                      <li><a href="#guarantee">Аксессуары</a></li>
+                  </ul>
+                  </div>
+                <div class="window">
+                    <div class="window-wrapper">
+                        <div class="window-text">
+                            <h2 class="window-title">Дверные системы 70 мм</h2>
+                            <ul class="window-list">
+                                <li class="window-list__item">Системная глубина: 70 мм</li>
+                                <li class="window-list__item">Количество камер: 4/5 </li>
+                                <li class="window-list__item">Приведённое сопротивление теплопередаче R₀ = 0,70 м2∙°С/Вт со стальным армированием</li>
+                                <li class="window-list__item">Материал: RAU-PVC, с использованием кальций-цинковых стабилизаторов</li>
+                                <li class="window-list__item">Улучшенная теплотехника за счёт 4-х камерного строения профиля</li>
+                                <li class="window-list__item">Конкурентная цена за счёт обновлённой геометрии и локализации производства</li>
+                                <li class="window-list__item">Совместимость с коробками системной глубины 70 мм и типовое армирование</li>
+                                <li class="window-list__item">Не требует дополнительных инвестиций. Дверные конструкции из профиля PEXAY 70 мм можно изготавливать на существующей производственной базе</li>
+                            </ul>
+                            <h3 class="window-subtitle">Строительные решения</h3>
+                            <p class="window-desc">Межкомнатные двери для административных, офисных и торговых зданий, а также объектов частного строительства. Одностворчатые входные двери с открыванием от и на себя, в том числе с глухими боковыми частями. Двустворчатые межкомнатные двери с открыванием от и на себя.Межкомнатные двери с фрамужными частями. Другие конструктивные варианты исполнения межкомнатных дверей</p>
+                            <picture class="window-img">
+                                <source srcset="../assets/imgs/doorsEntrance-8.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-8.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-8.png" alt="">
+                            </picture>
+                        </div>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-7.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-7.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-7.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="window-tablet">
+                    <h2 class="window-title">Дверные системы 70 мм</h2>
+                    <div class="window-imgs">
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-8.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-8.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-8.png" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-7.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-7.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-7.png" alt="">
+                        </picture>
+                    </div>
+                    <ul class="window-list">
+                        <li class="window-list__item">Системная глубина: 70 мм</li>
+                        <li class="window-list__item">Количество камер: 4/5 </li>
+                        <li class="window-list__item">Приведённое сопротивление теплопередаче R₀ = 0,70 м2∙°С/Вт со стальным армированием</li>
+                        <li class="window-list__item">Материал: RAU-PVC, с использованием кальций-цинковых стабилизаторов</li>
+                        <li class="window-list__item">Улучшенная теплотехника за счёт 4-х камерного строения профиля</li>
+                        <li class="window-list__item">Конкурентная цена за счёт обновлённой геометрии и локализации производства</li>
+                        <li class="window-list__item">Совместимость с коробками системной глубины 70 мм и типовое армирование</li>
+                        <li class="window-list__item">Не требует дополнительных инвестиций. Дверные конструкции из профиля PEXAY 70 мм можно изготавливать на существующей производственной базе</li>
+                    </ul>
+                    <h3 class="window-subtitle">Строительные решения</h3>
+                    <p class="window-desc">Межкомнатные двери для административных, офисных и торговых зданий, а также объектов частного строительства. Одностворчатые входные двери с открыванием от и на себя, в том числе с глухими боковыми частями. Двустворчатые межкомнатные двери с открыванием от и на себя.Межкомнатные двери с фрамужными частями. Другие конструктивные варианты исполнения межкомнатных дверей</p>
+                </div>
+                <div class="window-mob">
+                    <h2 class="window-title">Дверные системы 80 мм</h2>
+                    <div class="slider">
+                        <div class="slides">
+                          <div class="slide">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsEntrance-8.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-8.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-8.png" alt="">
+                            </picture>
+                          </div>
+                          <div class="slide">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsEntrance-9.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-9.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-9.png" alt="">
+                            </picture>
+                          </div>
+                        </div>
+                        <button class="prev" onclick="moveSlide(-1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                        <button class="next" onclick="moveSlide(1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                      </div>
+                      <script src="../script.js"></script>
+                      <ul class="window-list">
+                        <li class="window-list__item">Системная глубина: 70 мм</li>
+                        <li class="window-list__item">Количество камер: 4/5 </li>
+                        <li class="window-list__item">Приведённое сопротивление теплопередаче R₀ = 0,70 м2∙°С/Вт со стальным армированием</li>
+                        <li class="window-list__item">Материал: RAU-PVC, с использованием кальций-цинковых стабилизаторов</li>
+                        <li class="window-list__item">Улучшенная теплотехника за счёт 4-х камерного строения профиля</li>
+                        <li class="window-list__item">Конкурентная цена за счёт обновлённой геометрии и локализации производства</li>
+                        <li class="window-list__item">Совместимость с коробками системной глубины 70 мм и типовое армирование</li>
+                        <li class="window-list__item">Не требует дополнительных инвестиций. Дверные конструкции из профиля PEXAY 70 мм можно изготавливать на существующей производственной базе</li>
+                    </ul>
+                    <h3 class="window-subtitle">Строительные решения</h3>
+                    <p class="window-desc">Межкомнатные двери для административных, офисных и торговых зданий, а также объектов частного строительства. Одностворчатые входные двери с открыванием от и на себя, в том числе с глухими боковыми частями. Двустворчатые межкомнатные двери с открыванием от и на себя.Межкомнатные двери с фрамужными частями. Другие конструктивные варианты исполнения межкомнатных дверей</p>
+                </div>
+                <div class="window">
+                    <div class="window-wrapper window-last">
+                        <div class="window-text">
+                            <h2 class="window-title">Дверные системы 60 мм</h2>
+                            <p class="window-doptext">Дверная система PEXAY 60 мм сочетает в себе отличные показатели по теплоизоляции, высокое качество профиля и элегантный дизайн. При помощи дверей из профильной системы PEXAY 60 мм Вы можете добиться желанной тишины, покоя и уюта в помещении</p>
+                            <ul class="window-list">
+                                <li class="window-list__item">Системная глубина: 60 мм</li>
+                                <li class="window-list__item">Количество камер: 2 (створка) / 4 (коробка)</li>
+                                <li class="window-list__item">Максимальная толщина заполнения: 33 мм</li>
+                                <li class="window-list__item">Поверхность: гладкая и лёгкая в уходе</li>
+                                <li class="window-list__item">Взломобезопасность: до 3 класса</li>
+                                <li class="window-list__item">Звукоизоляция: до 4 класса</li>
+                            </ul>
+                            <h3 class="window-subtitle">Строительные решения</h3>
+                    <p class="window-desc">Межкомнатные двери для административных, офисных и торговых зданий, а также объектов частного строительства. Одностворчатые входные двери с открыванием от и на себя, в том числе с глухими боковыми частями. Двустворчатые межкомнатные двери с открыванием от и на себя.Межкомнатные двери с фрамужными частями.
+                     Другие конструктивные варианты исполнения межкомнатных дверей</p>
+                    <picture class="window-img">
+                        <source srcset="../assets/imgs/doorsEntrance-10.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/doorsEntrance-10.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/doorsEntrance-10.png" alt="">
+                    </picture>
+                        </div>
+                        <picture class="last-pic">
+                            <source srcset="../assets/imgs/doorsEntrance-9.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-9.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-9.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="window-tablet  window-last">
+                    <h2 class="window-title">Дверные системы 60 мм</h2>
+                    <div class="window-imgs">
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-10.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-10.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-10.png" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsEntrance-9.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsEntrance-9.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsEntrance-9.png" alt="">
+                        </picture>
+                    </div>
+                    <p class="window-doptext">Дверная система PEXAY 60 мм сочетает в себе отличные показатели по теплоизоляции, высокое качество профиля и элегантный дизайн. При помощи дверей из профильной системы PEXAY 60 мм Вы можете добиться желанной тишины, покоя и уюта в помещении</p>
+                            <ul class="window-list">
+                                <li class="window-list__item">Системная глубина: 60 мм</li>
+                                <li class="window-list__item">Количество камер: 2 (створка) / 4 (коробка)</li>
+                                <li class="window-list__item">Максимальная толщина заполнения: 33 мм</li>
+                                <li class="window-list__item">Поверхность: гладкая и лёгкая в уходе</li>
+                                <li class="window-list__item">Взломобезопасность: до 3 класса</li>
+                                <li class="window-list__item">Звукоизоляция: до 4 класса</li>
+                            </ul>
+                            <h3 class="window-subtitle">Строительные решения</h3>
+                    <p class="window-desc">Межкомнатные двери для административных, офисных и торговых зданий, а также объектов частного строительства. Одностворчатые входные двери с открыванием от и на себя, в том числе с глухими боковыми частями. Двустворчатые межкомнатные двери с открыванием от и на себя.Межкомнатные двери с фрамужными частями.
+                     Другие конструктивные варианты исполнения межкомнатных дверей</p>
+                </div>
+                <div class="window-mob  window-last">
+                    <h2 class="window-title">Дверные системы 60 мм</h2>
+                    <div class="slider-2">
+                        <div class="slides-2">
+                          <div class="slide-2">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsEntrance-10.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-10.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-10.png" alt="">
+                            </picture>
+                          </div>
+                          <div class="slide-2">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsEntrance-9.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsEntrance-9.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsEntrance-9.png" alt="">
+                            </picture>
+                          </div>
+                        </div>
+                        <button class="prev" onclick="moveSlide2(-1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                        <button class="next" onclick="moveSlide2(1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                      </div>
+                      <script src="../script.js"></script>
+                      <p class="window-doptext">Дверная система PEXAY 60 мм сочетает в себе отличные показатели по теплоизоляции, высокое качество профиля и элегантный дизайн. При помощи дверей из профильной системы PEXAY 60 мм Вы можете добиться желанной тишины, покоя и уюта в помещении</p>
+                      <ul class="window-list">
+                          <li class="window-list__item">Системная глубина: 60 мм</li>
+                          <li class="window-list__item">Количество камер: 2 (створка) / 4 (коробка)</li>
+                          <li class="window-list__item">Максимальная толщина заполнения: 33 мм</li>
+                          <li class="window-list__item">Поверхность: гладкая и лёгкая в уходе</li>
+                          <li class="window-list__item">Взломобезопасность: до 3 класса</li>
+                          <li class="window-list__item">Звукоизоляция: до 4 класса</li>
+                      </ul>
+                      <h3 class="window-subtitle">Строительные решения</h3>
+              <p class="window-desc">Межкомнатные двери для административных, офисных и торговых зданий, а также объектов частного строительства. Одностворчатые входные двери с открыванием от и на себя, в том числе с глухими боковыми частями. Двустворчатые межкомнатные двери с открыванием от и на себя.Межкомнатные двери с фрамужными частями.
+               Другие конструктивные варианты исполнения межкомнатных дверей</p>
+                </div>
+            </div>
+        </section>
+        <section class="glass">
+            <div class="container">
+                 <div class="glass-wrapper">
+                     <div class="glass-text">
+                         <h2 class="glass-title">Остекление</h2>
+                         <p class="glass-desc">Большое разнообразие вариантов стекла для изготовления стеклопакета, позволит получить максимум преимуществ от готового изделия. Вид и толщина стекла определяется в зависимости от ваших пожеланий, габаритных размеров створок и ветровой нагрузки. Для безопасной и эффективной эксплуатации конструкций применяются одно – и двухкамерные энергосберегающие стеклопакеты. Мультифункциональный стеклопакет, позволит не только сохранить тепло зимой, но и не даст помещению перегреться летом, снизив затраты на кондиционирование, стеклопакет с противоударным стеклом триплекс, повысит безопасность вашего дома или офиса, благодаря высокой стойкости к ударам и разрушению</p>
+                         <a class="glass-link" href="../pages/windows-glazed.html">Узнать подробнее</a>
+                     </div>
+                     <picture>
+                         <source srcset="../assets/imgs/windowsAll-4.2.png" media="(max-width: 768px)">
+                         <source srcset="../assets/imgs/windowsAll-4.1.png" media="(max-width: 1160px)">
+                         <img src="../assets/imgs/windowsAll-4.png" alt="">
+                     </picture>
+                 </div>
+            </div>
+         </section>
+        <section class="draw">
+            <div class="container">
+              <h2 class="draw-title">Ламинация — выберите вариант оформления</h2>
+              <div class="draw-wrapper">
+                  <div class="draw-img__wrapper">
+                   <div id="image-container">
+                     <img id="main-image" src="../assets/imgs/color-9.png" alt="Window Image">
+                   </div>   
+                  </div>
+                  <div>
+                   <p class="draw-choose">Цвет: <span id="color-name">Антрацит</span></p>
+                   <div id="color-options">
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-9.png', 'Антрацит')"><img src="../assets/imgs/color-1.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-10.png', 'Морёный дуб')"><img src="../assets/imgs/color-2.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-11.png', 'Золотой дуб')"><img src="../assets/imgs/color-3.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-12.png', 'Сапели')"><img src="../assets/imgs/color-4.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-13.png', 'Орех')"><img src="../assets/imgs/color-5.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-14.png', 'Чёрный')"><img src="../assets/imgs/color-6.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-15.png', 'Сиена-Белладжио')"><img src="../assets/imgs/color-7.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-16.png', 'Шоколад')"><img src="../assets/imgs/color-8.png" alt=""></div>
+                   </div>  
+                  </div>
+                 
+              </div>
+            </div>
+        </section>
+        <section class="hang" id="glass-1">
+            <div class="container">
+                <h2 class="hang-title">Особенности межкомнатных дверей дверей</h2>
+                <div class="hang-wrapper">
+                        <p class="hang-desc">Установка только внутри помещений</p>
+                        <p class="hang-desc">Алюминиевый порог</p>
+                        <p class="hang-desc">Установка замка, доводчика и тп. как и вх. двери (исключая многозап. замки)</p>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio" id="glass-2">
+            <div class="container">
+                <h2 class="portfolio-title">Галерея проектов</h2>
+                <div class="portfolio-imgs">
+                    <img class="portfolio-img" src="../assets/imgs/interior-10.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-11.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-12.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-13.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-14.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-15.png" alt="">
+                </div>
+                <div class="portfolio-imgs__planshet">
+                    <img class="portfolio-img" src="../assets/imgs/interior-11.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-13.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-10.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-12.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-14.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-15.1.png" alt="">
+                </div>
+                <div class="portfolio-imgs__mob">
+                    <img class="portfolio-img" src="../assets/imgs/interior-11.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-13.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-14.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-12.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-10.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-15.2.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="properties" id="guarantee">
+            <div class="container">
+                <h2 class="properties-title">Аксессуары и комплектующие</h2>
+                <div class="property-wrapper">
+                    <div class="property">
+                        <img src="../assets/imgs/doorsEntrance-11.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Доводчики </h3>
+                            <a class="property-link" href="#write">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="property">
+                        <img src="../assets/imgs/doorsEntrance-12.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Нажимной гарнитур </h3>
+                            <a class="property-link" href="#write">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="property">
+                        <img src="../assets/imgs/doorsEntrance-13.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Ручка штанга </h3>
+                            <a class="property-link" href="#write">Узнать подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="interior-form" id="write">
+            <div class="container">
+              <div class="form-wrapper">
+                <h3 class="contacts-form__title">
+                    Нужна наша консультация или помощь в выборе?
+                </h3>
+                <p class="contacts-form__desc">Оставьте контактные данные, мы свяжемся с вами и ответим на все интересующие вопросы</p>
+                <form action="../form-handler.php" method="post">
+                  <input class="contacts-input" name="fullname" type="text" placeholder="Ваше имя" required pattern="[A-Za-zА-Яа-яЁё\s]{3,20}" maxlength="20" title="Имя должно содержать только буквы, быть длиной от 3 до 20 символов"/>
+                  <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+                  <button class="contacts-button" type="submit" name="submit">Отправить</button>
+                  <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+                    </label>
+                </form>
+                <p class="connection">Связаться с нами напрямую</p>
+                <div class="contacts-links">
+                  <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+                  <a class="contacts-links__whatsup" href="https://wa.me/79960294525 ">Написать в WhatsApp</a>
+                </div>
+                <div class="contacts-links-2">
+                  <a class="contacts-links__vk" href="https://vk.com/glens_39">Группа ВКонтакте</a>
+                  <a class="contacts-links__tg" href="https://t.me/+79960294525">Написать в Telegram</a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a class="footer-logo" href="../index.html">
+            <img src="../assets/imgs/logo.svg" alt=""/>
+          </a>
+          <div class="footer-main__links">
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+            <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+            <a class="money" href="#write">Расчёт проекта</a>
+          </div>
+        </div>
+        <div class="footer-wrapper">
+          <div class="footer-address">
+            <p class="footer-address__street">
+                г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00
+            </p>
+            <a class="whatsapp" href="https://wa.me/79960294525 "><img src="../assets/imgs/whatsapp.svg" alt="" /></a>
+            <a class="tg" href="https://t.me/+79960294525"><img src="../assets/imgs/tg.svg" alt="" /></a>
+            <a class="vk" href="https://vk.com/glens_39"><img src="../assets/imgs/vk.svg" alt="" /></a>
+            <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+          </div>
+          <nav class="footer-nav">
+            <div>
+              <h4 class="footer-nav__title">Продукция</h4>
+              <ul class="footer-nav__list">
+                <li><a class="footer-nav__list-link" href="../pages/windows-all.html">Окна</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/doors-all.html">Двери</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/cottages.html">Коттеджи</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="footer-nav__title">Услуги</h4>
+              <ul class="footer-nav__list">
+                <li><a class="footer-nav__list-link" href="../pages/services.html">Замер</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/services.html">Консультация</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/services.html">Монтаж</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/services.html">Гарантия</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="footer-nav__title">Другие разделы</h4>
+              <ul class="footer-nav__list">
+                <li><a class="footer-nav__list-link" href="../pages/examples.html">Вдохновляющие примеры</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/designers.html">Дизайнерам и архитекторам</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer-mob">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div>
+            <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt=""></a>
+            <p class="footer-address__street">
+              г. Калининград ул. 9 Апреля, 88А (второй этаж) <br/> пн-пт 9.00-18.00 сб. 10.00-15.00
+            </p>
+            <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          </div>
+          <a class="money" href="#write">Расчёт проекта</a>
+        </div>
+        <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>

@@ -2,15 +2,12 @@ footer {
   margin-top: 100px;
   border-top: 1px solid #bfbfbf;
   padding-top: 50px;
-  padding-bottom: 193px;
+  padding-bottom: 53px;
   .container {
     padding-right: 234px;
   }
 }
 
-.footer-logo {
-  transform: translateX(-18px);
-}
 
 .footer-links {
   display: flex;
@@ -82,7 +79,7 @@ footer {
 }
 
 .footer-wrapper {
-  margin-top: 9px;
+  margin-top: 24px;
   display: flex;
   gap: 10px;
   justify-content: space-between;
@@ -123,6 +120,13 @@ footer {
 .whatsapp {
   display: inline-block;
   margin-top: 31px;
+  margin-right: 10px;
+}
+
+.tg {
+  display: inline-block;
+  margin-top: 31px;
+  margin-right: 10px;
 }
 
 .politics {
@@ -202,7 +206,7 @@ footer {
   .footer-mob {
     margin-top: 50px;
     padding-top: 30px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
 
     p {
       max-width: 280px;

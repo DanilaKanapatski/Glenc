@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glens</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/popap.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/doorsSliding-page.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon.png">
+  </head>
+  <body>
+    <header class="header-desc">
+      <div class="container">
+        <nav class="main-nav">
+          <a class="header-logo" href="../index.html">
+            <img src="../assets/imgs/logo.svg" alt="logo" />
+          </a>
+          <p class="address">
+            г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб.
+            10.00-15.00
+          </p>
+          <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          <div class="overlay" id="overlay"></div>
+          <div class="popup" id="popup">
+            <span class="close" id="closePopup"></span>
+            <h2>Оставьте свой номер телефона, мы вам перезвоним</h2>
+            <form action="../form-handler.php" method="post">
+              <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+              <button type="submit">Отправить</button>
+              <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+            </label>
+            </form>
+          </div>
+          <button id="orderCall">Заказать звонок</button>
+      </div>
+        </nav>
+      <nav class="header-links">
+        <div class="container">
+          <ul>
+            <li>
+              <a class="header-link" href="">Окна</a>
+              <div class="dropdown-content">
+                <a href="../pages/windows-pvx.html">Окна ПВХ</a>
+                <a href="../pages/windows-all.html">Окна алюминиевые</a>
+              </div>
+            </li>
+            <li>
+              <a class="header-link" href="">Двери</a>
+              <div class="dropdown-content">
+                <a href="../pages/doors-pvx.html">Двери ПВХ</a>
+                <a href="../pages/doors-all.html">Двери алюминиевые</a>
+              </div>
+            </li>
+            <li><a class="header-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+            <li><a class="header-link" href="../pages/cottages.html">Коттеджи</a></li>
+            <li><a class="header-link" href="../pages/services.html">Услуги</a></li>
+            <li><a class="header-link" href="../pages/examples.html">Вдохновляющие примеры</a></li>
+            <li><a class="header-link" href="../pages/interior.html">Интерьерные решения</a></li>
+            <li>
+              <a class="header-link" href="../pages/designers.html">Дизайнерам и архитекторам</a>
+            </li>
+            <li><a class="header-link" href="../pages/contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <header class="header-mob">
+      <div class="container">
+        <div class="header-container">
+          <div class="logo">
+              <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt="Glens"></a>
+          </div>
+          <div class="contact-info">
+              <p class="address">г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00</p>
+          </div>
+          <div class="call-button">
+            <button id="orderCall">Заказать звонок</button>
+          </div>
+          <div>
+            <a class="header-tel tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          </div>
+          <div class="menu-icon" onclick="toggleMenu(this)">
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="dropdown-menu" class="hidden">
+          <ul>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown('dropdown-1')">Окна</a>
+              <ul id="dropdown-1" class="dropdown-content__mob hidden">
+                  <li><a href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                  <li><a href="../pages/windows-all.html">Окна алюминиевые</a></li>
+            </ul>
+          </li>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown('dropdown-2')">Двери</a>
+              <ul id="dropdown-2" class="dropdown-content__mob hidden">
+                  <li><a href="../pages/doors-pvx.html">Двери ПВХ</a></li>
+                  <li><a href="../pages/doors-all.html">Двери алюминиевые</a></li>
+              </ul>
+            </li>
+              <li><a href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+              <li><a href="../pages/cottages.html">Коттеджи</a></li>
+              <li><a href="../pages/services.html">Услуги</a></li>
+              <li><a href="../pages/examples.html">Вдохновляющие примеры</a></li>
+              <li><a href="../pages/interior.html">Интерьерные решения</a></li>
+              <li><a href="../pages/designers.html">Дизайнерам и архитекторам</a></li>
+              <li><a href="../pages/contacts.html">Контакты</a></li>
+              <li><a class="btn-header__mob" href="#">Рассчитать стоимость</a></li>
+          </ul>
+      </nav>
+    </div>
+    </header>
+    <main>
+        <section class="main">
+            <div class="container">
+                <div class="contacts-info__links">
+                    <a class="pages-link" href="../index.html">Главная</a>
+                    <span><img src="../assets/imgs/arrow-link.svg" alt=""></span>
+                    <a class="pages-link" href="../pages/doors-sliding.html">Раздвижные двери</a>
+                </div>
+                <h1 class="main-title">Раздвижные двери</h1>
+                <p class="main-desc">Раздвижные двери используются при панорамном остеклении. Конструкция увеличивает обзор и решает проблему с дефицитом свободного пространства. Практичная фурнитура создана с учётом специфики манипуляций, позволяет с лёгкостью сдвинуть дверь любого размера в сторону без больших физических усилий Одной из ведущих тенденций современной архитектуры является панорамное остекление и светопрозрачные конструкций больших размеров. Открытость, насыщенность естественным светом, вид на окружающий пейзаж и зрительное увеличение пространства – все это преимущества стеклянных порталов.</p>
+            </div>
+        </section>
+        <section class="windows">
+            <div class="container">
+                <nav class="windows-nav">
+                    <a class="windows-nav__link" href="#glass">Описание</a>
+                    <a class="windows-nav__link" href="#glass-1">Особенности</a>
+                    <a class="windows-nav__link" href="#glass-2">Портфолио</a>
+                    <a class="windows-nav__link" href="#guarantee">Аксессуары</a>
+                </nav>
+                <div class="menu-container">
+                  <div class="menu-header" id="menu-header">
+                    <a href="#glass">Описание</a>
+                      <span class="arrow"><img src="../assets/imgs/arr-nav.svg" alt=""></span>
+                  </div>
+                  <ul class="dropdown-menu-1" id="dropdown-menu-1">
+                      <li><a href="#glass-1">Особенности</a></li>
+                      <li><a href="#glass-2">Портфолио</a></li>
+                      <li><a href="#guarantee">Аксессуары</a></li>
+                  </ul>
+              </div>
+                <div class="window" id="glass">
+                    <div class="window-wrapper">
+                        <div class="window-text">
+                            <h2 class="window-title">SL 160</h2>
+                            <p class="window-desc">Подъёмно-раздвижные двери — современное решение для остекления больших проёмов зданий повышенной комфортности. Функциональность конструкций обеспечивается за счёт особого способа открывания — створки сдвигаются параллельно стене, не занимая внутреннее пространство комнаты и высвобождая широкий проем. Таким образом, они позволяют объединить несколько помещений или помещение с террасой.</p>
+                            <ul class="window-list">
+                                <li class="window-list__item">Поддерживает створки большого размера: до 3385 мм высота и 3250 мм ширина</li>
+                                <li class="window-list__item">Вес скользящей створки: до 440 кг </li>
+                                <li class="window-list__item">Минимальная высота створки: 1200 мм</li>
+                                <li class="window-list__item">Минимальная ширина створки: 720 мм</li>
+                                <li class="window-list__item">Стеклопакет: до 54 мм</li>
+                            </ul>
+                            <picture class="window-img">
+                                <source srcset="../assets/imgs/doorsSliding-2.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsSliding-2.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsSliding-2.png" alt="">
+                            </picture>
+                            <p class="draw-choose-1">Варианты покраски <span>RAL</span></p>
+                         <div class="draw-colors">
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                         </div>    
+                        </div>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsSliding-1.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsSliding-1.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsSliding-1.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="window-tablet">
+                    <h2 class="window-title">SL 160</h2>
+                    <div class="window-imgs">
+                        <picture>
+                            <source srcset="../assets/imgs/doorsSliding-2.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsSliding-2.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsSliding-2.png" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsSliding-1.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsSliding-1.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsSliding-1.png" alt="">
+                        </picture>
+                    </div>
+                    <p class="window-desc">Подъёмно-раздвижные двери — современное решение для остекления больших проёмов зданий повышенной комфортности. Функциональность конструкций обеспечивается за счёт особого способа открывания — створки сдвигаются параллельно стене, не занимая внутреннее пространство комнаты и высвобождая широкий проем. Таким образом, они позволяют объединить несколько помещений или помещение с террасой.</p>
+                    <ul class="window-list">
+                        <li class="window-list__item">Поддерживает створки большого размера: до 3385 мм высота и 3250 мм ширина</li>
+                        <li class="window-list__item">Вес скользящей створки: до 440 кг </li>
+                        <li class="window-list__item">Минимальная высота створки: 1200 мм</li>
+                        <li class="window-list__item">Минимальная ширина створки: 720 мм</li>
+                        <li class="window-list__item">Стеклопакет: до 54 мм</li>
+                    </ul>
+                    <p class="draw-choose-1">Варианты покраски <span>RAL</span></p>
+                         <div class="draw-colors">
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                         </div>    
+                </div>
+                <div class="window-mob">
+                    <h2 class="window-title">SL 160</h2>
+                    <div class="slider">
+                        <div class="slides">
+                          <div class="slide">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsSliding-2.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsSliding-2.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsSliding-2.png" alt="">
+                            </picture>
+                          </div>
+                          <div class="slide">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsSliding-1.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsSliding-1.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsSliding-1.png" alt="">
+                            </picture>
+                          </div>
+                        </div>
+                        <button class="prev" onclick="moveSlide(-1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                        <button class="next" onclick="moveSlide(1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                      </div>
+                      <script src="../script.js"></script>
+                      <p class="window-desc">Подъёмно-раздвижные двери — современное решение для остекления больших проёмов зданий повышенной комфортности. Функциональность конструкций обеспечивается за счёт особого способа открывания — створки сдвигаются параллельно стене, не занимая внутреннее пространство комнаты и высвобождая широкий проем. Таким образом, они позволяют объединить несколько помещений или помещение с террасой.</p>
+                      <ul class="window-list">
+                          <li class="window-list__item">Поддерживает створки большого размера: до 3385 мм высота и 3250 мм ширина</li>
+                          <li class="window-list__item">Вес скользящей створки: до 440 кг </li>
+                          <li class="window-list__item">Минимальная высота створки: 1200 мм</li>
+                          <li class="window-list__item">Минимальная ширина створки: 720 мм</li>
+                          <li class="window-list__item">Стеклопакет: до 54 мм</li>
+                      </ul>
+                      <p class="draw-choose-1">Варианты покраски <span>RAL</span></p>
+                         <div class="draw-colors">
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                             <div class="draw-color"></div>
+                         </div>    
+                </div>
+                <div class="window">
+                    <div class="window-wrapper">
+                        <div class="window-text">
+                            <h2 class="window-title">INTELIO SLIDE 80</h2>
+                            <p class="window-desc">Система с лёгким и компактным открыванием конструкции. Профиль сберегает тепло и сохраняет комфортный микроклимат дома. У вас есть возможность использовать зону вдоль раздвижной двери для установки приборов отопления и для размещения мебели — створка при открывании не будет их задевать. Intelio slide 80 — лёгкая в уходе, надёжная и тёплая раздвижная дверь, которая на внешний вид и на ощупь не отличается от дерева</p>
+                            <ul class="window-list">
+                                <li class="window-list__item">Системная глубина коробки: 156 мм</li>
+                                <li class="window-list__item">Системная глубина створки: 80 мм </li>
+                                <li class="window-list__item">Максимальные габариты створки ШхВ: 2000 мм х 2500 мм </li>
+                                <li class="window-list__item">Максимальная ширина конструкции: 4000 мм</li>
+                                <li class="window-list__item">Максимальный вес створки: 200 кг</li>
+                            </ul>
+                            <picture class="window-img">
+                                <source srcset="../assets/imgs/doorsSliding-4.1.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsSliding-4.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsSliding-4.png" alt="">
+                            </picture>
+                        </div>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsSliding-3.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsSliding-3.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsSliding-3.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="window-tablet">
+                    <h2 class="window-title">INTELIO SLIDE 80</h2>
+                    <div class="window-imgs">
+                        <picture>
+                            <source srcset="../assets/imgs/doorsSliding-4.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsSliding-4.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsSliding-4.png" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsSliding-3.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsSliding-3.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsSliding-3.png" alt="">
+                        </picture>
+                    </div>
+                    <p class="window-desc">Система с лёгким и компактным открыванием конструкции. Профиль сберегает тепло и сохраняет комфортный микроклимат дома. У вас есть возможность использовать зону вдоль раздвижной двери для установки приборов отопления и для размещения мебели — створка при открывании не будет их задевать. Intelio slide 80 — лёгкая в уходе, надёжная и тёплая раздвижная дверь, которая на внешний вид и на ощупь не отличается от дерева</p>
+                    <ul class="window-list">
+                        <li class="window-list__item">Системная глубина коробки: 156 мм</li>
+                        <li class="window-list__item">Системная глубина створки: 80 мм </li>
+                        <li class="window-list__item">Максимальные габариты створки ШхВ: 2000 мм х 2500 мм </li>
+                        <li class="window-list__item">Максимальная ширина конструкции: 4000 мм</li>
+                        <li class="window-list__item">Максимальный вес створки: 200 кг</li>
+                    </ul>
+                </div>
+                <div class="window-mob">
+                    <h2 class="window-title">INTELIO SLIDE 80</h2>
+                    <div class="slider-1">
+                        <div class="slides-1">
+                          <div class="slide-1">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsSliding-4.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsSliding-4.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsSliding-4.png" alt="">
+                            </picture>
+                          </div>
+                          <div class="slide-1">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsSliding-3.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsSliding-3.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsSliding-3.png" alt="">
+                            </picture>
+                          </div>
+                        </div>
+                        <button class="prev" onclick="moveSlide1(-1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                        <button class="next" onclick="moveSlide1(1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                      </div>
+                      <script src="../script.js"></script>
+                      <p class="window-desc">Система с лёгким и компактным открыванием конструкции. Профиль сберегает тепло и сохраняет комфортный микроклимат дома. У вас есть возможность использовать зону вдоль раздвижной двери для установки приборов отопления и для размещения мебели — створка при открывании не будет их задевать. Intelio slide 80 — лёгкая в уходе, надёжная и тёплая раздвижная дверь, которая на внешний вид и на ощупь не отличается от дерева</p>
+                      <ul class="window-list">
+                          <li class="window-list__item">Системная глубина коробки: 156 мм</li>
+                          <li class="window-list__item">Системная глубина створки: 80 мм </li>
+                          <li class="window-list__item">Максимальные габариты створки ШхВ: 2000 мм х 2500 мм </li>
+                          <li class="window-list__item">Максимальная ширина конструкции: 4000 мм</li>
+                          <li class="window-list__item">Максимальный вес створки: 200 кг</li>
+                      </ul>
+                </div>
+                <div class="window">
+                    <div class="window-wrapper window-last">
+                        <div class="window-text">
+                            <h2 class="window-title">PSK портал</h2>
+                            <p class="window-desc">Раздвижные двери PSK - оптимальное решение для остекления небольших проёмов, уходящая в сторону дверь, не занимает много места. Двери сочетают в себе стильный вид и функциональное удобство использования.
+                                Благодаря доводчику створка имеет лёгкое открывание и закрывание. Конструкция обеспечивает хорошую шумоизоляцию и теплосбережение</p>
+                            <ul class="window-list">
+                                <li class="window-list__item">Тип открывания: раздвижной + наклонный</li>
+                                <li class="window-list__item">Проветривание: откидывание створки </li>
+                                <li class="window-list__item">Проветривание: откидывание створки</li>
+                                <li class="window-list__item">Максимальная ширина створки: 1500 мм</li>
+                                <li class="window-list__item">Максимальная высота створки: 2500 мм</li>
+                            </ul>
+                            <picture class="window-img">
+                                <source srcset="../assets/imgs/doorsSliding-6.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsSliding-6.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsSliding-6.png" alt="">
+                            </picture>
+                        </div>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsSliding-5.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsSliding-5.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsSliding-5.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="window-tablet  window-last">
+                    <h2 class="window-title">PSK портал</h2>
+                    <div class="window-imgs">
+                        <picture>
+                            <source srcset="../assets/imgs/doorsSliding-6.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsSliding-6.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsSliding-6.png" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="../assets/imgs/doorsSliding-5.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/doorsSliding-5.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/doorsSliding-5.png" alt="">
+                        </picture>
+                    </div>
+                    <p class="window-desc">Раздвижные двери PSK - оптимальное решение для остекления небольших проёмов, уходящая в сторону дверь, не занимает много места. Двери сочетают в себе стильный вид и функциональное удобство использования.
+                        Благодаря доводчику створка имеет лёгкое открывание и закрывание. Конструкция обеспечивает хорошую шумоизоляцию и теплосбережение</p>
+                    <ul class="window-list">
+                        <li class="window-list__item">Тип открывания: раздвижной + наклонный</li>
+                        <li class="window-list__item">Проветривание: откидывание створки </li>
+                        <li class="window-list__item">Проветривание: откидывание створки</li>
+                        <li class="window-list__item">Максимальная ширина створки: 1500 мм</li>
+                        <li class="window-list__item">Максимальная высота створки: 2500 мм</li>
+                    </ul>
+                </div>
+                <div class="window-mob  window-last">
+                    <h2 class="window-title">PSK портал</h2>
+                    <div class="slider-2">
+                        <div class="slides-2">
+                          <div class="slide-2">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsSliding-6.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsSliding-6.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsSliding-6.png" alt="">
+                            </picture>
+                          </div>
+                          <div class="slide-2">
+                            <picture>
+                                <source srcset="../assets/imgs/doorsSliding-5.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/doorsSliding-5.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/doorsSliding-5.png" alt="">
+                            </picture>
+                          </div>
+                        </div>
+                        <button class="prev" onclick="moveSlide2(-1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                        <button class="next" onclick="moveSlide2(1)"><img src="../assets/imgs/windows-arr.svg" alt=""></button>
+                      </div>
+                      <script src="../script.js"></script>
+                      <p class="window-desc">Раздвижные двери PSK - оптимальное решение для остекления небольших проёмов, уходящая в сторону дверь, не занимает много места. Двери сочетают в себе стильный вид и функциональное удобство использования.
+                        Благодаря доводчику створка имеет лёгкое открывание и закрывание. Конструкция обеспечивает хорошую шумоизоляцию и теплосбережение</p>
+                    <ul class="window-list">
+                        <li class="window-list__item">Тип открывания: раздвижной + наклонный</li>
+                        <li class="window-list__item">Проветривание: откидывание створки </li>
+                        <li class="window-list__item">Проветривание: откидывание створки</li>
+                        <li class="window-list__item">Максимальная ширина створки: 1500 мм</li>
+                        <li class="window-list__item">Максимальная высота створки: 2500 мм</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="glass">
+            <div class="container">
+                 <div class="glass-wrapper">
+                     <div class="glass-text">
+                         <h2 class="glass-title">Остекление</h2>
+                         <p class="glass-desc">Большое разнообразие вариантов стекла для изготовления стеклопакета, позволит получить максимум преимуществ от готового изделия. Вид и толщина стекла определяется в зависимости от ваших пожеланий, габаритных размеров створок и ветровой нагрузки. Для безопасной и эффективной эксплуатации конструкций применяются одно – и двухкамерные энергосберегающие стеклопакеты. Мультифункциональный стеклопакет, позволит не только сохранить тепло зимой, но и не даст помещению перегреться летом, снизив затраты на кондиционирование, стеклопакет с противоударным стеклом триплекс, повысит безопасность вашего дома или офиса, благодаря высокой стойкости к ударам и разрушению</p>
+                         <a class="glass-link" href="../pages/windows-glazed.html">Узнать подробнее</a>
+                     </div>
+                     <picture>
+                         <source srcset="../assets/imgs/windowsAll-4.2.png" media="(max-width: 768px)">
+                         <source srcset="../assets/imgs/windowsAll-4.1.png" media="(max-width: 1160px)">
+                         <img src="../assets/imgs/windowsAll-4.png" alt="">
+                     </picture>
+                 </div>
+            </div>
+         </section>
+        <section class="draw">
+            <div class="container">
+              <h2 class="draw-title">Ламинация — выберите вариант оформления</h2>
+              <div class="draw-wrapper">
+                  <div class="draw-img__wrapper">
+                   <div id="image-container">
+                     <img id="main-image" src="../assets/imgs/color-9.png" alt="Window Image">
+                   </div>   
+                  </div>
+                  <div>
+                   <p class="draw-choose">Цвет: <span id="color-name">Антрацит</span></p>
+                   <div id="color-options">
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-9.png', 'Антрацит')"><img src="../assets/imgs/color-1.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-10.png', 'Морёный дуб')"><img src="../assets/imgs/color-2.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-11.png', 'Золотой дуб')"><img src="../assets/imgs/color-3.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-12.png', 'Сапели')"><img src="../assets/imgs/color-4.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-13.png', 'Орех')"><img src="../assets/imgs/color-5.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-14.png', 'Чёрный')"><img src="../assets/imgs/color-6.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-15.png', 'Сиена-Белладжио')"><img src="../assets/imgs/color-7.png" alt=""></div>
+                     <div class="color-option" onclick="changeImage('../assets/imgs/color-16.png', 'Шоколад')"><img src="../assets/imgs/color-8.png" alt=""></div>
+                   </div>  
+                  </div>
+                 
+              </div>
+            </div>
+        </section>
+        <section class="hang" id="glass-1">
+            <div class="container">
+                <h2 class="hang-title">Особенности раздвижных дверей</h2>
+                <div class="hang-wrapper">
+                    <div class="hang-text">
+                        <h3 class="hang-subtitle">Экономия места</h3>
+                        <p class="hang-desc">Раздвижные двери не требуют места для распахивания, как распашные двери. Они отлично подойдут для небольших помещений или узких проходов. Двери позволяют максимально использовать пространство, создавая ощущение простора и открытости</p>
+                    </div>
+                    <div class="hang-text">
+                        <h3 class="hang-subtitle">Удобство использования</h3>
+                        <p class="hang-desc">Раздвижные двери легко открываются и закрываются с помощью скользящего механизма — не нужно прикладывать больших сил. Удобны для людей всех возрастов и способностей, включая детей, пожилых людей и людей с ограниченной подвижностью</p>
+                    </div>
+                    <div class="hang-text">
+                        <h3 class="hang-subtitle">Гибкость</h3>
+                        <p class="hang-desc">Раздвижные двери можно устанавливать в разных конфигурациях, они подойдут для всех типов помещений. Двери можно устанавливать на внутренних и внешних стенах, обеспечивая плавный переход между внутренними и наружными пространствами</p>
+                    </div>
+                    <div class="hang-text">
+                        <h3 class="hang-subtitle">Естественное освещение</h3>
+                        <p class="hang-desc">Раздвижные двери позволяют проникать большому количеству естественного света в любое время года. Благодаря этому в помещении создаётся светлая и воздушная атмосфера, снижается потребность в искусственном освещении — это снижает затраты на электроэнергию. Естественный свет спобоствует поднятию настроения и поддержки тонуса вашей нервной системы</p>
+                    </div>
+                    <div class="hang-text">
+                        <h3 class="hang-subtitle">Энергоэффективность</h3>
+                        <p class="hang-desc">Раздвижные двери с энергоэффективными стеклянными панелями помогают снизить потери тепла и холода. Установленные герметичные уплотнения предотвращают попадание сквозняков, что позволяет поддерживать комфортную температуру в помещении. С раздвижными дверями ваше здоровье всегда в безопасности</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio" id="glass-2">
+            <div class="container">
+                <h2 class="portfolio-title">Галерея проектов</h2>
+                <div class="portfolio-imgs">
+                    <img class="portfolio-img" src="../assets/imgs/interior-10.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-11.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-12.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-13.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-14.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-15.png" alt="">
+                </div>
+                <div class="portfolio-imgs__planshet">
+                    <img class="portfolio-img" src="../assets/imgs/interior-11.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-13.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-10.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-12.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-14.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-15.1.png" alt="">
+                </div>
+                <div class="portfolio-imgs__mob">
+                    <img class="portfolio-img" src="../assets/imgs/interior-11.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-13.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-14.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-12.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-10.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-15.2.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="properties" id="guarantee">
+            <div class="container">
+                <h2 class="properties-title">Аксессуары и комплектующие</h2>
+                <div class="property-wrapper">
+                    <div class="property">
+                        <img src="../assets/imgs/windows-10.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Ручки для раздвижек </h3>
+                            <p class="property-desc">Компания представляет широкий выбор оконных ручек и нажимных гарнитуров в разных цветах и с разными варианта дизайна, что позволит подобрать идеальное решение именно для вашего окна или двери</p>
+                            <a class="property-link" href="../pages/accessories.html">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="property">
+                        <img src="../assets/imgs/windows-12.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Вентиляционные клапаны </h3>
+                            <p class="property-desc">Современные оконные клапаны обеспечивают высокое энергосбережение, снижение уровня шума и поддерживать оптимальный микроклимат</p>
+                            <a class="property-link" href="../pages/accessories.html">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="property">
+                        <img src="../assets/imgs/windows-11.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Шпросы </h3>
+                            <p class="property-desc">Шпросы — это раскладка декоративных элементов внутри стеклопакета. Они представляют особые планки, которые можно выгибать и вставлять под любым углом до получения желаемого узора. При этом цвет таких планок может быть разным</p>
+                            <a class="property-link" href="../pages/accessories.html">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="property">
+                        <img src="../assets/imgs/windows-13.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Москитные сетки</h3>
+                            <p class="property-desc">Правильно подобранная и качественно установленная москитная сетка надёжно защитит ваш дом или квартиру от насекомых и уличной пыли. Эстетически приятная конструкция удачно впишется в вашу оконную раму</p>
+                            <a class="property-link" href="../pages/accessories.html">Узнать подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="interior-form" id="write">
+            <div class="container">
+              <div class="form-wrapper">
+                <h3 class="contacts-form__title">
+                    Нужна наша консультация или помощь в выборе?
+                </h3>
+                <p class="contacts-form__desc">Оставьте контактные данные, мы свяжемся с вами и ответим на все интересующие вопросы</p>
+                <form action="../form-handler.php" method="post">
+                  <input class="contacts-input" name="fullname" type="text" placeholder="Ваше имя" required pattern="[A-Za-zА-Яа-яЁё\s]{3,20}" maxlength="20" title="Имя должно содержать только буквы, быть длиной от 3 до 20 символов"/>
+                  <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+                  <button class="contacts-button" type="submit" name="submit">Отправить</button>
+                  <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+                    </label>
+                </form>
+                <p class="connection">Связаться с нами напрямую</p>
+                <div class="contacts-links">
+                  <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+                  <a class="contacts-links__whatsup" href="https://wa.me/79960294525 ">Написать в WhatsApp</a>
+                </div>
+                <div class="contacts-links-2">
+                  <a class="contacts-links__vk" href="https://vk.com/glens_39">Группа ВКонтакте</a>
+                  <a class="contacts-links__tg" href="https://t.me/+79960294525">Написать в Telegram</a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a class="footer-logo" href="../index.html">
+            <img src="../assets/imgs/logo.svg" alt=""/>
+          </a>
+          <div class="footer-main__links">
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+            <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+            <a class="money" href="#write">Расчёт проекта</a>
+          </div>
+        </div>
+        <div class="footer-wrapper">
+          <div class="footer-address">
+            <p class="footer-address__street">
+                г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00
+            </p>
+            <a class="whatsapp" href="https://wa.me/79960294525 "><img src="../assets/imgs/whatsapp.svg" alt="" /></a>
+            <a class="tg" href="https://t.me/+79960294525"><img src="../assets/imgs/tg.svg" alt="" /></a>
+            <a class="vk" href="https://vk.com/glens_39"><img src="../assets/imgs/vk.svg" alt="" /></a>
+            <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+          </div>
+          <nav class="footer-nav">
+            <div>
+              <h4 class="footer-nav__title">Продукция</h4>
+              <ul class="footer-nav__list">
+                <li><a class="footer-nav__list-link" href="../pages/windows-all.html">Окна</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/doors-all.html">Двери</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/cottages.html">Коттеджи</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="footer-nav__title">Услуги</h4>
+              <ul class="footer-nav__list">
+                <li><a class="footer-nav__list-link" href="../pages/services.html">Замер</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/services.html">Консультация</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/services.html">Монтаж</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/services.html">Гарантия</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="footer-nav__title">Другие разделы</h4>
+              <ul class="footer-nav__list">
+                <li><a class="footer-nav__list-link" href="../pages/examples.html">Вдохновляющие примеры</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/designers.html">Дизайнерам и архитекторам</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer-mob">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div>
+            <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt=""></a>
+            <p class="footer-address__street">
+              г. Калининград ул. 9 Апреля, 88А (второй этаж) <br/> пн-пт 9.00-18.00 сб. 10.00-15.00
+            </p>
+            <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          </div>
+          <a class="money" href="#write">Расчёт проекта</a>
+        </div>
+        <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>

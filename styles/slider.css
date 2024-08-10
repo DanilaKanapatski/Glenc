@@ -44,7 +44,7 @@
 }
 
 .prev {
-  right: 165px;
+  right: 125px;
 }
 
 .next {
@@ -83,7 +83,7 @@
     right: 80 px;
   }
 
-  .slides img {
+  /* .slides img {
     height: 250px;
-  }
+  } */
 }

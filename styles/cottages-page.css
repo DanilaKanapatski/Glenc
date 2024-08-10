@@ -136,11 +136,11 @@
 }
 
 .examples-form {
-  background-image: url("../assets/imgs/cottages-8.png");
+  background-image: url("../assets/imgs/servicesPage-23.jpg");
 }
 
 .contacts-form__title {
-  padding-top: 65px;
+  padding-top: 70px;
   font-weight: 400;
   font-size: clamp(
     23px,
@@ -207,16 +207,40 @@ form {
   display: flex;
   gap: 50px;
   margin-top: 30px;
-  padding-bottom: 80px;
 
   .tel {
     color: #0d0d0d;
   }
 }
 
+.contacts-links-2 {
+  margin-top: 15px;
+  display: flex;
+  gap: 52px;
+  padding-bottom: 25px;
+}
+
 .contacts-links__whatsup {
-  font-size: 22px;
+  font-size: 20px;
   color: #28d146;
+  position: relative;
+  display: inline-block;
+  padding-left: 24px;
+  padding-bottom: 3px;
+}
+
+.contacts-links__vk {
+  font-size: 20px;
+  color: #0077ff;
+  position: relative;
+  display: inline-block;
+  padding-left: 24px;
+  padding-bottom: 3px;
+}
+
+.contacts-links__tg {
+  font-size: 20px;
+  color: #2aabee;
   position: relative;
   display: inline-block;
   padding-left: 24px;
@@ -234,6 +258,29 @@ form {
   width: 18px;
 }
 
+.contacts-links__tg::before {
+  content: "";
+  background-image: url(../assets/imgs/tg.svg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  height: 18px;
+  width: 18px;
+}
+
+.contacts-links__vk::before {
+  content: "";
+  background-image: url(../assets/imgs/vk.svg);
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 0;
+  height: 22px;
+  width: 20px;
+}
+
 .contacts-links__whatsup::after {
   position: absolute;
   width: 90%;
@@ -244,7 +291,35 @@ form {
   left: 24px;
 }
 
+.contacts-links__tg::after {
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  background-color: #2aabee;
+  content: "";
+  bottom: 0;
+  left: 24px;
+}
+
+.contacts-links__vk::after {
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  background-color: #0077ff;
+  content: "";
+  bottom: 0;
+  left: 24px;
+}
+
 .contacts-links__whatsup:hover::after {
+  display: none;
+}
+
+.contacts-links__vk:hover::after {
+  display: none;
+}
+
+.contacts-links__tg:hover::after {
   display: none;
 }
 
@@ -497,18 +572,18 @@ form {
   }
 
   .contacts-links {
-    margin-top: 20px;
-    padding-bottom: 0px;
     flex-wrap: wrap;
     gap: 15px;
   }
 
+  .contacts-links-2 {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-bottom: 0;
+  }
+
   .contacts-links__whatsup {
     font-size: 20px;
-  }
-  
-  .connection {
-    margin-top: 30px;
   }
 
   .checkbox-container {

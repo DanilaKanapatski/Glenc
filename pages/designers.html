@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glens</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/slider.css" />
+    <link rel="stylesheet" href="../styles/popap.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/advantages.css" />
+    <link rel="stylesheet" href="styles/contacts.css" />
+    <link rel="stylesheet" href="../styles/drafts.css" />
+    <link rel="stylesheet" href="../styles/office.css" />
+    <link rel="stylesheet" href="../styles/products.css" />
+    <link rel="stylesheet" href="styles/services.css" />
+    <link rel="stylesheet" href="../styles/designers-page.css" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon.png">
+  </head>
+  <body>
+    <header class="header-desc">
+      <div class="container">
+        <nav class="main-nav">
+          <a class="header-logo" href="../index.html">
+            <img src="../assets/imgs/logo.svg" alt="logo" />
+          </a>
+          <p class="address">
+            г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб.
+            10.00-15.00
+          </p>
+          <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          <div class="overlay" id="overlay"></div>
+          <div class="popup" id="popup">
+            <span class="close" id="closePopup"></span>
+            <h2>Оставьте свой номер телефона, мы вам перезвоним</h2>
+            <form action="../form-handler.php" method="post">
+              <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+              <button type="submit">Отправить</button>
+              <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+            </label>
+            </form>
+          </div>
+          <button id="orderCall">Заказать звонок</button>
+      </div>
+        </nav>
+      <nav class="header-links">
+        <div class="container">
+          <ul>
+            <li>
+              <a class="header-link" href="../pages/windows.html">Окна</a>
+              <div class="dropdown-content">
+                <a href="../pages/windows-pvx.html">Окна ПВХ</a>
+                <a href="../pages/windows-all.html">Окна алюминиевые</a>
+              </div>
+            </li>
+            <li>
+              <a class="header-link" href="">Двери</a>
+              <div class="dropdown-content">
+                <a href="../pages/doors-pvx.html">Двери ПВХ</a>
+                <a href="../pages/doors-all.html">Двери алюминиевые</a>
+              </div>
+            </li>
+            <li><a class="header-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+            <li><a class="header-link" href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+            <li><a class="header-link" href="../pages/services.html">Услуги</a></li>
+            <li><a class="header-link" href="../pages/interior.html">Интерьерные решения</a></li>
+            <li><a class="header-link" href="../index.html">Частным заказчикам</a></li>
+            <li><a class="header-link" href="../pages/contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+      <header class="header-mob">
+        <div class="container">
+          <div class="header-container">
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt="Glens"></a>
+            </div>
+            <div class="contact-info">
+                <p class="address">г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00</p>
+            </div>
+            <div class="call-button">
+              <button id="orderCall">Заказать звонок</button>
+            </div>
+            <div>
+              <a class="header-tel tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu(this)">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav id="dropdown-menu" class="hidden">
+            <ul>
+              <li class="dropdown">
+                <a href="../pages/windows.html" onclick="toggleDropdown('dropdown-1')">Окна</a>
+                <ul id="dropdown-1" class="dropdown-content__mob hidden">
+                    <li><a href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                    <li><a href="../pages/windows-all.html">Окна алюминиевые</a></li>
+              </ul>
+            </li>
+              <li class="dropdown">
+                <a href="#" onclick="toggleDropdown('dropdown-2')">Двери</a>
+                <ul id="dropdown-2" class="dropdown-content__mob hidden">
+                    <li><a href="../pages/doors-pvx.html">Двери ПВХ</a></li>
+                    <li><a href="../pages/doors-all.html">Двери алюминиевые</a></li>
+                </ul>
+              </li>
+              <li><a href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+              <li><a href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+              <li><a href="../pages/services.html">Услуги</a></li>
+              <li><a href="../pages/interior.html">Интерьерные решения</a></li>
+              <li><a href="../index.html">Частным заказчикам</a></li>
+              <li><a href="../pages/contacts.html">Контакты</a></li>
+              <li><a class="btn-header__mob" href="#write">Рассчитать стоимость</a></li>
+            </ul>
+        </nav>
+      </div>
+      </header>
+    <main>
+      <section class="main">
+          <div class="button-wrapper">
+            <a href="#write" class="center-button">Связаться с нами для обсуждения деталей </a>
+            <div class="dop-circle"></div>
+          </div>
+          <div class="main-wrapper">
+            <div class="main-text">
+              <h1 class="main-title">
+                Дизайнерам и архитекторам
+              </h1>
+              <p class="main-text1">Вы, как создатель архитектурных сооружений, формируете мир, вдохновляя нас своими идеями. Вы — эксперт, дизайнер и архитектор, умеющий создавать захватывающие и прагматичные вещи одновременно. Ваше желание творчества совмещается с потребностью в надёжных проектах. Поэтому важно работать с адекватными компаниями и принимать обоснованные решения, именно такие, какие предлагаем мы</p>
+              <div class="main-desc">
+                <img src="../assets/imgs/main-1.svg" alt="">
+                <p>Предоставляем трендовые образцы светопрочных конструкций</p>
+              </div>
+             <div class="main-desc">
+                <img src="../assets/imgs/main-2.svg" alt="">
+                <p>Индивидуальный подход к каждому клиенту</p>
+              </div>
+             <div class="main-desc">
+                <img src="../assets/imgs/main-3.svg" alt="">
+                <p>Оказываем полный комплекс услуг по индивидуальному остеклению</p>
+              </div>
+            </div>
+            <a href="#write" class="main-button">Рассчитать стоимость</a>
+            <div class="img-wrap">
+                <picture>
+                    <source srcset="../assets/imgs/designers-1.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/designers-1.1.png" media="(max-width: 1160px)">
+                    <img class="options-img" src="../assets/imgs/designers-1.png" alt="">
+                  </picture>
+            </div>
+          </div>
+      </section>
+      <section class="office">
+        <div class="container">
+          <h2 class="section-title">Центр индивидуального остекления</h2>
+          <span class="section-subtitle">Наш офис</span>
+          <p class="office-text">
+            У нас самый большой, современный и красивый выставочный зал с образцами изделий из ПВХ и алюминия. Наши грамотные специалисты помогут подобрать
+            вариант остекления с учетом Ваших пожеланий. Мы гарантируем нашим
+            заказчикам не только высокий уровень качества и надежности
+            конструкций, но и высокий уровень сервиса от консультации и монтажа
+            до гарантийного обслуживания. Среди всех оконных компаний, Гленс
+            является создателем уникальных пространств остекления для
+            индивидуального комфорта, потому что мы СЛЫШИМ ваши желания и
+            воплощаем их на практике
+          </p>
+          <div class="slider">
+            <div class="slides">
+              <div class="slide">
+                <picture>
+                    <source srcset="../assets/imgs/office.2.jpg" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/office.1.jpg" media="(max-width: 1160px)">
+                    <img class="options-img" src="../assets/imgs/office.jpg" alt="">
+                  </picture>
+              </div>
+              <div class="slide">
+                <picture>
+                    <source srcset="../assets/imgs/office-2.2.jpg" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/office-2.1.jpg" media="(max-width: 1160px)">
+                    <img class="options-img" src="../assets/imgs/office-2.jpg" alt="">
+                  </picture>
+              </div>
+              <div class="slide">
+                <picture>
+                    <source srcset="../assets/imgs/office-3.2.jpg" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/office-3.1.jpg" media="(max-width: 1160px)">
+                    <img class="options-img" src="../assets/imgs/office-3.jpg" alt="">
+                  </picture>
+              </div>
+              <div class="slide">
+                <picture>
+                    <source srcset="../assets/imgs/office-4.2.jpg" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/office-4.1.jpg" media="(max-width: 1160px)">
+                    <img class="options-img" src="../assets/imgs/office-4.jpg" alt="">
+                  </picture>
+              </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)"></button>
+            <button class="next" onclick="moveSlide(1)"></button>
+          </div>
+          <script src="../script.js"></script>
+        </div>
+      </section>
+      <section class="products">
+        <div class="container">
+          <h2 class="section-title">Какая продукция вас интересует?</h2>
+          <span class="section-subtitle">Продукция</span>
+          <div class="products-imgs">
+            <div>
+              <div class="products-imgs__wrapper">
+                <picture>
+                    <source srcset="../assets/imgs/designers-2.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/designers-2.1.png" media="(max-width: 1160px)">
+                    <img class="options-img" src="../assets/imgs/designers-2.png" alt="">
+                  </picture>
+                <div class="overlay">
+                  <a href="../pages/windows.html" class="img-button">Посмотреть подробнее</a>
+                  <a href="../pages/windows.html" class="img-button">Окна</a>
+                </div>
+              </div>
+              <p>Окна</p>
+            </div>
+            <div>
+              <div class="products-imgs__wrapper">
+                <picture>
+                    <source srcset="../assets/imgs/designers-3.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/designers-3.1.png" media="(max-width: 1160px)">
+                    <img class="options-img" src="../assets/imgs/designers-3.png" alt="">
+                  </picture>
+                <div class="overlay">
+                  <a href="../pages/accessories.html" class="img-button">Посмотреть подробнее</a>
+                  <a href="../pages/accessories.html" class="img-button">Аксессуры</a>
+                </div>
+              </div>
+              <p>Аксессуры</p>
+            </div>
+            <div>
+              <div class="products-imgs__wrapper">
+                <picture>
+                    <source srcset="../assets/imgs/designers-4.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/designers-4.1.png" media="(max-width: 1160px)">
+                    <img class="options-img" src="../assets/imgs/designers-4.png" alt="">
+                  </picture>
+                <div class="overlay">
+                  <a href="../pages/doors-sliding.html" class="img-button">Посмотреть подробнее</a>
+                  <a href="../pages/doors-sliding.html" class="img-button">Раздвижные системы</a>
+                </div>
+              </div>
+              <p>Раздвижные системы</p>
+            </div>
+            <div>
+              <div class="products-imgs__wrapper">
+                <picture>
+                    <source srcset="../assets/imgs/designers-5.2.png" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/designers-5.1.png" media="(max-width: 1160px)">
+                    <img class="options-img" src="../assets/imgs/designers-5.png" alt="">
+                  </picture>
+                <div class="overlay">
+                  <a href="../pages/doors-all.html" class="img-button">Посмотреть подробнее</a>
+                  <a href="../pages/doors-all.html" class="img-button">Двери</a>
+                </div>
+              </div>
+              <p>Двери</p>
+            </div>
+            <div>
+                <div class="products-imgs__wrapper">
+                    <picture>
+                        <source srcset="../assets/imgs/designers-6.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/designers-6.1.png" media="(max-width: 1160px)">
+                        <img class="options-img" src="../assets/imgs/designers-6.png" alt="">
+                      </picture>
+                  <div class="overlay">
+                    <a href="../pages/windows-glazed.html" class="img-button">Посмотреть подробнее</a>
+                    <a href="../pages/windows-glazed.html" class="img-button">Стеклопакеты</a>
+                  </div>
+                </div>
+                <p>Стеклопакеты</p>
+              </div>
+              <div>
+                <div class="products-imgs__wrapper">
+                    <picture>
+                        <source srcset="../assets/imgs/designers-7.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/designers-7.1.png" media="(max-width: 1160px)">
+                        <img class="options-img" src="../assets/imgs/designers-7.png" alt="">
+                      </picture>
+                  <div class="overlay">
+                    <a href="services.html" class="img-button">Посмотреть подробнее</a>
+                    <a href="services.html" class="img-button">Особенности монтажа и подготовка проёмов</a>
+                  </div>
+                </div>
+                <p>Особенности монтажа и подготовка проёмов</p>
+              </div>
+          </div>
+        </div>
+      </section>
+      <section class="drafts">
+        <div class="container">
+          <h2 class="section-title">Индивидуальный подход к каждому клиенту</h2>
+          <span class="section-subtitle">Проекты</span>
+          <div class="drafts-imgs">
+            <div class="drafts-img">
+              <img src="../assets/imgs/draft-1.jpg" alt="" />
+              <span class="drafts-img__text">Остекленение балкона</span>
+            </div>
+            <div class="drafts-img">
+              <img src="../assets/imgs/draft-2.jpg" alt="" />
+              <span class="drafts-img__text">Установка двери W72</span>
+            </div>
+            <div class="drafts-img">
+              <img src="../assets/imgs/draft-3.jpg" alt="" />
+              <span class="drafts-img__text">Установка входных раздвижных дверей</span>
+            </div>
+            <div class="drafts-img">
+              <img src="../assets/imgs/draft-4.jpg" alt="" />
+              <span class="drafts-img__text">Установка ALT150 Славянский квартал</span>
+            </div>
+            <div class="drafts-img">
+              <img src="../assets/imgs/draft-5.jpg" alt="" />
+              <span class="drafts-img__text">Установка окна W72 для частного дома</span>
+            </div>
+            <div class="drafts-img">
+              <img src="../assets/imgs/draft-6.jpg" alt="" />
+              <span class="drafts-img__text">Остекление БЦ «Тринити»</span>
+            </div>
+          </div>
+          <div class="drafts-imgs__mob">
+            <div class="drafts-img">
+              <img src="../assets/imgs/draft-1.jpg" alt="" />
+            </div>
+            <div class="drafts-img">
+              <img src="../assets/imgs/draft-3.jpg" alt="" />
+       
+            </div>
+            <div class="drafts-img">
+              <img src="../assets/imgs/draft-4.jpg" alt="" />
+              
+            </div>
+            <div class="drafts-img">
+              <img src="../assets/imgs/draft-2.jpg" alt="" />
+            
+            </div>
+            <div class="drafts-img">
+              <img src="../assets/imgs/draft-5.jpg" alt="" />
+       
+            </div>
+            <div class="drafts-img">
+              <img src="../assets/imgs/draft-7.jpg" alt="" />
+            </div>
+          </div>
+          <a class="drafts-link" href="../pages/examples.html">Посмотреть больше проектов</a>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="container">
+          <h2 class="section-title">
+            Бескомпромиссное качество комплексных решений в остеклении
+          </h2>
+          <span class="section-subtitle">Преимущества</span>
+          <ul class="advantages-list">
+            <li>
+              <span></span>Предоставляем трендовые образцы светопрочных
+              конструкций
+            </li>
+            <li><span></span>Индивидуальный подход к каждому клиенту</li>
+            <li>
+              <span></span>Оказываем полный комплекс услуг по индивидуальному
+              остеклению
+            </li>
+            <li>
+              <span></span>Помогаем подобрать решение остекления без ущерба
+              для творческой свободы дизайнера и архитектора
+            </li>
+            <li>
+              <span></span>Используем только лучшие материалы от надежных
+              партнеров для своих изделий
+            </li>
+            <li>
+              <span></span>Применяем инновационные решения для пассивных и
+              энергоэффективных зданий
+            </li>
+            <li>
+              <span></span>Наша команда — это эксперты в области остекления
+              со стажем более 10 лет
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="interior-form" id="write">
+        <div class="container">
+          <div class="form-wrapper">
+            <h3 class="contacts-form__title">
+                Хотите сотрудничать с нами?
+            </h3>
+            <p class="contacts-form__desc">Оставьте контактные данные, мы свяжемся с вами и обсудим условия сотрудничества</p>
+            <form action="../form-handler.php" method="post">
+              <input class="contacts-input" name="fullname" type="text" placeholder="Ваше имя" required pattern="[A-Za-zА-Яа-яЁё\s]{3,20}" maxlength="20" title="Имя должно содержать только буквы, быть длиной от 3 до 20 символов"/>
+              <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+              <button class="contacts-button" type="submit" name="submit">Отправить</button>
+              <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+                </label>
+            </form>
+            <p class="connection">Связаться с нами напрямую</p>
+            <div class="contacts-links">
+              <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+              <a class="contacts-links__whatsup" href="https://wa.me/79960294525 ">Написать в WhatsApp</a>
+            </div>
+            <div class="contacts-links-2">
+              <a class="contacts-links__vk" href="https://vk.com/glens_39">Группа ВКонтакте</a>
+              <a class="contacts-links__tg" href="https://t.me/+79960294525">Написать в Telegram</a>
+            </div>
+        </div>
+        </div>
+    </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a class="footer-logo" href="../index.html">
+            <img src="../assets/imgs/logo.svg" alt=""/>
+          </a>
+          <div class="footer-main__links">
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+            <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+            <a class="money" href="#write">Расчёт проекта</a>
+          </div>
+        </div>
+        <div class="footer-wrapper">
+          <div class="footer-address">
+            <p class="footer-address__street">
+                г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00
+            </p>
+            <a class="whatsapp" href="https://wa.me/79960294525 "><img src="../assets/imgs/whatsapp.svg" alt="" /></a>
+            <a class="tg" href="https://t.me/+79960294525"><img src="../assets/imgs/tg.svg" alt="" /></a>
+            <a class="vk" href="https://vk.com/glens_39"><img src="../assets/imgs/vk.svg" alt="" /></a>
+            <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+          </div>
+          <nav class="footer-nav">
+            <div>
+              <ul class="footer-nav__list dis">
+                <li><a class="footer-nav__list-link" href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/windows-all.html">Алюминиевые окна</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="footer-nav__title"><a href="../index.html">Частным заказчикам</a></h4>
+            </div>
+            <div>
+              <ul class="footer-nav__list dis">
+                <li><a class="footer-nav__list-link" href="..pages/contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer-mob">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div>
+            <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt=""></a>
+            <p class="footer-address__street">
+              г. Калининград ул. 9 Апреля, 88А (второй этаж) <br/> пн-пт 9.00-18.00 сб. 10.00-15.00
+            </p>
+            <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          </div>
+          <a class="money" href="#write">Расчёт проекта</a>
+        </div>
+        <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+      </div>
+    </footer>
+  </body>
+</html>

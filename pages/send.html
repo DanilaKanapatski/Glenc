@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glens</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/slider.css" />
+    <link rel="stylesheet" href="../styles/popap.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/send-page.css" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon.png">
+  </head>
+  <body>
+    <header class="header-desc">
+      <div class="container">
+        <nav class="main-nav">
+          <a class="header-logo" href="../index.html">
+            <img src="../assets/imgs/logo.svg" alt="logo" />
+          </a>
+          <p class="address">
+            г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб.
+            10.00-15.00
+          </p>
+          <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          <div class="overlay" id="overlay"></div>
+          <div class="popup" id="popup">
+            <span class="close" id="closePopup"></span>
+            <h2>Оставьте свой номер телефона, мы вам перезвоним</h2>
+            <form action="../form-handler.php" method="post">
+              <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+              <button type="submit">Отправить</button>
+              <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+            </label>
+            </form>
+          </div>
+          <button id="orderCall">Заказать звонок</button>
+      </div>
+        </nav>
+      <nav class="header-links">
+        <div class="container">
+          <ul>
+            <li>
+              <a class="header-link" href="">Окна</a>
+              <div class="dropdown-content">
+                <a href="../pages/windows-pvx.html">Окна ПВХ</a>
+                <a href="../pages/windows-all.html">Окна алюминиевые</a>
+              </div>
+            </li>
+            <li>
+              <a class="header-link" href="">Двери</a>
+              <div class="dropdown-content">
+                <a href="../pages/doors-pvx.html">Двери ПВХ</a>
+                <a href="../pages/doors-all.html">Двери алюминиевые</a>
+              </div>
+            </li>
+            <li><a class="header-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+            <li><a class="header-link" href="../pages/cottages.html">Коттеджи</a></li>
+            <li><a class="header-link" href="../pages/services.html">Услуги</a></li>
+            <li><a class="header-link" href="../pages/examples.html">Вдохновляющие примеры</a></li>
+            <li><a class="header-link" href="../pages/interior.html">Интерьерные решения</a></li>
+            <li>
+              <a class="header-link" href="../pages/designers.html">Дизайнерам и архитекторам</a>
+            </li>
+            <li><a class="header-link" href="../pages/contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <header class="header-mob">
+      <div class="container">
+        <div class="header-container">
+          <div class="logo">
+              <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt="Glens"></a>
+          </div>
+          <div class="contact-info">
+              <p class="address">г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00</p>
+          </div>
+          <div class="call-button">
+            <button id="orderCall">Заказать звонок</button>
+          </div>
+          <div>
+            <a class="header-tel tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          </div>
+          <div class="menu-icon" onclick="toggleMenu(this)">
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="dropdown-menu" class="hidden">
+          <ul>
+            <li class="dropdown">
+              <a href="../pages/windows.html" onclick="toggleDropdown('dropdown-1')">Окна</a>
+              <ul id="dropdown-1" class="dropdown-content__mob hidden">
+                  <li><a href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                  <li><a href="../pages/windows-all.html">Окна алюминиевые</a></li>
+            </ul>
+          </li>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown('dropdown-2')">Двери</a>
+              <ul id="dropdown-2" class="dropdown-content__mob hidden">
+                  <li><a href="../pages/doors-pvx.html">Двери ПВХ</a></li>
+                  <li><a href="../pages/doors-all.html">Двери алюминиевые</a></li>
+              </ul>
+            </li>
+            <li><a href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+            <li><a href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+            <li><a href="../pages/services.html">Монтаж</a></li>
+            <li><a href="../pages/interior.html">Интерьерные решения</a></li>
+            <li><a href="../index.html">Частным заказчикам</a></li>
+            <li><a href="../pages/contacts.html">Контакты</a></li>
+            <li><a class="btn-header__mob" href="#write">Рассчитать стоимость</a></li>
+          </ul>
+      </nav>
+    </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="main-title">Спасибо за оставленную заявку, мы свяжемся с вами в ближайшее время</h1>
+            <a class="main-link" href="../index.html">Вернуться на главную страницу</a>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+  </body>

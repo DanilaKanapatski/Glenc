@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glens</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/popap.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/accessories.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon.png">
+  </head>
+  <body>
+    <header class="header-desc">
+        <div class="container">
+          <nav class="main-nav">
+            <a class="header-logo" href="../index.html">
+              <img src="../assets/imgs/logo.svg" alt="logo" />
+            </a>
+            <p class="address">
+              г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб.
+              10.00-15.00
+            </p>
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+            <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+            <div class="overlay" id="overlay"></div>
+            <div class="popup" id="popup">
+              <span class="close" id="closePopup"></span>
+              <h2>Оставьте свой номер телефона, мы вам перезвоним</h2>
+              <form action="../form-handler.php" method="post">
+                <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+                <button type="submit">Отправить</button>
+                <label class="checkbox-container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+              </label>
+              </form>
+            </div>
+            <button id="orderCall">Заказать звонок</button>
+        </div>
+          </nav>
+        <nav class="header-links">
+          <div class="container">
+            <ul>
+                <li>
+                  <a class="header-link" href="">Окна</a>
+                  <div class="dropdown-content">
+                    <a href="../pages/windows-pvx.html">Окна ПВХ</a>
+                    <a href="../pages/windows-all.html">Окна алюминиевые</a>
+                  </div>
+                </li>
+                <li>
+                  <a class="header-link" href="">Двери</a>
+                  <div class="dropdown-content">
+                    <a href="../pages/doors-pvx.html">Двери ПВХ</a>
+                    <a href="../pages/doors-all.html">Двери алюминиевые</a>
+                  </div>
+                </li>
+                <li><a class="header-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+                <li><a class="header-link" href="../pages/cottages.html">Коттеджи</a></li>
+                <li><a class="header-link" href="../pages/services.html">Услуги</a></li>
+                <li><a class="header-link" href="../pages/examples.html">Вдохновляющие примеры</a></li>
+                <li><a class="header-link" href="../pages/interior.html">Интерьерные решения</a></li>
+                <li>
+                  <a class="header-link" href="../pages/designers.html">Дизайнерам и архитекторам</a>
+                </li>
+                <li><a class="header-link" href="../pages/contacts.html">Контакты</a></li>
+              </ul>
+          </div>
+        </nav>
+      </header>
+      <header class="header-mob">
+        <div class="container">
+          <div class="header-container">
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt="Glens"></a>
+            </div>
+            <div class="contact-info">
+                <p class="address">г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00</p>
+            </div>
+            <div class="call-button">
+              <a href="#write" id="orderCall">Заказать звонок</a>
+            </div>
+            <div>
+              <a class="header-tel tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu(this)">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav id="dropdown-menu" class="hidden">
+            <ul>
+              <li class="dropdown">
+                <a href="#" onclick="toggleDropdown('dropdown-1')">Окна</a>
+                <ul id="dropdown-1" class="dropdown-content__mob hidden">
+                    <li><a href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                    <li><a href="../pages/windows-all.html">Окна алюминиевые</a></li>
+              </ul>
+            </li>
+              <li class="dropdown">
+                <a href="#" onclick="toggleDropdown('dropdown-2')">Двери</a>
+                <ul id="dropdown-2" class="dropdown-content__mob hidden">
+                    <li><a href="../pages/doors-pvx.html">Двери ПВХ</a></li>
+                    <li><a href="../pages/doors-all.html">Двери алюминиевые</a></li>
+                </ul>
+              </li>
+                <li><a href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+                <li><a href="../pages/cottages.html">Коттеджи</a></li>
+                <li><a href="../pages/services.html">Услуги</a></li>
+                <li><a href="../pages/examples.html">Вдохновляющие примеры</a></li>
+                <li><a href="../pages/interior.html">Интерьерные решения</a></li>
+                <li><a href="../pages/designers.html">Дизайнерам и архитекторам</a></li>
+                <li><a href="../pages/contacts.html">Контакты</a></li>
+                <li><a class="btn-header__mob" href="#write">Рассчитать стоимость</a></li>
+            </ul>
+        </nav>
+      </div>
+      </header>
+    <main>
+        <section class="main">
+            <div class="container">
+                <div class="contacts-info__links">
+                    <a class="pages-link" href="../index.html">Главная</a>
+                    <span><img src="../assets/imgs/arrow-link.svg" alt=""></span>
+                    <a class="pages-link" href="../pages/accessories.html">Аксессуары</a>
+                </div>
+                <h1 class="main-title">Аксессуары</h1>
+                <p class="main-desc">Строя свой дом или квартиру всегда хочется подчеркнуть свою индивидуальность и уникальный вкус. В центре индивидуального остекления Гленс, работают настоящие эстеты, они вместе с вами подберут аксессуары и комплектующие к вашему заказу, которые позволят вам в полной мере наслаждаться комфортом и красотой</p>
+            </div>
+        </section>
+        <section class="sprats">
+            <div class="container">
+                <nav class="windows-nav">
+                    <a class="windows-nav__link" href="#sprats">Шпросы</a>
+                    <a class="windows-nav__link" href="#sill">Подоконники</a>
+                    <a class="windows-nav__link" href="#ebb">Отливы</a>
+                    <a class="windows-nav__link" href="#ebb-1">Панели HPL</a>
+                    <a class="windows-nav__link" href="#mesh">Москитные сетки</a>
+                    <a class="windows-nav__link" href="#valve">Приточный клапан</a>
+                    <a class="windows-nav__link" href="#locks">Защита для детей</a>
+                    <a class="windows-nav__link" href="#pens">Ручки</a>
+                </nav>
+                <div class="menu-container">
+                    <div class="menu-header" id="menu-header">
+                      <a href="#sprats">Шпросы</a>
+                        <span class="arrow"><img src="../assets/imgs/arr-nav.svg" alt=""></span>
+                    </div>
+                    <ul class="dropdown-menu-1" id="dropdown-menu-1">
+                        <li><a href="#sill">Подоконники</a></li>
+                        <li><a href="#ebb">Отливы</a></li>
+                        <li><a href="#ebb-1">Панели HPL</a></li>
+                        <li><a href="#mesh">Москитные сетки</a></li>
+                        <li><a href="#valve">Приточный клапан</a></li>
+                        <li><a href="#locks">Защита для детей</a></li>
+                        <li><a href="#pens">Ручки</a></li>
+                    </ul>
+                </div>
+                <div class="sprats-wrapper" id="sprats">
+                    <div class="sprats-text">
+                        <h2 class="sprats-title">Шпросы</h2>
+                        <p class="sprats-desc">Шпросы — это раскладка декоративных элементов внутри стеклопакета. Чаще всего используют межстекольные шпросы. Они вставляются в стеклопакеты, расстояние между стёклами, в которых не меньше 12 мм. Это особые планки, которые можно выгибать и вставлять под любым углом до получения желаемого узора. При этом цвет таких планок может быть разным.</p>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/accessories-1.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-1.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-1.png" alt="">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="hang">
+            <div class="container">
+                <h2 class="hang-title">Преимущества шпрос</h2>
+                <div class="hang-wrapper">
+                        <p class="hang-desc">Эмоциональное и эстетическое наслаждение как владельцев, так и прохожих</p>
+                        <p class="hang-desc">У межстекольных решеток с наружной стороны окна нет выступов, что обеспечивает беспрепятственное стекание осадков и отсутствие разводов, при этом пыль и грязь не будет скапливаться в углах</p>
+                        <p class="hang-desc">Шпросы, расположенные в межстекольном пространстве, не снижают функциональные характеристики окна</p>
+                        <p class="hang-desc">Огромный выбор оконных раскладок, что позволяет подобрать узор под любой фасад</p>
+                        <p class="hang-desc">При длительном сроке эксплуатации планки не теряют формы и не тускнеют</p>
+                        <p class="hang-desc">Легкий уход и мытье окон</p>
+                </div>
+                <div class="hang-properties">
+                    <div class="hang-properties-text">
+                        <h3 class="hang-properties-title">Размер</h3>
+                        <p class="hang-properties-desc">При выборе размера руководствуются площадью, которую необходимо остеклить. Чем она больше, тем разнообразнее декор из узких элементов (всевозможные завитушки, вензеля и др.)</p>
+                        <h3 class="hang-properties-title">Цвет</h3>
+                        <p class="hang-properties-desc">При выборе раскладки обычно опираются на цвет оконной рамы. Это могут быть однотонные (чёрные, белые, золотые, коричневые, под металл, дерево и др.), разноцветные (с фасада один цвет, с внутренней стороны — другой), контрастные и др.</p>
+                        <h3 class="hang-properties-title">Толщина</h3>
+                        <p class="hang-properties-desc">Зависит от вида шпроса:<br/>
+                            - 8мм тонкий, элегантный шпрос золотого или белого цвета;<br/>
+                            - 18мм белый или с ламинацией или покраской под цвет окна;<br/>
+                            - 26мм белый или ламинированный шпрос</p>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/accessories-2.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-2.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-2.png" alt="">
+                    </picture>
+                </div>
+                <div class="newsprats">
+                    <div class="newsprats-wrapper">
+                        <div class="newsprats-text">
+                            <h3 class="newsprats-title">
+                                Венецианские шпросы
+                            </h3>
+                            <p class="newsprats-desc">Венецианские шпросы (их еще называют накладными шпросами либо фальш-переплётом) популярны из-за их простой конструкции, легкого монтажа, хорошей совместимости с любым дизайном фасадов и интерьера. Внешне они представляют собой декоративный профиль, который крепят на внешнюю поверхность стекла при помощи двусторонней клейкой ленты</p>
+                            <h4 class="newsprats-subtitle">Особенности: </h4>
+                            <p class="newsprats-subdesc">Монтаж простой, за него часто владельцы жилья берутся самостоятельно. Конструкция требует ухода, потому что вокруг переплета скапливается пыль. Снимать такую раскладку при уборке не стоит, потому что это повредит клеевой слой.</p>
+                            <p class="newsprats-subdesc">Толщина: 26мм и 47мм</p>
+                            <p class="newsprats-subdesc">Цвет: белый</p>
+                        </div>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-3.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-3.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-3.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="newsprats-mob">
+                    <div class="newsprats-wrapper">
+                        <div class="newsprats-text">
+                            <h3 class="newsprats-title">
+                                Венецианские шпросы
+                            </h3>
+                            <p class="newsprats-desc">Венецианские шпросы (их еще называют накладными шпросами либо фальш-переплётом) популярны из-за их простой конструкции, легкого монтажа, хорошей совместимости с любым дизайном фасадов и интерьера. Внешне они представляют собой декоративный профиль, который крепят на внешнюю поверхность стекла при помощи двусторонней клейкой ленты</p>
+                            <picture>
+                                <source srcset="../assets/imgs/accessories-3.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/accessories-3.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/accessories-3.png" alt="">
+                            </picture>
+                        </div>
+                        <div>
+                            <h4 class="newsprats-subtitle">Особенности: </h4>
+                            <p class="newsprats-subdesc">Монтаж простой, за него часто владельцы жилья берутся самостоятельно. Конструкция требует ухода, потому что вокруг переплета скапливается пыль. Снимать такую раскладку при уборке не стоит, потому что это повредит клеевой слой.</p>
+                            <p class="newsprats-subdesc">Толщина: 26мм и 47мм</p>
+                            <p class="newsprats-subdesc">Цвет: белый</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="choose">
+                    <h3 class="choose-title">Как выбрать шпросы на окна?</h3>
+                    
+                        <p class="choose-desc">Предела фантазии здесь нет, шпросы могут быть завершающим штрихом стиля для дома или квартиры, «вашей изюминкой», это могут быть арочные раскладки, готические, французские, английские, венецианские.</p>
+                        <h3 class="choose-subtitle">Рекомендации</h3>
+                        <div class="choose-text">
+                        <p class="choose-subdesc"><span>01</span>Цвет — гармоничное сочетание с расцветкой фасада, интерьером обязательны, иначе они не станут украшением и будут выделяться несуразным «пятном» на общем фоне</p>
+                        <p class="choose-subdesc"><span>02</span>Размер – на маленьких окнах шпросы неактуальны, а вот на панорамных проемах полету фантазии ничего не мешает</p>
+                        <p class="choose-subdesc"><span>03</span>Способ монтажа – накладные шпросы или фальш-переплет (клеятся снаружи стекла, их будет сложно очищать от пыли, накопленной в местах соединений, между разделителями и стеклом)</p>
+                        <p class="choose-subdesc"><span>04</span>Декоративные шпросы внутри стеклопакета не мешают при мытье окон, т.к. на стекло ничего не наклеено и уход такой же как за обычными окнами</p>
+                        <p class="choose-subdesc"><span>05</span>Существуют стереотипы, что шпросы необходимы, если дом выполнен в одном из стилей: прованс, кантри, английский, американский, тосканский, монтерей, готика, неоготика, средиземноморский. Это совершенно не обязательно — шпросы украсят любой дом, просто в некоторых случаях желательно сначала провести компьютерное моделирование и затем решать, уместно ли разделение оконного проёма с помощью шпрос или лучше оставить его «как есть»</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sill" id="sill">
+            <div class="container">
+                <div class="sill-wrapper">
+                    <div class="sill-text">
+                        <h2 class="sill-title">Подоконники Crystallit </h2>
+                        <p class="sill-desc">Подоконники линии Crystallit более устойчивы к механическим воздействиям, чем другие подоконники в данном ценновом сегменте, они просты в уходе. Конструкции Crystallit созданы из материалов высокого качества, которые прошли сцециальное лицензирование. Для покупателей представлен широкий выбор цветовых решений</p>
+                        <p class="sill-subdesc">Прочный: толщина верхней стенки 3 мм, перегородки 1,5 мм</p>
+                        <p class="sill-subdesc">Безупречно ровный и гладкий</p>
+                        <p class="sill-subdesc">Теплостойкость подоконника</p>
+                        <p class="sill-subdesc">Анти-бактериальная составляющая</p>
+                        <p class="sill-subdesc">Стойкость покрытия к отпечаткам пальцев</p>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/accessories-4.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-4.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-4.png" alt="">
+                    </picture>
+                </div>
+                <div class="sill-wrapper-mob">
+                    <div class="sill-text">
+                        <h2 class="sill-title">Подоконники Crystallit </h2>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-4.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-4.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-4.png" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <p class="sill-desc">Подоконники линии Crystallit более устойчивы к механическим воздействиям, чем другие подоконники в данном ценновом сегменте, они просты в уходе. Конструкции Crystallit созданы из материалов высокого качества, которые прошли сцециальное лицензирование. Для покупателей представлен широкий выбор цветовых решений</p>
+                        <p class="sill-subdesc">Прочный: толщина верхней стенки 3 мм, перегородки 1,5 мм</p>
+                        <p class="sill-subdesc">Безупречно ровный и гладкий</p>
+                        <p class="sill-subdesc">Теплостойкость подоконника</p>
+                        <p class="sill-subdesc">Анти-бактериальная составляющая</p>
+                        <p class="sill-subdesc">Стойкость покрытия к отпечаткам пальцев</p>
+                    </div>
+                </div>
+                <div class="sill-imgs">
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-5.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-5.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-5.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Белый глянец</p>
+                        <p class="sill-img__subdesc">Ширина: 500 мм / 600 мм / 700 мм</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-6.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-6.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-6.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Белый сатин</p>
+                        <p class="sill-img__subdesc">Ширина: 500 мм / 600 мм / 700 мм</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-7.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-7.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-7.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Антрацит мат</p>
+                        <p class="sill-img__subdesc">Ширина: 500 мм / 600 мм / 700 мм</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-8.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-8.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-8.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Чёрный бархат</p>
+                        <p class="sill-img__subdesc">Ширина: 500 мм / 600 мм</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-9.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-9.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-9.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Белый дуб глянец</p>
+                        <p class="sill-img__subdesc">Ширина: 500 мм / 600 мм</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-10.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-10.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-10.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Альпийский шифер</p>
+                        <p class="sill-img__subdesc">Ширина: 500 мм / 600 мм</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-11.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-11.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-11.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Мрамор белый глянец</p>
+                        <p class="sill-img__subdesc">Ширина: 500 мм / 600 мм / 700 мм</p>
+                    </div>
+                </div>
+                <div class="sill-wrapper sill-2">
+                    <div class="sill-text">
+                        <h2 class="sill-title">Подоконники Estera </h2>
+                        <p class="sill-desc">Форма капиноса создаёт ощущение, что подоконник из натурального камня. Подоконники Estera обладают идеально ровной поверхностью и благородным сатиновым покрытием. Преимущество подоконника из пластика перед подоконниками из натурального камня — это лёгкость монтажа, привлекательная цена, защищённость от механических повреждений и едких веществ, остатков пищевых продуктов, так как практически невозможно удалить разводы от чая и кофе с поверхности натурального камня.</p>
+                        <p class="sill-subdesc">Прочный: толщина верхней стенки 3 мм, перегородки 1,5 мм</p>
+                        <p class="sill-subdesc">Безупречно ровный и гладкий</p>
+                        <p class="sill-subdesc">Теплостойкость подоконника</p>
+                        <p class="sill-subdesc">Анти-бактериальная составляющая</p>
+                        <p class="sill-subdesc">Стойкость покрытия к отпечаткам пальцев</p>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/accessories-12.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-12.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-12.png" alt="">
+                    </picture>
+                </div>
+                <div class="sill-wrapper-mob sill-2">
+                    <div class="sill-text">
+                        <h2 class="sill-title">Подоконники Estera </h2>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-12.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-12.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-12.png" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <p class="sill-desc">Форма капиноса создаёт ощущение, что подоконник из натурального камня. Подоконники Estera обладают идеально ровной поверхностью и благородным сатиновым покрытием. Преимущество подоконника из пластика перед подоконниками из натурального камня — это лёгкость монтажа, привлекательная цена, защищённость от механических повреждений и едких веществ, остатков пищевых продуктов, так как практически невозможно удалить разводы от чая и кофе с поверхности натурального камня.</p>
+                        <p class="sill-subdesc">Прочный: толщина верхней стенки 3 мм, перегородки 1,5 мм</p>
+                        <p class="sill-subdesc">Безупречно ровный и гладкий</p>
+                        <p class="sill-subdesc">Теплостойкость подоконника</p>
+                        <p class="sill-subdesc">Анти-бактериальная составляющая</p>
+                        <p class="sill-subdesc">Стойкость покрытия к отпечаткам пальцев</p>
+                    </div>
+                    
+                </div>
+                <div class="sill-imgs-1">
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-13.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-13.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-13.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Белый сатин</p>
+                        <p class="sill-img__subdesc">Ширина: 600 мм</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-14.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-14.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-14.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Белый дуб глянец</p>
+                        <p class="sill-img__subdesc">Ширина: 600 мм</p>
+                    </div>
+                </div>
+                <div class="sill-wrapper sill-2">
+                    <div class="sill-text">
+                        <h2 class="sill-title">Подоконники Vitrage </h2>
+                        <p class="sill-desc">Подоконники Vitrage - надежные, экологичные и качественные подоконники по доступной цене с большим выбором цветовых сочетаний</p>
+                        <p class="sill-subdesc">Теплостойкость подоконника</p>
+                        <p class="sill-subdesc">Анти-бактериальная составляющая</p>
+                        <p class="sill-subdesc">Ширина от 100 до 900мм</p>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/accessories-15.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-15.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-15.png" alt="">
+                    </picture>
+                </div>
+                <div class="sill-wrapper-mob sill-2">
+                    <div class="sill-text">
+                        <h2 class="sill-title">Подоконники Vitrage </h2>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-15.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-15.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-15.png" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <p class="sill-desc">Подоконники Vitrage - надежные, экологичные и качественные подоконники по доступной цене с большим выбором цветовых сочетаний</p>
+                        <p class="sill-subdesc">Теплостойкость подоконника</p>
+                        <p class="sill-subdesc">Анти-бактериальная составляющая</p>
+                        <p class="sill-subdesc">Ширина от 100 до 900мм</p>
+                    </div>
+                </div>
+                <div class="sill-imgs-2">
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-16.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-16.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-16.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Тёмный дуб</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-17.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-17.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-17.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Орех</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-18.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-18.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-18.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Золотой дуб</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-19.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-19.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-19.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Белый дуб</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-20.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-20.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-20.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">Махагон</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ebb" id="ebb">
+            <div class="container">
+                <h2 class="ebb-title">Отливы</h2>
+                <p class="ebb-desc">Это «подоконники» с внешней стороны окна из оцинкованной стали, из алюминия. При остеклении квартир и частных домов отливы устанавливается с уличной стороны окна для отвода осадков. Отлив не позволяет попадать осадкам в монтажный шов между стеной и окном.</p>
+                <div class="ebb-imgs">
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-21.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-21.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-21.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">200*1000 мм</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-22.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-22.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-22.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">200*1500 мм</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-23.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-23.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-23.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">150*1000 мм</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-24.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-24.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-24.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">150*1500 мм</p>
+                    </div>
+                </div>
+                <h2 class="ebb-title" id="ebb-1">Панели HPL</h2>
+                <div class="ebb-imgs">
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-25.1.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-25.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-25.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">0080 SX</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-26.1.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-26.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-26.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">0027 NN</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-27.1.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-27.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-27.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">0599 FH</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-28.1.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-28.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-28.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">0048 FH</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-29.1.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-29.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-29.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">5577</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-30.1.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-30.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-30.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">5575</p>
+                    </div>
+                    <div>
+                        <picture>
+                        <source srcset="../assets/imgs/accessories-31.1.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-31.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-31.png" alt="">
+                    </picture>
+                        <p class="sill-img__desc">5574</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mesh" id="mesh">
+            <div class="container">
+                <h2 class="mesh-title">Москитные сетки на окна и двери</h2>
+                <div class="mesh-imgs">
+                    <div>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-32.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-32.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-32.png" alt="">
+                        </picture>
+                        <h3 class="mesh-img__title">Стандартные рамочные</h3>
+                        <p class="maesh-img__desc">Стандартные рамочные москитные сетки «Випмоскито»</p>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-33.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-33.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-33.png" alt="">
+                        </picture>
+                        <h3 class="mesh-img__title">Москитные сетки «Плиссе»</h3>
+                        <p class="maesh-img__desc">Отличное решение для порталов и террасных дверей</p>
+                    </div>
+                </div>
+                <div class="how">
+                    <h2 class="mesh-title">Как выбрать москитное полотно?</h2>
+                    <p class="mesh-desc">Типы москитных полотен бывают разные. В базовой комплектации всегда указывается стандартное полотно, но в некоторых конструкциях можно установить и другие виды, в зависимости от ваших пожеланий</p>
+                    <div class="mesh-imgs">
+                        <div>
+                            <picture>
+                                <source srcset="../assets/imgs/accessories-34.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/accessories-34.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/accessories-34.png" alt="">
+                            </picture>
+                            <p class="maesh-img__desc">Стандартное</p>
+                            <p class="maesh-img__subdesc">Изготавливается из стекловолокна и покрывается ПВХ. Окрашивается в серый цвет, потому что серое полотно менее заметно для человеческого глаза и на нем меньше всего выделяется грязь</p>
+                        </div>
+                        <div>
+                            <picture>
+                                <source srcset="../assets/imgs/accessories-35.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/accessories-35.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/accessories-35.png" alt="">
+                            </picture>
+                            <p class="maesh-img__desc">Антикошка</p>
+                            <p class="maesh-img__subdesc">Защитит от насекомых и убережет ваших питомцев от незапланированной прогулки. Не провисает и не растягивается. способна устоять против когтей и лап</p>
+                        </div>
+                        <div>
+                            <picture>
+                                <source srcset="../assets/imgs/accessories-36.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/accessories-36.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/accessories-36.png" alt="">
+                            </picture>
+                            <p class="maesh-img__desc">Антипыльца</p>
+                            <p class="maesh-img__subdesc">Защищает от насыщенной аллергенами пыльцы растений. Нейлоновое полотно задерживает, притягивая к себе, частички различных растений и пыльцу.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="valve" id="valve">
+                    <h2 class="mesh-title">Приточный клапан для вентиляции</h2>
+                    <div class="valve-imgs">
+                        <div>
+                            <picture>
+                                <source srcset="../assets/imgs/accessories-37.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/accessories-37.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/accessories-37.png" alt="">
+                            </picture>
+                            <p class="maesh-img__desc">Ренсон TС60</p>
+                        </div>
+                        <div>
+                            <picture>
+                                <source srcset="../assets/imgs/accessories-38.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/accessories-38.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/accessories-38.png" alt="">
+                            </picture>
+                            <p class="maesh-img__desc">Ренсон AR75</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="locks" id="locks">
+            <div class="container">
+                <h2 class="mesh-title">Детские замки и защита детей</h2>
+                <div class="mesh-imgs">
+                    <div>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-39.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-39.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-39.png" alt="">
+                        </picture>
+                        <h3 class="mesh-img__title">Ограничитель открывания</h3>
+                        <p class="maesh-img__desc">Ограничитель открывания с тросом, предназначен для обеспечения безопасного проветривания помещения. Ограничивает открытия окна на безопасное расстояние — 10 см. Ограничитель предназначен для обеспечения безопасного проветривания. Это уникальное и доступное решение для предотвращения несчастных случаев. Лучший способ обезопасить детей и близких</p>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-40.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-40.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-40.png" alt="">
+                        </picture>
+                        <h3 class="mesh-img__title">Защёлка-блокиратор</h3>
+                        <p class="maesh-img__desc">Блокиратор представляет собой блокиратор, который подходит для всех видов окон и дверей. И может быть использован как «детский» замок, так и противовзломноe устройство. Литой металлический корпус со встроенным замком и кнопкой обеспечивает высокую прочность, безопасность и долголетнюю эксплуатацию замка</p>
+                    </div>
+                </div>
+                <div class="limiter">
+                    <h2 class="mesh-title">Ограничитель открывания на окно пластиковое «гребёнка» металлическая белый</h2>
+                    <div class="mesh-imgs">
+                            <picture>
+                                <source srcset="../assets/imgs/accessories-41.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/accessories-41.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/accessories-41.png" alt="">
+                            </picture>
+                            <picture>
+                                <source srcset="../assets/imgs/accessories-42.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/accessories-42.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/accessories-42.png" alt="">
+                            </picture>
+                            <p class="dop-1">Не подвергается коррозии и окислению</p>
+                            <p class="dop-2">Шарнитное соединение на магните</p>
+                            <p class="dop-3">БЕЗОПАСНОЕ ОКНО</p>
+                    </div>
+                    <div class="limiter-text">
+                        <p class="limiter-desc"><img src="../assets/imgs/accessories-53.svg" alt="">Магнитный ограничитель окна и балконных дверей Windyy, который вам позволит зафиксировать окно или балконные двери в любом положении</p>
+                        <p class="limiter-desc"><img src="../assets/imgs/accessories-52.svg" alt="">Гребёнка самое простое устройство для многоступенчатого проветривания окна. В простонародье «гребёнка». Имеет 5 режимов проветривания, от самого узкого до более широкого. Устанавливается легко и просто: ответная часть под ручку окна на её же болты, а сама гребёнка — рядом на саморезы со сверлом</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="pens" id="pens">
+            <div class="container">
+                <h2 class="mesh-title">Оконные ручки</h2>
+                <div class="valve-imgs">
+                    <div>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-43.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-43.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-43.png" alt="">
+                        </picture>
+                        <p class="maesh-img__desc">Ручка Stublina классическая для алюминиевых окон</p>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-44.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-44.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-44.png" alt="">
+                        </picture>
+                        <p class="maesh-img__desc">Ручки для ПВХ окон Atlanta</p>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-45.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-45.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-45.png" alt="">
+                        </picture>
+                        <p class="maesh-img__desc">Ручки для ПВХ окон Secustik ативзлом</p>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-49.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-49.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-49.png" alt="">
+                        </picture>
+                        <p class="maesh-img__desc">Ручка для ПВХ окна CLIO</p>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-50.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-50.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-50.png" alt="">
+                        </picture>
+                        <p class="maesh-img__desc">Ручка для ПВХ окна CLIO 1</p>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-51.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-51.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-51.png" alt="">
+                        </picture>
+                        <p class="maesh-img__desc">Ручка для ПВХ окна CLIO 2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="interior-form" id="write">
+            <div class="container">
+              <div class="form-wrapper">
+                <h3 class="contacts-form__title">
+                    Нужна наша консультация или помощь в выборе?
+                </h3>
+                <p class="contacts-form__desc">Оставьте контактные данные, мы свяжемся с вами и ответим на все интересующие вопросы</p>
+                <form action="../form-handler.php" method="post">
+                    <input class="contacts-input" name="fullname" type="text" placeholder="Ваше имя" required pattern="[A-Za-zА-Яа-яЁё\s]{3,20}" maxlength="20" title="Имя должно содержать только буквы, быть длиной от 3 до 20 символов"/>
+                    <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+                  <button class="contacts-button" type="submit" name="submit">Отправить</button>
+                  <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+                    </label>
+                </form>
+                <p class="connection">Связаться с нами напрямую</p>
+                <div class="contacts-links">
+                    <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+                    <a class="contacts-links__whatsup" href="https://wa.me/79960294525 ">Написать в WhatsApp</a>
+                  </div>
+                  <div class="contacts-links-2">
+                    <a class="contacts-links__vk" href="https://vk.com/glens_39">Группа ВКонтакте</a>
+                    <a class="contacts-links__tg" href="https://t.me/+79960294525">Написать в Telegram</a>
+                  </div>
+            </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+              <div class="footer-links">
+                <a class="footer-logo" href="../index.html">
+                  <img src="../assets/imgs/logo.svg" alt=""/>
+                </a>
+                <div class="footer-main__links">
+                  <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+                  <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+                  <a class="money" href="#write">Расчёт проекта</a>
+                </div>
+              </div>
+              <div class="footer-wrapper">
+                <div class="footer-address">
+                  <p class="footer-address__street">
+                      г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00
+                  </p>
+                  <a class="whatsapp" href="https://wa.me/79960294525 "><img src="../assets/imgs/whatsapp.svg" alt="" /></a>
+                  <a class="tg" href="https://t.me/+79960294525"><img src="../assets/imgs/tg.svg" alt="" /></a>
+                  <a class="vk" href="https://vk.com/glens_39"><img src="../assets/imgs/vk.svg" alt="" /></a>
+                  <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+                </div>
+                <nav class="footer-nav">
+                  <div>
+                    <h4 class="footer-nav__title">Продукция</h4>
+                    <ul class="footer-nav__list">
+                      <li><a class="footer-nav__list-link" href="../pages/windows-all.html">Окна</a></li>
+                      <li><a class="footer-nav__list-link" href="../pages/doors-all.html">Двери</a></li>
+                      <li><a class="footer-nav__list-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+                      <li><a class="footer-nav__list-link" href="../pages/cottages.html">Коттеджи</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="footer-nav__title">Услуги</h4>
+                    <ul class="footer-nav__list">
+                      <li><a class="footer-nav__list-link" href="../pages/services.html">Замер</a></li>
+                      <li><a class="footer-nav__list-link" href="../pages/services.html">Консультация</a></li>
+                      <li><a class="footer-nav__list-link" href="../pages/services.html">Монтаж</a></li>
+                      <li><a class="footer-nav__list-link" href="../pages/services.html">Гарантия</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="footer-nav__title">Другие разделы</h4>
+                    <ul class="footer-nav__list">
+                      <li><a class="footer-nav__list-link" href="../pages/examples.html">Вдохновляющие примеры</a></li>
+                      <li><a class="footer-nav__list-link" href="../pages/designers.html">Дизайнерам и архитекторам</a></li>
+                      <li><a class="footer-nav__list-link" href="../pages/contacts.html">Контакты</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </footer>
+          <footer class="footer-mob">
+            <div class="container">
+              <div class="footer-wrapper">
+                <div>
+                  <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt=""></a>
+                  <p class="footer-address__street">
+                    г. Калининград ул. 9 Апреля, 88А (второй этаж) <br/> пн-пт 9.00-18.00 сб. 10.00-15.00
+                  </p>
+                  <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+                  <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+                </div>
+                <a class="money" href="#write">Расчёт проекта</a>
+              </div>
+              <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+            </div>
+          </footer>
+        <script src="../script.js"></script>
+    </body>

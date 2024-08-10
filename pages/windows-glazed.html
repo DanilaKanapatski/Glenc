@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glens</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/popap.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/windowsGlazed-page.css" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon.png">
+  </head>
+  <body>
+    <header class="header-desc">
+        <div class="container">
+          <nav class="main-nav">
+            <a class="header-logo" href="../index.html">
+              <img src="../assets/imgs/logo.svg" alt="logo" />
+            </a>
+            <p class="address">
+              г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб.
+              10.00-15.00
+            </p>
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+            <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+            <div class="overlay" id="overlay"></div>
+            <div class="popup" id="popup">
+              <span class="close" id="closePopup"></span>
+              <h2>Оставьте свой номер телефона, мы вам перезвоним</h2>
+              <form action="../form-handler.php" method="post">
+                <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+                <button type="submit">Отправить</button>
+                <label class="checkbox-container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+              </label>
+              </form>
+            </div>
+            <button id="orderCall">Заказать звонок</button>
+        </div>
+          </nav>
+        <nav class="header-links">
+          <div class="container">
+            <ul>
+              <li>
+                <a class="header-link" href="../pages/windows.html">Окна</a>
+                <div class="dropdown-content">
+                  <a href="../pages/windows-pvx.html">Окна ПВХ</a>
+                  <a href="../pages/windows-all.html">Окна алюминиевые</a>
+                </div>
+              </li>
+              <li>
+                <a class="header-link" href="">Двери</a>
+                <div class="dropdown-content">
+                  <a href="../pages/doors-pvx.html">Двери ПВХ</a>
+                  <a href="../pages/doors-all.html">Двери алюминиевые</a>
+                </div>
+              </li>
+              <li><a class="header-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+              <li><a class="header-link" href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+              <li><a class="header-link" href="../pages/services.html">Услуги</a></li>
+              <li><a class="header-link" href="../pages/interior.html">Интерьерные решения</a></li>
+              <li><a class="header-link" href="../index.html">Частным заказчикам</a></li>
+              <li><a class="header-link" href="../pages/contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <header class="header-mob">
+        <div class="container">
+          <div class="header-container">
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt="Glens"></a>
+            </div>
+            <div class="contact-info">
+                <p class="address">г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00</p>
+            </div>
+            <div class="call-button">
+              <button id="orderCall">Заказать звонок</button>
+            </div>
+            <div>
+              <a class="header-tel tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu(this)">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav id="dropdown-menu" class="hidden">
+            <ul>
+              <li class="dropdown">
+                <a href="../pages/windows.html" onclick="toggleDropdown('dropdown-1')">Окна</a>
+                <ul id="dropdown-1" class="dropdown-content__mob hidden">
+                    <li><a href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                    <li><a href="../pages/windows-all.html">Окна алюминиевые</a></li>
+              </ul>
+            </li>
+              <li class="dropdown">
+                <a href="#" onclick="toggleDropdown('dropdown-2')">Двери</a>
+                <ul id="dropdown-2" class="dropdown-content__mob hidden">
+                    <li><a href="../pages/doors-pvx.html">Двери ПВХ</a></li>
+                    <li><a href="../pages/doors-all.html">Двери алюминиевые</a></li>
+                </ul>
+              </li>
+              <li><a href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+              <li><a href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+              <li><a href="../pages/services.html">Услуги</a></li>
+              <li><a href="../pages/interior.html">Интерьерные решения</a></li>
+              <li><a href="../index.html">Частным заказчикам</a></li>
+              <li><a href="../pages/contacts.html">Контакты</a></li>
+              <li><a class="btn-header__mob" href="#write">Рассчитать стоимость</a></li>
+            </ul>
+        </nav>
+      </div>
+      </header>
+    <main>
+        <section class="main">
+            <div class="container">
+                <div class="contacts-info__links">
+                    <a class="pages-link" href="../pages/designers.html">Главная</a>
+                    <span><img src="../assets/imgs/arrow-link.svg" alt=""></span>
+                    <a class="pages-link" href="../pages/windows-glazed.html">Стеклопакеты</a>
+                </div>
+                <h1 class="main-title">Стеклопакеты</h1>
+                <p class="main-desc">Solar солнцезащитное многофункциональное зеркальное стекло</p>
+            </div>
+        </section>
+        <section class="glasses">
+            <div class="container">
+                <div class="glass">
+                    <div>
+                        <p class="glass-desc">Стекло Solar с мультифункциональным покрытием имеет серебристый оттенок снаружи и прозрачный вид изнутри. Это надёжное стекло с солнцезащитным и энергосберегающим напылением для непредсказуемых погодных условий. Продукт может помочь сохранить тепло зимой и снизить нагрузку на систему кондиционирования летом</p>
+                        <div class="glass-wrapper">
+                            <div class="glass-text">
+                                <p>Функции стекла</p>
+                                <p>Теплоизоляция, Управление солнечной энергией</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Применение</p>
+                                <p>Частные дома, Фасадное остекление</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Толщина</p>
+                                <p>4мм, 6мм</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Форматы</p>
+                                <p><3210x6000 мм</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Цвет</p>
+                                <p>Серый, белый</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Светопропускание</p>
+                                <p>67%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/windowsGlazed-1.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/windowsGlazed-1.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/windowsGlazed-1.png" alt="">
+                    </picture>
+                </div>
+                <div class="glass-mob">
+                    <div>
+                        <p class="glass-desc">Стекло Solar с мультифункциональным покрытием имеет серебристый оттенок снаружи и прозрачный вид изнутри. Это надёжное стекло с солнцезащитным и энергосберегающим напылением для непредсказуемых погодных условий. Продукт может помочь сохранить тепло зимой и снизить нагрузку на систему кондиционирования летом</p>
+                        <picture>
+                            <source srcset="../assets/imgs/windowsGlazed-1.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/windowsGlazed-1.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/windowsGlazed-1.png" alt="">
+                        </picture>
+                    </div>
+                        <div class="glass-wrapper">
+                            <p class="glass-subdesc">Функции стекла: Теплоизоляция, Управление солнечной энергией </p>
+                            <p class="glass-subdesc">Применение: Частные дома, Фасадное остекление </p>
+                            <p class="glass-subdesc">Толщина: 4мм, 6мм</p>
+                            <p class="glass-subdesc">Форматы: <3210x6000 мм</p>
+                            <p class="glass-subdesc">Цвет: Серый, белый</p>
+                            <p class="glass-subdesc">Светопропускание: 67%</p>
+                        </div>
+                </div>
+                <div class="glass">
+                    <div>
+                        <h2 class="glass-title">Stopsol Phoenix Grey солнцезащитное зеркальное стекло</h2>
+                        <div class="glass-wrapper">
+                            <div class="glass-text">
+                                <p>Категория стекла</p>
+                                <p>Архитектурные, Оконные, Интерьерные</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Функции стекла</p>
+                                <p>Солнцезащита, Дизайн решение</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Применение</p>
+                                <p>Фасадное остекление, Оконное применение, Перегородки и гардеробные</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Толщина</p>
+                                <p>4мм, 6мм, 8мм, 10мм</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Форматы</p>
+                                <p>DLF (2250x3210), PLF (6000x3210)</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Цвет</p>
+                                <p>Серый</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Светопропускание</p>
+                                <p>29%</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Энергоэффективность</p>
+                                <p>Uv=1.1 Ro=0.65</p>
+                            </div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/windowsGlazed-2.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/windowsGlazed-2.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/windowsGlazed-2.png" alt="">
+                    </picture>
+                </div>
+                <div class="glass-mob glass-mob-2">
+                    <div>
+                        <h2 class="glass-title">Stopsol Phoenix Grey солнцезащитное зеркальное стекло</h2>
+                        <picture>
+                            <source srcset="../assets/imgs/windowsGlazed-2.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/windowsGlazed-2.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/windowsGlazed-2.png" alt="">
+                        </picture>
+                    </div>
+                        <div class="glass-wrapper">
+                            <p class="glass-subdesc">Категория стекла: Архитектурные, Оконные, Интерьерные </p>
+                            <p class="glass-subdesc">Функции стекла: Солнцезащита, Дизайн решение </p>
+                            <p class="glass-subdesc">Применение: Фасадное остекление, Оконное применение, Перегородки и гардеробные</p>
+                            <p class="glass-subdesc">Толщина: 4мм, 6мм, 8мм, 10мм</p>
+                            <p class="glass-subdesc">Форматы: DLF (2250x3210), PLF (6000x3210)</p>
+                            <p class="glass-subdesc">Цвет: Серый</p>
+                            <p class="glass-subdesc">Светопропускание: 29%</p>
+                            <p class="glass-subdesc">Энергоэффективность: Uv=1.1 Ro=0.65</p>
+                        </div>
+                </div>
+                <div class="glass">
+                    <div>
+                        <h2 class="glass-title">Stopsol Phoenix Bronze солнцезащитное зеркальное стекло</h2>
+                        <div class="glass-wrapper">
+                            <div class="glass-text">
+                                <p>Категория стекла</p>
+                                <p>Архитектурные, Оконные, Интерьерные</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Функции стекла</p>
+                                <p>Солнцезащита, Дизайн решение</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Применение</p>
+                                <p>Фасадное остекление, Оконное применение, Перегородки и гардеробные</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Толщина</p>
+                                <p>4мм, 6мм</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Форматы</p>
+                                <p>DLF (2250x3210), PLF (6000x3210)</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Цвет</p>
+                                <p>Бронзовый</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Светопропускание</p>
+                                <p>33%</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Энергоэффективность</p>
+                                <p>Uv=1.1 Ro=0.65</p>
+                            </div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/windowsGlazed-3.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/windowsGlazed-3.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/windowsGlazed-3.png" alt="">
+                    </picture>
+                </div>
+                <div class="glass-mob glass-mob-2">
+                    <div>
+                        <h2 class="glass-title">Stopsol Phoenix Bronze солнцезащитное зеркальное стекло</h2>
+                        <picture>
+                            <source srcset="../assets/imgs/windowsGlazed-3.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/windowsGlazed-3.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/windowsGlazed-3.png" alt="">
+                        </picture>
+                    </div>
+                        <div class="glass-wrapper">
+                            <p class="glass-subdesc">Категория стекла: Архитектурные, Оконные, Интерьерные </p>
+                            <p class="glass-subdesc">Функции стекла: Солнцезащита, Дизайн решение </p>
+                            <p class="glass-subdesc">Применение: Фасадное остекление, Оконное применение, Перегородки и гардеробные</p>
+                            <p class="glass-subdesc">Толщина: 4мм, 6мм</p>
+                            <p class="glass-subdesc">Форматы: DLF (2250x3210), PLF (6000x3210)</p>
+                            <p class="glass-subdesc">Цвет: Бронзовый</p>
+                            <p class="glass-subdesc">Светопропускание: 33%</p>
+                            <p class="glass-subdesc">Энергоэффективность: Uv=1.1 Ro=0.65</p>
+                        </div>
+                </div>
+                <div class="glass">
+                    <div>
+                        <h2 class="glass-title">Энергосберегающее низкоэмиссионное стекло</>
+                        <p class="glass-desc">Теплосберегающее стекло с «мягким» покрытием — качественный продукт с высочайшими показателями теплоизоляции, прозрачности и однородности покрытия. Благоприятный, здоровый климат в помещении — важнейшее требование к современному комфортному жилью. Стекло обладает высокой светопропускной способностью, сопоставимой с обычным остеклением. Характеристики стекла позволяют достичь высшего уровня комфорта в помещении. Все цвета сохраняют свою яркость и контрастность</p>
+                        <h3 class="glass-subtitle none">Экплуатационные характеристики в составе стеклопакета</h3>
+                    </div>
+                    <picture >
+                        <source srcset="../assets/imgs/windowsGlazed-4.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/windowsGlazed-4.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/windowsGlazed-4.png" alt="">
+                    </picture>
+                </div>
+                <div class="glass-mob glass-mob-3">
+                    <div>
+                        <h2 class="glass-title">Энергосберегающее низкоэмиссионное стекло</h2>
+                        <p class="glass-desc">Теплосберегающее стекло с «мягким» покрытием — качественный продукт с высочайшими показателями теплоизоляции, прозрачности и однородности покрытия. Благоприятный, здоровый климат в помещении — важнейшее требование к современному комфортному жилью. Стекло обладает высокой светопропускной способностью, сопоставимой с обычным остеклением. Характеристики стекла позволяют достичь высшего уровня комфорта в помещении. Все цвета сохраняют свою яркость и контрастность</p>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/windowsGlazed-4.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/windowsGlazed-4.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/windowsGlazed-4.png" alt="">
+                    </picture>
+                </div>
+                <picture class="none">
+                    <source srcset="../assets/imgs/windowsGlazed-5.svg" media="(max-width: 768px)">
+                    <source srcset="../assets/imgs/windowsGlazed-5.svg" media="(max-width: 1160px)">
+                    <img src="../assets/imgs/windowsGlazed-5.svg" alt="">
+                </picture>
+                <div class="glass glass-5">
+                    <div>
+                        <h2 class="glass-title">Cтекло триплекс 3.3.1</h2>
+                        <p class="glass-desc">Триплекс — это композиция из двух или нескольких стёкол и поливинилбутиральной (PVB) плёнки (плёночный триплекс) или полимерной смолы (заливной триплекс). Благодаря основному свойству — безопасности при разрушении — триплекс широко применяется применяется в строительстве частных домов, обеспечивая безопасность вам и вашим близким. Так же широкое применение триплекс получил в строительстве торговых центров. Уже невозможно представить огромные стеклянные небоскрёбы без многослойного безопасного стекла. Помимо высокой сопротивляемости к удару триплекс значительно улучшает звукоизоляцию окна, добавляя несколько дБ к уровню звукоизоляции обычного стеклопакета. Многослойное стекло (триплекс) можно изготовить также используя стекла с покрытием)</p>
+                        <div class="glass-wrapper">
+                            <div class="glass-text">
+                                <p>Категория стекла</p>
+                                <p>Архитектурные, Оконные, Интерьерные</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Функции стекла</p>
+                                <p>Безопасность</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Применение</p>
+                                <p>Фасадное остекление, Витрины, Двери, Перегородки и гардеробные, Лестницы, Частные дома, Козырьки, Оконное применение</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Толщина</p>
+                                <p>6мм, 8мм, 10мм</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Форматы</p>
+                                <p>MF (2550x1605), DLF (2250x3210), PLF (6000x3210)</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Цвет</p>
+                                <p>Бесцветный</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Светопропускание</p>
+                                <p>75-80%</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Класс Безопасности</p>
+                                <p>СМ4, Р2А</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Звукоизоляция</p>
+                                <p>RW = 35(-1;-3)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/windowsGlazed-6.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/windowsGlazed-6.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/windowsGlazed-6.png" alt="">
+                    </picture>
+                </div>
+                <div class="glass-mob glass-mob-4">
+                    <div>
+                        <h2 class="glass-title">Cтекло триплекс 3.3.1</h2>
+                        <p class="glass-desc">Триплекс — это композиция из двух или нескольких стёкол и поливинилбутиральной (PVB) плёнки (плёночный триплекс) или полимерной смолы (заливной триплекс). Благодаря основному свойству — безопасности при разрушении — триплекс широко применяется применяется в строительстве частных домов, обеспечивая безопасность вам и вашим близким. Так же широкое применение триплекс получил в строительстве торговых центров. Уже невозможно представить огромные стеклянные небоскрёбы без многослойного безопасного стекла. Помимо высокой сопротивляемости к удару триплекс значительно улучшает звукоизоляцию окна, добавляя несколько дБ к уровню звукоизоляции обычного стеклопакета. Многослойное стекло (триплекс) можно изготовить также используя стекла с покрытием)</p>
+                        <picture>
+                            <source srcset="../assets/imgs/windowsGlazed-6.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/windowsGlazed-6.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/windowsGlazed-6.png" alt="">
+                        </picture>
+                    </div>
+                        <div class="glass-wrapper">
+                            <p class="glass-subdesc">Категория стекла: Архитектурные, Оконные, Интерьерные  </p>
+                            <p class="glass-subdesc">Функции стекла: Безопасность  </p>
+                            <p class="glass-subdesc">Применение: Фасадное остекление, Витрины, Двери, Перегородки и гардеробные, Лестницы, Частные дома, Козырьки, Оконное применение</p>
+                            <p class="glass-subdesc">Толщина: 6мм, 8мм, 10мм</p>
+                            <p class="glass-subdesc">Форматы: MF (2550x1605), DLF (2250x3210), PLF (6000x3210)</p>
+                            <p class="glass-subdesc">Цвет: Бесцветный</p>
+                            <p class="glass-subdesc">Светопропускание: 75-80%</p>
+                            <p class="glass-subdesc">Класс Безопасности: СМ4, Р2А</p>
+                            <p class="glass-subdesc">Звукоизоляция: RW = 35(-1;-3)</p>
+                        </div>
+                </div>
+                <div class="glass glass-6">
+                    <div>
+                        <h2 class="glass-title">Cтекло 3.3.1top триплекс + энергосбережение</h2>
+                        <p class="glass-desc">Энергосберегающее стекло с мягким магнетронным покрытием, а благодаря противоударным свойствам стекла триплекс, это еще и безопасно. Обладает высокой степенью светопропускания, придаёт фасаду нейтральный внешний вид. При использовании такого стекла в стеклопакете экономится до 50% энергии внутри зданий</p>
+                        <div class="glass-wrapper">
+                            <div class="glass-text">
+                                <p>Категория стекла</p>
+                                <p>Архитектурные, Интерьерные</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Функции стекла</p>
+                                <p>Безопасность</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Применение</p>
+                                <p>Антибликовость, Безопасность</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Толщина</p>
+                                <p>4мм, 6мм, 8мм</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Форматы</p>
+                                <p>PLF (6000x3210), DLF (2250x3210)</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Цвет</p>
+                                <p>Бесцветный</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Светопропускание</p>
+                                <p>70%</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Класс Безопасности</p>
+                                <p>СМ3</p>
+                            </div>
+                            <div class="glass-text">
+                                <p>Звукоизоляция</p>
+                                <p>34 (-1;-2)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/windowsGlazed-7.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/windowsGlazed-7.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/windowsGlazed-7.png" alt="">
+                    </picture>
+                </div>
+                <div class="glass-mob glass-mob-4">
+                    <div>
+                        <h2 class="glass-title">Cтекло 3.3.1top триплекс + энергосбережение</h2>
+                        <p class="glass-desc">Энергосберегающее стекло с мягким магнетронным покрытием, а благодаря противоударным свойствам стекла триплекс, это еще и безопасно. Обладает высокой степенью светопропускания, придаёт фасаду нейтральный внешний вид. При использовании такого стекла в стеклопакете экономится до 50% энергии внутри зданий</p>
+                        <picture>
+                            <source srcset="../assets/imgs/windowsGlazed-7.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/windowsGlazed-7.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/windowsGlazed-7.png" alt="">
+                        </picture>
+                    </div>
+                        <div class="glass-wrapper">
+                            <p class="glass-subdesc">Категория стекла: Архитектурные, Интерьерные </p>
+                            <p class="glass-subdesc">Функции стекла: Безопасность  </p>
+                            <p class="glass-subdesc">Применение: Антибликовость, Безопасность</p>
+                            <p class="glass-subdesc">Толщина: 4мм, 6мм, 8мм</p>
+                            <p class="glass-subdesc">Форматы: PLF (6000x3210), DLF (2250x3210)</p>
+                            <p class="glass-subdesc">Цвет: Бесцветный</p>
+                            <p class="glass-subdesc">Светопропускание: 70%</p>
+                            <p class="glass-subdesc">Класс Безопасности: СМ3</p>
+                            <p class="glass-subdesc">Звукоизоляция: 34 (-1;-2)</p>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="sprats">
+            <div class="container">
+                <div class="sprats-wrapper">
+                    <div class="sprats-text">
+                        <h2 class="sprats-title">Шпросы</h2>
+                        <p class="sprats-desc">Шпросы — это раскладка декоративных элементов внутри стеклопакета. Чаще всего используют межстекольные шпросы. Они вставляются в стеклопакеты, расстояние между стёклами, в которых не меньше 12 мм. Это особые планки, которые можно выгибать и вставлять под любым углом до получения желаемого узора. При этом цвет таких планок может быть разным.</p>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/accessories-1.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-1.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-1.png" alt="">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="hang">
+            <div class="container">
+                <h2 class="hang-title">Преимущества шпрос</h2>
+                <div class="hang-wrapper">
+                        <p class="hang-desc">Эмоциональное и эстетическое наслаждение как владельцев, так и прохожих</p>
+                        <p class="hang-desc">У межстекольных решеток с наружной стороны окна нет выступов, что обеспечивает беспрепятственное стекание осадков и отсутствие разводов, при этом пыль и грязь не будет скапливаться в углах</p>
+                        <p class="hang-desc">Шпросы, расположенные в межстекольном пространстве, не снижают функциональные характеристики окна</p>
+                        <p class="hang-desc">Огромный выбор оконных раскладок, что позволяет подобрать узор под любой фасад</p>
+                        <p class="hang-desc">При длительном сроке эксплуатации планки не теряют формы и не тускнеют</p>
+                        <p class="hang-desc">Легкий уход и мытье окон</p>
+                </div>
+                <div class="hang-properties">
+                    <div class="hang-properties-text">
+                        <h3 class="hang-properties-title">Размер</h3>
+                        <p class="hang-properties-desc">При выборе размера руководствуются площадью, которую необходимо остеклить. Чем она больше, тем разнообразнее декор из узких элементов (всевозможные завитушки, вензеля и др.)</p>
+                        <h3 class="hang-properties-title">Цвет</h3>
+                        <p class="hang-properties-desc">При выборе раскладки обычно опираются на цвет оконной рамы. Это могут быть однотонные (чёрные, белые, золотые, коричневые, под металл, дерево и др.), разноцветные (с фасада один цвет, с внутренней стороны — другой), контрастные и др.</p>
+                        <h3 class="hang-properties-title">Толщина</h3>
+                        <p class="hang-properties-desc">Зависит от вида шпроса:<br/>
+                            - 8мм тонкий, элегантный шпрос золотого или белого цвета;<br/>
+                            - 18мм белый или с ламинацией или покраской под цвет окна;<br/>
+                            - 26мм белый или ламинированный шпрос</p>
+                    </div>
+                    <picture>
+                        <source srcset="../assets/imgs/accessories-2.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/accessories-2.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/accessories-2.png" alt="">
+                    </picture>
+                </div>
+                <div class="newsprats">
+                    <div class="newsprats-wrapper">
+                        <div class="newsprats-text">
+                            <h3 class="newsprats-title">
+                                Венецианские шпросы
+                            </h3>
+                            <p class="newsprats-desc">Венецианские шпросы (их еще называют накладными шпросами либо фальш-переплётом) популярны из-за их простой конструкции, легкого монтажа, хорошей совместимости с любым дизайном фасадов и интерьера. Внешне они представляют собой декоративный профиль, который крепят на внешнюю поверхность стекла при помощи двусторонней клейкой ленты</p>
+                            <h4 class="newsprats-subtitle">Особенности: </h4>
+                            <p class="newsprats-subdesc">Монтаж простой, за него часто владельцы жилья берутся самостоятельно. Конструкция требует ухода, потому что вокруг переплета скапливается пыль. Снимать такую раскладку при уборке не стоит, потому что это повредит клеевой слой.</p>
+                            <p class="newsprats-subdesc">Толщина: 26мм и 47мм</p>
+                            <p class="newsprats-subdesc">Цвет: белый</p>
+                        </div>
+                        <picture>
+                            <source srcset="../assets/imgs/accessories-3.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/accessories-3.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/accessories-3.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="newsprats-mob">
+                    <div class="newsprats-wrapper">
+                        <div class="newsprats-text">
+                            <h3 class="newsprats-title">
+                                Венецианские шпросы
+                            </h3>
+                            <p class="newsprats-desc">Венецианские шпросы (их еще называют накладными шпросами либо фальш-переплётом) популярны из-за их простой конструкции, легкого монтажа, хорошей совместимости с любым дизайном фасадов и интерьера. Внешне они представляют собой декоративный профиль, который крепят на внешнюю поверхность стекла при помощи двусторонней клейкой ленты</p>
+                            <picture>
+                                <source srcset="../assets/imgs/accessories-3.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/accessories-3.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/accessories-3.png" alt="">
+                            </picture>
+                        </div>
+                        <div>
+                            <h4 class="newsprats-subtitle">Особенности: </h4>
+                            <p class="newsprats-subdesc">Монтаж простой, за него часто владельцы жилья берутся самостоятельно. Конструкция требует ухода, потому что вокруг переплета скапливается пыль. Снимать такую раскладку при уборке не стоит, потому что это повредит клеевой слой.</p>
+                            <p class="newsprats-subdesc">Толщина: 26мм и 47мм</p>
+                            <p class="newsprats-subdesc">Цвет: белый</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="choose">
+                    <h3 class="choose-title">Как выбрать шпросы на окна?</h3>
+                    
+                        <p class="choose-desc">Предела фантазии здесь нет, шпросы могут быть завершающим штрихом стиля для дома или квартиры, «вашей изюминкой», это могут быть арочные раскладки, готические, французские, английские, венецианские.</p>
+                        <h3 class="choose-subtitle">Рекомендации</h3>
+                        <div class="choose-text">
+                        <p class="choose-subdesc"><span>01</span>Цвет — гармоничное сочетание с расцветкой фасада, интерьером обязательны, иначе они не станут украшением и будут выделяться несуразным «пятном» на общем фоне</p>
+                        <p class="choose-subdesc"><span>02</span>Размер – на маленьких окнах шпросы неактуальны, а вот на панорамных проемах полету фантазии ничего не мешает</p>
+                        <p class="choose-subdesc"><span>03</span>Способ монтажа – накладные шпросы или фальш-переплет (клеятся снаружи стекла, их будет сложно очищать от пыли, накопленной в местах соединений, между разделителями и стеклом)</p>
+                        <p class="choose-subdesc"><span>04</span>Декоративные шпросы внутри стеклопакета не мешают при мытье окон, т.к. на стекло ничего не наклеено и уход такой же как за обычными окнами</p>
+                        <p class="choose-subdesc"><span>05</span>Существуют стереотипы, что шпросы необходимы, если дом выполнен в одном из стилей: прованс, кантри, английский, американский, тосканский, монтерей, готика, неоготика, средиземноморский. Это совершенно не обязательно — шпросы украсят любой дом, просто в некоторых случаях желательно сначала провести компьютерное моделирование и затем решать, уместно ли разделение оконного проёма с помощью шпрос или лучше оставить его «как есть»</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="oil">
+            <div class="container">
+                <h2 class="oil-title">Цветное в массе стекло</h2>
+                <p class="oil-desc">Стекло, тонированное в массе — это стекло, окрашивание которого производится путём добавления в расплавленную стекольную массу специальных красящих пигментов (окислов металла). От дозировки красящего компонента зависит и основной цвет, и оттенки будущего стекла. Тонированные в массе стекла — это не только красивый внешний вид, но и функциональность. Они могут применяться при необходимости фильтрации света при минимальном коэффициенте отражения</p>
+                <h3 class="oil-subtitle">Варианты</h3>
+                <div class="oil-imgs">
+                    <div>
+                        <picture>
+                                <source srcset="../assets/imgs/windowsGlazed-8.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/windowsGlazed-8.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/windowsGlazed-8.png" alt="">
+                            </picture>
+                            <p class="oil-subdesc">Стекло морозко белое</p>
+                    </div>
+                    <div>
+                        <picture>
+                                <source srcset="../assets/imgs/windowsGlazed-9.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/windowsGlazed-9.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/windowsGlazed-9.png" alt="">
+                            </picture>
+                            <p class="oil-subdesc">Стекло матовое</p>
+                    </div>
+                    <div>
+                        <picture>
+                                <source srcset="../assets/imgs/windowsGlazed-10.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/windowsGlazed-10.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/windowsGlazed-10.png" alt="">
+                            </picture>
+                            <p class="oil-subdesc">Стекло графит</p>
+                    </div>
+                    <div>
+                        <picture>
+                                <source srcset="../assets/imgs/windowsGlazed-11.2.png" media="(max-width: 768px)">
+                                <source srcset="../assets/imgs/windowsGlazed-11.1.png" media="(max-width: 1160px)">
+                                <img src="../assets/imgs/windowsGlazed-11.png" alt="">
+                            </picture>
+                            <p class="oil-subdesc">Стекло бронза</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="interior-form" id="write">
+            <div class="container">
+              <div class="form-wrapper">
+                <h3 class="contacts-form__title">
+                    Хотите сотрудничать с нами?
+                </h3>
+                <p class="contacts-form__desc">Оставьте контактные данные, мы свяжемся с вами и обсудим условия сотрудничества</p>
+                <form action="../form-handler.php" method="post">
+                    <input class="contacts-input" name="fullname" type="text" placeholder="Ваше имя" required pattern="[A-Za-zА-Яа-яЁё\s]{3,20}" maxlength="20" title="Имя должно содержать только буквы, быть длиной от 3 до 20 символов"/>
+                    <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+                  <button class="contacts-button" type="submit" name="submit">Отправить</button>
+                  <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+                    </label>
+                </form>
+                <p class="connection">Связаться с нами напрямую</p>
+                <div class="contacts-links">
+                    <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+                    <a class="contacts-links__whatsup" href="https://wa.me/79960294525">Написать в WhatsApp</a>
+                  </div>
+                  <div class="contacts-links-2">
+                    <a class="contacts-links__vk" href="https://vk.com/glens_39">Группа ВКонтакте</a>
+                    <a class="contacts-links__tg" href="https://t.me/+79960294525">Написать в Telegram</a>
+                  </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-links">
+            <a class="footer-logo" href="../index.html">
+              <img src="../assets/imgs/logo.svg" alt=""/>
+            </a>
+            <div class="footer-main__links">
+              <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+              <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+              <a class="money" href="#write">Расчёт проекта</a>
+            </div>
+          </div>
+          <div class="footer-wrapper">
+            <div class="footer-address">
+              <p class="footer-address__street">
+                  г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00
+              </p>
+              <a class="whatsapp" href="https://wa.me/79960294525 "><img src="../assets/imgs/whatsapp.svg" alt="" /></a>
+              <a class="tg" href="https://t.me/+79960294525"><img src="../assets/imgs/tg.svg" alt="" /></a>
+              <a class="vk" href="https://vk.com/glens_39"><img src="../assets/imgs/vk.svg" alt="" /></a>
+              <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+            </div>
+            <nav class="footer-nav">
+              <div>
+                <ul class="footer-nav__list dis">
+                  <li><a class="footer-nav__list-link" href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                  <li><a class="footer-nav__list-link" href="../pages/windows-all.html">Алюминиевые окна</a></li>
+                  <li><a class="footer-nav__list-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+                  <li><a class="footer-nav__list-link" href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="footer-nav__title"><a href="../index.html">Частным заказчикам</a></h4>
+              </div>
+              <div>
+                <ul class="footer-nav__list dis">
+                  <li><a class="footer-nav__list-link" href="..pages/contacts.html">Контакты</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </footer>
+      <footer class="footer-mob">
+        <div class="container">
+          <div class="footer-wrapper">
+            <div>
+              <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt=""></a>
+              <p class="footer-address__street">
+                г. Калининград ул. 9 Апреля, 88А (второй этаж) <br/> пн-пт 9.00-18.00 сб. 10.00-15.00
+              </p>
+              <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+              <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+            </div>
+            <a class="money" href="#write">Расчёт проекта</a>
+          </div>
+          <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+        </div>
+      </footer>
+    <script src="../script.js"></script>
+</body>

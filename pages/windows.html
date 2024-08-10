@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glens</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/slider.css" />
+    <link rel="stylesheet" href="../styles/popap.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/windows-page.css" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon.png">
+  </head>
+  <body>
+    <header class="header-desc">
+      <div class="container">
+        <nav class="main-nav">
+          <a class="header-logo" href="../index.html">
+            <img src="../assets/imgs/logo.svg" alt="logo" />
+          </a>
+          <p class="address">
+            г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб.
+            10.00-15.00
+          </p>
+          <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          <div class="overlay" id="overlay"></div>
+          <div class="popup" id="popup">
+            <span class="close" id="closePopup"></span>
+            <h2>Оставьте свой номер телефона, мы вам перезвоним</h2>
+            <form action="../form-handler.php" method="post">
+              <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+              <button type="submit">Отправить</button>
+              <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+            </label>
+            </form>
+          </div>
+          <button id="orderCall">Заказать звонок</button>
+      </div>
+        </nav>
+      <nav class="header-links">
+        <div class="container">
+          <ul>
+            <li>
+              <a class="header-link" href="../pages/windows.html">Окна</a>
+              <div class="dropdown-content">
+                <a href="../pages/windows-pvx.html">Окна ПВХ</a>
+                <a href="../pages/windows-all.html">Окна алюминиевые</a>
+              </div>
+            </li>
+            <li>
+              <a class="header-link" href="">Двери</a>
+              <div class="dropdown-content">
+                <a href="../pages/doors-pvx.html">Двери ПВХ</a>
+                <a href="../pages/doors-all.html">Двери алюминиевые</a>
+              </div>
+            </li>
+            <li><a class="header-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+            <li><a class="header-link" href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+            <li><a class="header-link" href="../pages/services.html">Услуги</a></li>
+            <li><a class="header-link" href="../pages/interior.html">Интерьерные решения</a></li>
+            <li><a class="header-link" href="../index.html">Частным заказчикам</a></li>
+            <li><a class="header-link" href="../pages/contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <header class="header-mob">
+      <div class="container">
+        <div class="header-container">
+          <div class="logo">
+              <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt="Glens"></a>
+          </div>
+          <div class="contact-info">
+              <p class="address">г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00</p>
+          </div>
+          <div class="call-button">
+            <button id="orderCall">Заказать звонок</button>
+          </div>
+          <div>
+            <a class="header-tel tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          </div>
+          <div class="menu-icon" onclick="toggleMenu(this)">
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="dropdown-menu" class="hidden">
+          <ul>
+            <li class="dropdown">
+              <a href="../pages/windows.html" onclick="toggleDropdown('dropdown-1')">Окна</a>
+              <ul id="dropdown-1" class="dropdown-content__mob hidden">
+                  <li><a href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                  <li><a href="../pages/windows-all.html">Окна алюминиевые</a></li>
+            </ul>
+          </li>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown('dropdown-2')">Двери</a>
+              <ul id="dropdown-2" class="dropdown-content__mob hidden">
+                  <li><a href="../pages/doors-pvx.html">Двери ПВХ</a></li>
+                  <li><a href="../pages/doors-all.html">Двери алюминиевые</a></li>
+              </ul>
+            </li>
+            <li><a href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+            <li><a href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+            <li><a href="../pages/services.html">Услуги</a></li>
+            <li><a href="../pages/interior.html">Интерьерные решения</a></li>
+            <li><a href="../index.html">Частным заказчикам</a></li>
+            <li><a href="../pages/contacts.html">Контакты</a></li>
+            <li><a class="btn-header__mob" href="#write">Рассчитать стоимость</a></li>
+          </ul>
+      </nav>
+    </div>
+    </header>
+    <main>
+        <section class="windows">
+            <div class="container">
+                <div>
+                    <a class="pages-link" href="../pages/designers.html">Главная</a>
+                    <span>
+                        <img src="../assets/imgs/arrow-link.svg" alt="">
+                    </span>
+                    <a class="pages-link" href="../pages/windows.html">Окна</a>
+                </div>
+                <h1 class="windows-title">Окна</h1>
+                <nav class="windows-nav">
+                    <a class="windows-nav__link" href="#glass">Описание</a>
+                    <a class="windows-nav__link" href="#glass-1">Остекление</a>
+                    <a class="windows-nav__link" href="#glass-2">Фурнитура</a>
+                    <a class="windows-nav__link" href="#glass-3">Портфолио</a>
+                    <a class="windows-nav__link" href="#guarantee">Аксессуары</a>
+                </nav>
+                <div class="menu-container">
+                  <div class="menu-header" id="menu-header">
+                    <a href="#glass">Описание</a>
+                      <span class="arrow"><img src="../assets/imgs/arr-nav.svg" alt=""></span>
+                  </div>
+                  <ul class="dropdown-menu-1" id="dropdown-menu-1">
+                      <li><a href="#glass-1">Остекление</a></li>
+                      <li><a href="#glass-2">Фурнитура</a></li>
+                      <li><a href="#glass-3">Портфолио</a></li>
+                      <li><a href="#guarantee">Аксессуары</a></li>
+                  </ul>
+            </div>
+        </section>
+        <section class="examples ex-1" id="glass">
+            <div class="container">
+                <h2 class="example-title">Рехау Intelio</h2>
+                <div class="example-wrapper">
+                    <div class="example-text">
+                        <p class="example-text__desc">Окна Рехау Intelio – это система умного комфорта, которая позволит создать в доме оптимальный микроклимат и максимально повысить уровень теплосбережения и звукоизоляции. Это прекрасное решение при остеклении частных домов. Благодаря глубине 80 мм и 6-камерному строению холодными зимами вы сможете существенно экономить на отоплении</p>
+                        <ul class="example-list">
+                            <li>Системная глубина: 80 мм</li>
+                            <li>Количество камер: 6 </li>
+                            <li>Максимальная толщина заполнения: 53 мм</li>
+                            <li>Теплоизоляция: R опр. = 0,98 м2°С/Вт</li>
+                            <li>Взломобезопасность: до 3 класса</li>
+                            <li>Звукоизоляция: до 4 класса</li>
+                        </ul>
+                    </div>
+                    <div class="example-imgs">
+                      <picture>
+                        <source srcset="../assets/imgs/windows-1.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/windows-1.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/windows-1.png" alt="">
+                      </picture>
+                        <div>
+                          <picture>
+                            <source srcset="../assets/imgs/windows-16.2.png" media="(max-width: 768px)">
+                            <source srcset="../assets/imgs/windows-16.1.png" media="(max-width: 1160px)">
+                            <img src="../assets/imgs/windows-16.png" alt="">
+                          </picture>
+                            <p class="example-img__desc">Intelio 80мм - оконная рама и створка</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="examples ex-2">
+            <div class="container">
+                <h2 class="example-title">Рехау Delight</h2>
+                <div class="example-wrapper">
+                    <div class="example-text">
+                        <p class="example-text__desc">Если вы цените свет, тепло, уют, индивидуальный дизайн и функциональность, окна из этого профиля будут превосходным выбором. Pexay Delight пропускает на 10% больше света, чем обычные оконные системы. А это даст вам больше хорошего настроения и энергии. Окна из этого профиля обладают не только изысканным дизайном, но и уникальной способностью сохранять тепло в вашем квартире или доме </p>
+                        <ul class="example-list">
+                            <li>Системная глубина: 70 мм</li>
+                            <li>Количество камер: 5 </li>
+                            <li>Максимальная толщина заполнения: 40 мм</li>
+                            <li>Теплоизоляция: R опр. = 0,94 м2°С/Вт</li>
+                            <li>Взломобезопасность: до 3 класса</li>
+                            <li>Звукоизоляция: до 4 класса</li>
+                        </ul>
+                    </div>
+                    <div class="example-imgs">
+                        <picture>
+                          <source srcset="../assets/imgs/windows-2.2.png" media="(max-width: 768px)">
+                          <source srcset="../assets/imgs/windows-2.1.png" media="(max-width: 1160px)">
+                          <img src="../assets/imgs/windows-2.png" alt="">
+                        </picture>
+                        <div>
+                            
+                            <picture>
+                              <source srcset="../assets/imgs/windows-17.2.png" media="(max-width: 768px)">
+                              <source srcset="../assets/imgs/windows-17.1.png" media="(max-width: 1160px)">
+                              <img src="../assets/imgs/windows-17.png" alt="">
+                            </picture>
+                            <p class="example-img__desc">Delight 70мм - оконная рама и створка</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="examples ex-3">
+            <div class="container">
+                <h2 class="example-title">Рехау Blitz</h2>
+                <div class="example-wrapper">
+                    <div class="example-text">
+                        <p class="example-text__desc">Окна Рехау Blitz - надежные базовые окна. Благодаря небольшой ширине рамы и створки — 105 мм пропускают больше света в помещение, а вместе с энергосберегающим стеклопакетом, сохраняют тепло, защищают квартиру или дом от уличного шума. Хорошее решения при выборе окон в летний домик, оптимально при остеклении беседок и балконов.</p>
+                        <ul class="example-list">
+                            <li>Системная глубина: 60 мм</li>
+                            <li>Количество камер: 3 </li>
+                            <li>Максимальная толщина заполнения: 32 мм</li>
+                            <li>Теплоизоляция: R опр. = 0,70 м2°С/Вт</li>
+                            <li>Взломобезопасность: до 3 класса</li>
+                            <li>Звукоизоляция: до 4 класса</li>
+                        </ul>
+                    </div>
+                    <div class="example-imgs">
+                        <picture>
+                          <source srcset="../assets/imgs/windows-3.2.png" media="(max-width: 768px)">
+                          <source srcset="../assets/imgs/windows-3.1.png" media="(max-width: 1160px)">
+                          <img src="../assets/imgs/windows-3.png" alt="">
+                        </picture>
+                        <div>
+                            <picture>
+                              <source srcset="../assets/imgs/windows-18.2.png" media="(max-width: 768px)">
+                              <source srcset="../assets/imgs/windows-18.1.png" media="(max-width: 1160px)">
+                              <img src="../assets/imgs/windows-18.png" alt="">
+                            </picture>
+                            <p class="example-img__desc">Blitz 60мм - оконная рама и створка</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="draw">
+            <div class="container">
+              <h2 class="draw-title">Ламинация — выберите вариант оформления</h2>
+              <div class="draw-wrapper">
+                  <div class="draw-img__wrapper">
+                   <div id="image-container">
+                     <img id="main-image" src="../assets/imgs/color-9.png" alt="Window Image">
+                   </div>   
+                  </div>
+                  <div>
+                      <p class="draw-choose">Цвет: <span id="color-name">Антрацит</span></p>
+                 <div id="color-options">
+                   <div class="color-option" onclick="changeImage('../assets/imgs/color-9.png', 'Антрацит')"><img src="../assets/imgs/color-1.png" alt=""></div>
+                   <div class="color-option" onclick="changeImage('../assets/imgs/color-10.png', 'Морёный дуб')"><img src="../assets/imgs/color-2.png" alt=""></div>
+                   <div class="color-option" onclick="changeImage('../assets/imgs/color-11.png', 'Золотой дуб')"><img src="../assets/imgs/color-3.png" alt=""></div>
+                   <div class="color-option" onclick="changeImage('../assets/imgs/color-12.png', 'Сапели')"><img src="../assets/imgs/color-4.png" alt=""></div>
+                   <div class="color-option" onclick="changeImage('../assets/imgs/color-13.png', 'Орех')"><img src="../assets/imgs/color-5.png" alt=""></div>
+                   <div class="color-option" onclick="changeImage('../assets/imgs/color-14.png', 'Чёрный')"><img src="../assets/imgs/color-6.png" alt=""></div>
+                   <div class="color-option" onclick="changeImage('../assets/imgs/color-15.png', 'Сиена-Белладжио')"><img src="../assets/imgs/color-7.png" alt=""></div>
+                   <div class="color-option" onclick="changeImage('../assets/imgs/color-16.png', 'Шоколад')"><img src="../assets/imgs/color-8.png" alt=""></div>
+                 </div>
+                 </div>
+                 
+              </div>
+            </div>
+        </section>
+        <section class="examples ex-4">
+            <div class="container">
+                <h2 class="example-title">Классическое окно с термоизоляцией ALT W72 Hi+</h2>
+                <div class="example-wrapper">
+                    <div class="example-text">
+                        <p class="example-text__desc">Алюминиевые окна Alutech ALT W72 Hi+ — из профильной системы с усовершенствованным термоизолирующим блоком, который обеспечивает высокие теплоизоляционные характеристики. Система позволяет производить остекление энергоэффективных жилых зданий — современных строений с минимальным потреблением энергии. В профильной системе ALT W72 возможна установка широкого ассортимента заполнений толщиной до 58 мм</p>
+                        <ul class="example-list">
+                            <li>Максимальная высота створки: 2500 мм</li>
+                            <li>Максимальная ширина створки: 1600 мм</li>
+                            <li>Максимальная толщина заполнения: 58 мм</li>
+                            <li>Теплоизоляция: R₀ = 1,04 м2∙°С/Вт</li>
+                            <li>Взломобезопасность: до 3 класса</li>
+                            <li>Звукоизоляция: до 4 класса</li>
+                        </ul>
+                    </div>
+                        <picture>
+                          <source srcset="../assets/imgs/windows-5.2.png" media="(max-width: 768px)">
+                          <source srcset="../assets/imgs/windows-5.1.png" media="(max-width: 1160px)">
+                          <img src="../assets/imgs/windows-5.png" alt="">
+                        </picture>
+                </div>
+            </div>
+        </section>
+        <section class="examples ex-5">
+            <div class="container">
+                <h2 class="example-title">Классическое окно с термоизоляцией ALT W62</h2>
+                <div class="example-wrapper">
+                    <div class="example-text">
+                        <p class="example-text__desc">Окна ALT 62 позволяют повышают безопасность и функциональность зданий, обеспечивают высокий уровень комфорта в помещениях. Конструкции ALT 62 имеют высокие показатели тепло- и звукоизоляции, надёжны и долговечны. Применяемые профили, комплектующие и фурнитура, используемые типы покрытий гарантируют долгий срок службы окон. Конструкции удачно гармонируют с фасадными и дверными системами</p>
+                        <ul class="example-list">
+                            <li>Максимальная высота створки: 2500 мм</li>
+                            <li>Максимальная ширина створки: 1600 мм</li>
+                            <li>Максимальная толщина заполнения: 50 мм</li>
+                            <li>Теплоизоляция: R₀ = 0,67 м2∙°С/Вт</li>
+                            <li>Взломобезопасность: до 3 класса</li>
+                            <li>Звукоизоляция: до 4 класса</li>
+                        </ul>
+                    </div>
+                    <picture>
+                      <source srcset="../assets/imgs/windows-6.2.png" media="(max-width: 768px)">
+                      <source srcset="../assets/imgs/windows-6.1.png" media="(max-width: 1160px)">
+                      <img src="../assets/imgs/windows-6.png" alt="">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="draw-1">
+            <div class="container">
+              <h2 class="draw-title">Покраска — выберите вариант оформления</h2>
+              <div class="draw-wrapper">
+                  <div class="draw-img__wrapper-2">
+                   <div id="image-container">
+                     <img id="main-image-1" src="../assets/imgs/color-17.png" alt="Window Image">
+                   </div>  
+                  </div>
+                  <div>
+                      <p class="draw-choose">Цвет: <span id="color-name-1">Белый</span></p>
+                 <div id="color-options-1">
+                   <div class="color-option" onclick="changeImage1('../assets/imgs/color-17.png', 'Белый')"></div>
+                   <div class="color-option" onclick="changeImage1('../assets/imgs/color-18.png', 'Антрацит')"></div>
+                   <div class="color-option" onclick="changeImage1('../assets/imgs/color-19.png', 'Коричневый')"></div>
+                   <div class="color-option" onclick="changeImage1('../assets/imgs/color-20.png', 'Черный')"></div>
+                   <div class="color-option" onclick="changeImage1('../assets/imgs/color-21.png', 'Серый антрацит')"></div>
+                   <div class="color-option" onclick="changeImage1('../assets/imgs/color-22.png', 'Серый')"></div>
+                   <div class="color-option" onclick="changeImage1('../assets/imgs/color-23.png', 'Зелёный')"></div>
+                   <div class="color-option" onclick="changeImage1('../assets/imgs/color-24.png', 'Красный')"></div>
+                 </div>  
+                  </div>
+                 
+              </div>
+            </div>
+        </section>
+        <section class="glass" id="glass-1">
+            <div class="container">
+                <div class="glass-wrapper">
+                    <div class="glass-text">
+                        <h2 class="glass-title">Остекление</h2>
+                        <p class="glass-desc">Толщина стекла определяется в зависимости от габаритных размеров створок и ветровой нагрузки. Для безопасной и эффективной эксплуатации таких конструкций применяются одно — и двухкамерные стеклопакеты с закалённым энергосберегающим стеклом или триплексом</p>
+                        <a class="glass-link" href="../pages/windows-glazed.html">Узнать подробнее</a>
+                    </div>
+                    <picture>
+                      <source srcset="../assets/imgs/windows-8.2.png" media="(max-width: 768px)">
+                      <source srcset="../assets/imgs/windows-8.1.png" media="(max-width: 1160px)">
+                      <img src="../assets/imgs/windows-8.png" alt="">
+                    </picture>
+                  </div>
+            </div>
+        </section>
+        <section class="findings" id="glass-2">
+          <div class="container">
+            <h2 class="findings-title">Фурнитура</h2>
+            <div class="findings-wrapper">
+              <div class="findings-text">
+                <p class="findings-desc"><span>Антивзломная фурнитура.</span> Обеспечивает защиту от взлома при помощи специальных антивзломных ответных планок и грибовидных цапф. Рекомендуем применять совместно с противоударным стеклом триплекс. Ваш дом под надежной защитой.</p>
+                <p class="findings-desc"><span>Комфортное проветривание.</span> функция безопасного щелевого проветривания с помощью смещения створки по всему периметру оконной рамы на 6 миллиметров. Окно, оснащённое системой PADK, позволяет комфортно проветривать помещение, обеспечивая здоровый микроклимат, экономию энергии и защиту от дождя и шума. Более того, створка, находящаяся в положении проветривания, сохраняет высокие противовзломные свойства.</p>
+                <p class="findings-desc"><span>Скрытые петли.</span> При закрытом окне видна только оконная ручка, что придает ему исключительно строгий, стильный вид. Удачное решение для окон в цветном профиле, дизайн цветного окна не искажает вид не подходящих по цвету накладок на петли.</p>
+                <p class="findings-desc"><span>TILT FIRST поворотно-откидное окно,</span> работающее в обратной последовательности. То есть сначала оно откидывается, а только потом открывается. Преимуществом такого решения является то, что маленький ребенок повернув ручку окна не открывает его, а только откидывает. То есть меньше подвергает себя риску выпадения.</p>
+              </div>
+              <img src="../assets/imgs/windows-9.png" alt="">
+            </div>
+          </div>
+        </section>
+        <section class="fuctions">
+          <div class="container">
+            <h2 class="fuctions-title">Вы можете заказать дополнительные функции к стандартным окнам:</h2>
+            <div class="functions-wrapper">
+              <div class="function">
+                <h3 class="fuction-title">Микровентиляция</h3>
+                <p class="fuction-desc">Небольшая щель между створкой и оконной рамой обеспечивает постоянный приток воздуха в квартиру. Предохраняет от избыточной влажности и образования конденсата водяного пара на стеклах окон и стенах квартиры</p>
+              </div>
+              <div class="function">
+                <h3 class="fuction-title">Гребёнка (многоступенчатое проветривание) </h3>
+                <p class="fuction-desc">Дает возможность регулировать приток воздуха в квартиру: можно выбрать одну из четырех позиций наклона створки. Это очень удобное решение, особенно для людей, которые любят спать при открытом окне</p>
+              </div>
+              <div class="function">
+                <h3 class="fuction-title">Детский замок</h3>
+                <p class="fuction-desc">После блокировки створки ключом, створку можно только откинуть, но невозможно открыть, что предотвращает выпадение из окна</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="portfolio" id="glass-3">
+            <div class="container">
+                <h2 class="portfolio-title">Портфолио из наших работ</h2>
+                <div class="portfolio-imgs">
+                    <img class="portfolio-img" src="../assets/imgs/interior-10.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-11.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-12.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-13.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-14.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-15.png" alt="">
+                </div>
+                <div class="portfolio-imgs__planshet">
+                    <img class="portfolio-img" src="../assets/imgs/interior-11.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-13.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-10.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-12.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-14.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-15.1.png" alt="">
+                </div>
+                <div class="portfolio-imgs__mob">
+                    <img class="portfolio-img" src="../assets/imgs/interior-11.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-13.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-14.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-12.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-10.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-15.2.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="properties" id="guarantee">
+            <div class="container">
+                <h2 class="properties-title">Аксессуары и комплектующие</h2>
+                <div class="property-wrapper">
+                    <div class="property">
+                        <img src="../assets/imgs/windows-10.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Оконная ручка </h3>
+                            <p class="property-desc">Компания представляет широкий выбор оконных ручек и нажимных гарнитуров в разных цветах и с разными варианта дизайна, что позволит подобрать идеальное решение именно для вашего окна или двери</p>
+                            <a class="property-link" href="../pages/accessories.html">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="property">
+                        <img src="../assets/imgs/windows-11.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Шпросы </h3>
+                            <p class="property-desc">Шпросы — это раскладка декоративных элементов внутри стеклопакета. Они представляют особые планки, которые можно выгибать и вставлять под любым углом до получения желаемого узора. При этом цвет таких планок может быть разным</p>
+                            <a class="property-link" href="../pages/accessories.html">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="property">
+                        <img src="../assets/imgs/windows-12.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Вентиляционные клапаны </h3>
+                            <p class="property-desc">Современные оконные клапаны обеспечивают высокое энергосбережение, снижение уровня шума и поддерживать оптимальный микроклимат</p>
+                            <a class="property-link" href="../pages/accessories.html">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="property">
+                        <img src="../assets/imgs/windows-13.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Москитные сетки</h3>
+                            <p class="property-desc">Правильно подобранная и качественно установленная москитная сетка надёжно защитит ваш дом или квартиру от насекомых и уличной пыли. Эстетически приятная конструкция удачно впишется в вашу оконную раму</p>
+                            <a class="property-link" href="../pages/accessories.html">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="property">
+                        <img src="../assets/imgs/windows-14.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Подоконники </h3>
+                            <p class="property-desc">Подоконник — неотъемлемая часть оконного проёма. закрывает стыки после монтажа, защищает от сквозняков, дарит окну завершённый вид и красивый дизайн</p>
+                            <a class="property-link" href="../pages/accessories.html">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="property">
+                        <img src="../assets/imgs/windows-15.png" alt="">
+                        <div class="property-text">
+                            <h3 class="property-title">Откосы</h3>
+                            <p class="property-desc">Откосы — это участки оконного проема, которые обрамляют окно изнутри и снаружи. Откосы сохраняют тепло в помещении, улучшают шумоизоляцию, защищают от проникновения влаги</p>
+                            <a class="property-link" href="../pages/accessories.html">Узнать подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      <section class="interior-form" id="write">
+        <div class="container">
+          <div class="form-wrapper">
+            <h3 class="contacts-form__title">
+                Хотите сотрудничать с нами?
+            </h3>
+            <p class="contacts-form__desc">Оставьте контактные данные, мы свяжемся с вами и обсудим условия сотрудничества</p>
+            <form action="../form-handler.php" method="post">
+              <input class="contacts-input" name="fullname" type="text" placeholder="Ваше имя" required pattern="[A-Za-zА-Яа-яЁё\s]{3,20}" maxlength="20" title="Имя должно содержать только буквы, быть длиной от 3 до 20 символов"/>
+              <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+              <button class="contacts-button" type="submit" name="submit">Отправить</button>
+              <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+                </label>
+            </form>
+            <p class="connection">Связаться с нами напрямую</p>
+            <div class="contacts-links">
+              <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+              <a class="contacts-links__whatsup" href="https://wa.me/79960294525">Написать в WhatsApp</a>
+            </div>
+            <div class="contacts-links-2">
+              <a class="contacts-links__vk" href="https://vk.com/glens_39">Группа ВКонтакте</a>
+              <a class="contacts-links__tg" href="https://t.me/+79960294525">Написать в Telegram</a>
+            </div>
+        </div>
+        </div>
+    </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a class="footer-logo" href="../index.html">
+            <img src="../assets/imgs/logo.svg" alt=""/>
+          </a>
+          <div class="footer-main__links">
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+            <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+            <a class="money" href="#write">Расчёт проекта</a>
+          </div>
+        </div>
+        <div class="footer-wrapper">
+          <div class="footer-address">
+            <p class="footer-address__street">
+                г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00
+            </p>
+            <a class="whatsapp" href="https://wa.me/79960294525 "><img src="../assets/imgs/whatsapp.svg" alt="" /></a>
+            <a class="tg" href="https://t.me/+79960294525"><img src="../assets/imgs/tg.svg" alt="" /></a>
+            <a class="vk" href="https://vk.com/glens_39"><img src="../assets/imgs/vk.svg" alt="" /></a>
+            <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+          </div>
+          <nav class="footer-nav">
+            <div>
+              <ul class="footer-nav__list dis">
+                <li><a class="footer-nav__list-link" href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/windows-all.html">Алюминиевые окна</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="footer-nav__title"><a href="../index.html">Частным заказчикам</a></h4>
+            </div>
+            <div>
+              <ul class="footer-nav__list dis">
+                <li><a class="footer-nav__list-link" href="..pages/contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer-mob">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div>
+            <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt=""></a>
+            <p class="footer-address__street">
+              г. Калининград ул. 9 Апреля, 88А (второй этаж) <br/> пн-пт 9.00-18.00 сб. 10.00-15.00
+            </p>
+            <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          </div>
+          <a class="money" href="#write">Расчёт проекта</a>
+        </div>
+        <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

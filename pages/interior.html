@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glens</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/popap.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/interior-page.css" />
+    <link rel="stylesheet" href="../styles/slider.css" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon.png">
+  </head>
+  <body>
+    <header class="header-desc">
+      <div class="container">
+        <nav class="main-nav">
+          <a class="header-logo" href="../index.html">
+            <img src="../assets/imgs/logo.svg" alt="logo" />
+          </a>
+          <p class="address">
+            г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб.
+            10.00-15.00
+          </p>
+          <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          <div class="overlay" id="overlay"></div>
+          <div class="popup" id="popup">
+            <span class="close" id="closePopup"></span>
+            <h2>Оставьте свой номер телефона, мы вам перезвоним</h2>
+            <form action="../form-handler.php" method="post">
+              <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+              <button type="submit">Отправить</button>
+              <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+            </label>
+            </form>
+          </div>
+          <button id="orderCall">Заказать звонок</button>
+      </div>
+        </nav>
+      <nav class="header-links">
+        <div class="container">
+          <ul>
+            <li>
+              <a class="header-link" href="../pages/windows.html">Окна</a>
+              <div class="dropdown-content">
+                <a href="../pages/windows-pvx.html">Окна ПВХ</a>
+                <a href="../pages/windows-all.html">Окна алюминиевые</a>
+              </div>
+            </li>
+            <li>
+              <a class="header-link" href="">Двери</a>
+              <div class="dropdown-content">
+                <a href="../pages/doors-pvx.html">Двери ПВХ</a>
+                <a href="../pages/doors-all.html">Двери алюминиевые</a>
+              </div>
+            </li>
+            <li><a class="header-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+            <li><a class="header-link" href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+            <li><a class="header-link" href="../pages/services.html">Услуги</a></li>
+            <li><a class="header-link" href="../pages/interior.html">Интерьерные решения</a></li>
+            <li><a class="header-link" href="../index.html">Частным заказчикам</a></li>
+            <li><a class="header-link" href="../pages/contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <header class="header-mob">
+      <div class="container">
+        <div class="header-container">
+          <div class="logo">
+              <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt="Glens"></a>
+          </div>
+          <div class="contact-info">
+              <p class="address">г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00</p>
+          </div>
+          <div class="call-button">
+            <button id="orderCall">Заказать звонок</button>
+          </div>
+          <div>
+            <a class="header-tel tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+          </div>
+          <div class="menu-icon" onclick="toggleMenu(this)">
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="dropdown-menu" class="hidden">
+          <ul>
+            <li class="dropdown">
+              <a href="../pages/windows.html" onclick="toggleDropdown('dropdown-1')">Окна</a>
+              <ul id="dropdown-1" class="dropdown-content__mob hidden">
+                  <li><a href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                  <li><a href="../pages/windows-all.html">Окна алюминиевые</a></li>
+            </ul>
+          </li>
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown('dropdown-2')">Двери</a>
+              <ul id="dropdown-2" class="dropdown-content__mob hidden">
+                  <li><a href="../pages/doors-pvx.html">Двери ПВХ</a></li>
+                  <li><a href="../pages/doors-all.html">Двери алюминиевые</a></li>
+              </ul>
+            </li>
+            <li><a href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+            <li><a href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+            <li><a href="../pages/services.html">Услуги</a></li>
+            <li><a href="../pages/interior.html">Интерьерные решения</a></li>
+            <li><a href="../index.html">Частным заказчикам</a></li>
+            <li><a href="../pages/contacts.html">Контакты</a></li>
+            <li><a class="btn-header__mob" href="#write">Рассчитать стоимость</a></li>
+          </ul>
+      </nav>
+    </div>
+    </header>
+    <main>
+        <section class="interior-main">
+            <div class="container">
+                <div>
+                    <a class="pages-link" href="../pages/designers.html">Главная</a>
+                    <span>
+                        <img src="../assets/imgs/arrow-link.svg" alt="">
+                    </span>
+                    <a class="pages-link" href="../pages/interior.html">Интерьерные решения</a>
+                </div>
+                <h1 class="interior-main__title">Интерьерные решения</h1>
+            </div>
+            <div class="interior-main__imgs">
+                <img class="interior-main__img" src="../assets/imgs/interior-1.png" alt="">
+                <div class="container">
+                    <img src="../assets/imgs/interior-2.png" alt="">
+                    <img src="../assets/imgs/interior-3.png" alt="">
+                    <img src="../assets/imgs/interior-4.png" alt="">
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slides">
+                  <div class="slide">
+                    <picture>
+                        <source srcset="../assets/imgs/interior-1.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/interior-1.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/interior-1.1.png" alt="">
+                      </picture>
+                  </div>
+                  <div class="slide">
+                    <picture>
+                        <source srcset="../assets/imgs/interior-2.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/interior-2.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/interior-2.1.png" alt="">
+                      </picture>
+                  </div>
+                  <div class="slide">
+                    <picture>
+                        <source srcset="../assets/imgs/interior-3.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/interior-3.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/interior-3.1.png" alt="">
+                      </picture>
+                  </div>
+                  <div class="slide">
+                    <picture>
+                        <source srcset="../assets/imgs/interior-4.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/interior-4.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/interior-4.1.png" alt="">
+                      </picture>
+                  </div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)"></button>
+                <button class="next" onclick="moveSlide(1)"></button>
+              </div>
+              <script src="../script.js"></script>
+        </section>
+        <section class="partition">
+            <div class="container">
+                <div class="partition-wrapper">
+                    <div>
+                        <h2 class="partition-title">Офисные перегородки ALT110</h2>
+                            <div class="partition-text">
+                                <p class="partition-text__title partition-text__1">Алюминиевые профили</p>
+                                <p>Сплав AlMgO,7Si 6063 состояние Т6</p>
+                            </div>
+                            <div class="partition-text">
+                                <p class="partition-text__title partition-text__2">Уплотнители</p>
+                                <p>Синтетический каучук EPDM / термопластичные эластомеры TPE</p>
+                            </div>
+                            <div class="partition-text">
+                                <p class="partition-text__title partition-text__3">Соединения</p>
+                                <p>Соединяющие угловые детали из стали и алюминиевого сплава, самонарезающие винты, подкладки из пластика</p>
+                            </div>
+                            <div class="partition-text">
+                                <p class="partition-text__title partition-text__4">Способ покрытия</p>
+                                <p>Порошковое покрытие полиэфирными красками, соответствующее требованиям Qualicoat, выбор цвета по шкале RAL; анодирование в 9 цветах в соответствии с требованиями Qualanod</p>
+                            </div>
+                    </div>
+                    <img src="../assets/imgs/interior-5.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="partition">
+            <div class="container">
+                <div class="partition-wrapper">
+                    <div>
+                        <h2 class="partition-title">Алюминиевая дверь ALT110 для офисных перегородок ALT110</h2>
+                            <div class="partition-text">
+                                <p class="partition-text__title partition-text__1">Алюминиевые профили</p>
+                                <p>Сплав AlMgO,7Si 6063 состояние Т6</p>
+                            </div>
+                            <div class="partition-text">
+                                <p class="partition-text__title partition-text__2">Уплотнители</p>
+                                <p>Синтетический каучук EPDM по нормам DIN 7863</p>
+                            </div>
+                            <div class="partition-text">
+                                <p class="partition-text__title partition-text__3">Соединения</p>
+                                <p>Соединяющие угловые детали из алюминиевого сплава, самонарезающие винты, подкладки из пластика</p>
+                            </div>
+                            <div class="partition-text">
+                                <p class="partition-text__title partition-text__4">Способ покрытия</p>
+                                <p>Порошковое покрытие полиэфирными красками, соответствующее требованиям Qualicoat, выбор цвета по шкале RAL; анодирование в 9 цветах в соответствии с требованиями Qualanod</p>
+                            </div>
+                    </div>
+                    <img src="../assets/imgs/interior-6.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="partition">
+            <div class="container">
+                <div class="partition-wrapper">
+                    <div>
+                        <h2 class="partition-title">Интерьерные перегородки ALT111</h2>
+                            <div class="partition-text">
+                                <p class="partition-text__title partition-text__1">Алюминиевые профили</p>
+                                <p>Сплав AlMgO,7Si 6063 состояние Т6</p>
+                            </div>
+                            <div class="partition-text">
+                                <p class="partition-text__title partition-text__2">Уплотнители</p>
+                                <p>Синтетический каучук EPDM / термопластичные эластомеры TPE</p>
+                            </div>
+                            <div class="partition-text">
+                                <p class="partition-text__title partition-text__3">Соединения</p>
+                                <p>Соединяющие угловые детали из стали и алюминиевого сплава, самонарезающие винты, подкладки из пластика</p>
+                            </div>
+                            <div class="partition-text">
+                                <p class="partition-text__title partition-text__4">Способ покрытия</p>
+                                <p>Порошковое покрытие полиэфирными красками, соответствующее требованиям Qualicoat, выбор цвета по шкале RAL; анодирование в 9 цветах в соответствии с требованиями Qualanod</p>
+                            </div>
+                    </div>
+                    <img src="../assets/imgs/interior-7.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="partition">
+            <div class="container">
+                <div class="partition-wrapper">
+                    <div>
+                        <h2 class="partition-title">Алюминиевая дверь ALT111 для офисных перегородок ALT110</h2>
+                        <div class="partition-text">
+                            <p class="partition-text__title partition-text__1">Алюминиевые профили</p>
+                            <p>Сплав AlMgO,7Si 6063 состояние Т6</p>
+                        </div>
+                        <div class="partition-text">
+                            <p class="partition-text__title partition-text__2">Уплотнители</p>
+                            <p>Синтетический каучук EPDM по нормам DIN 7863</p>
+                        </div>
+                        <div class="partition-text">
+                            <p class="partition-text__title partition-text__3">Соединения</p>
+                            <p>Соединяющие угловые детали из алюминиевого сплава, самонарезающие винты, подкладки из пластика</p>
+                        </div>
+                        <div class="partition-text">
+                            <p class="partition-text__title partition-text__4">Способ покрытия</p>
+                            <p>Порошковое покрытие полиэфирными красками, соответствующее требованиям Qualicoat, выбор цвета по шкале RAL; анодирование в 9 цветах в соответствии с требованиями Qualanod</p>
+                        </div>
+                    </div>
+                    <img src="../assets/imgs/interior-8.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="partition-mob">
+            <div class="container">
+                    <h2 class="partition-title">Офисные перегородки ALT110</h2>
+                    <picture>
+                        <source srcset="../assets/imgs/interior-5.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/interior-5.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/interior-5.1.png" alt="">
+                      </picture>
+                    <div class="partition-text__wrapper">
+                        <p class="partition-text">Алюминиевые профили: Сплав AlMgO,7Si 6063 состояние Т6 </p>
+                        <p class="partition-text">Уплотнители: Синтетический каучук EPDM / термопластичные эластомеры TPE </p>
+                        <p class="partition-text">Соединения: Соединяющие угловые детали из стали и алюминиевого сплава, самонарезающие винты, подкладки из пластика</p>
+                        <p class="partition-text">Способ покрытия: Порошковое покрытие полиэфирными красками, соответствующее требованиям Qualicoat, выбор цвета по шкале RAL; анодирование в 9 цветах в соответствии с требованиями Qualanod</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partition-mob">
+            <div class="container">
+                    <h2 class="partition-title">Алюминиевая дверь ALT110 для офисных перегородок ALT110</h2>
+                    <picture>
+                        <source srcset="../assets/imgs/interior-6.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/interior-6.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/interior-6.1.png" alt="">
+                      </picture>
+                    <div class="partition-text__wrapper">
+                        <p class="partition-text">Алюминиевые профили: Сплав AlMgO,7Si 6063 состояние Т6</p>
+                        <p class="partition-text">Уплотнители: Синтетический каучук EPDM по нормам DIN 7863</p>
+                        <p class="partition-text">Соединения: Соединяющие угловые детали из алюминиевого сплава, самонарезающие винты, подкладки из пластика</p>
+                        <p class="partition-text">Способ покрытия: Порошковое покрытие полиэфирными красками, соответствующее требованиям Qualicoat, выбор цвета по шкале RAL; анодирование в 9 цветах в соответствии с требованиями Qualanod</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partition-mob">
+            <div class="container">
+                    <h2 class="partition-title">Интерьерные перегородки ALT111</h2>
+                    <picture>
+                        <source srcset="../assets/imgs/interior-7.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/interior-7.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/interior-7.1.png" alt="">
+                      </picture>
+                    <div class="partition-text__wrapper">
+                        <p class="partition-text">Алюминиевые профили: Сплав AlMgO,7Si 6063 состояние Т6</p>
+                        <p class="partition-text">Уплотнители: Синтетический каучук EPDM / термопластичные эластомеры TPE</p>
+                        <p class="partition-text">Соединения: Соединяющие угловые детали из стали и алюминиевого сплава, самонарезающие винты, подкладки из пластика</p>
+                        <p class="partition-text">Способ покрытия: Порошковое покрытие полиэфирными красками, соответствующее требованиям Qualicoat, выбор цвета по шкале RAL; анодирование в 9 цветах в соответствии с требованиями Qualanod</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partition-mob">
+            <div class="container">
+                    <h2 class="partition-title">Алюминиевая дверь ALT111 для офисных перегородок ALT110</h2>
+                    <picture>
+                        <source srcset="../assets/imgs/interior-8.2.png" media="(max-width: 768px)">
+                        <source srcset="../assets/imgs/interior-8.1.png" media="(max-width: 1160px)">
+                        <img src="../assets/imgs/interior-8.1.png" alt="">
+                      </picture>
+                    <div class="partition-text__wrapper">
+                        <p class="partition-text">Алюминиевые профили: Сплав AlMgO,7Si 6063 состояние Т6</p>
+                        <p class="partition-text">Уплотнители: Синтетический каучук EPDM по нормам DIN 7863</p>
+                        <p class="partition-text">Соединения: Соединяющие угловые детали из алюминиевого сплава, самонарезающие винты, подкладки из пластика</p>
+                        <p class="partition-text">Способ покрытия: Порошковое покрытие полиэфирными красками, соответствующее требованиям Qualicoat, выбор цвета по шкале RAL; анодирование в 9 цветах в соответствии с требованиями Qualanod</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="draw">
+           <div class="container">
+            <h2 class="draw-title">Покраска — выберите вариант оформления</h2>
+            <div class="draw-wrapper">
+                <div class="draw-img__wrapper">
+                 <div id="image-container">
+                   <img id="main-image" src="../assets/imgs/color-17.png" alt="Window Image">
+                 </div>  
+                </div>
+                <div>
+                    <p class="draw-choose">Цвет: <span id="color-name">Белый</span></p>
+               <div id="color-options">
+                 <div class="color-option" onclick="changeImage('../assets/imgs/color-17.png', 'Белый')"></div>
+                 <div class="color-option" onclick="changeImage('../assets/imgs/color-18.png', 'Антрацит')"></div>
+                 <div class="color-option" onclick="changeImage('../assets/imgs/color-19.png', 'Коричневый')"></div>
+                 <div class="color-option" onclick="changeImage('../assets/imgs/color-20.png', 'Черный')"></div>
+                 <div class="color-option" onclick="changeImage('../assets/imgs/color-21.png', 'Серый антрацит')"></div>
+                 <div class="color-option" onclick="changeImage('../assets/imgs/color-22.png', 'Серый')"></div>
+                 <div class="color-option" onclick="changeImage('../assets/imgs/color-23.png', 'Зелёный')"></div>
+                 <div class="color-option" onclick="changeImage('../assets/imgs/color-24.png', 'Красный')"></div>
+               </div>  
+                </div>
+               
+            </div>
+           </div>
+        </section>
+        <section class="portfolio">
+            <div class="container">
+                <h2 class="portfolio-title">Портфолио из наших работ</h2>
+                <div class="portfolio-imgs">
+                    <img class="portfolio-img" src="../assets/imgs/interior-10.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-11.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-12.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-13.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-14.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-15.png" alt="">
+                </div>
+                <div class="portfolio-imgs__planshet">
+                    <img class="portfolio-img" src="../assets/imgs/interior-11.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-13.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-10.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-12.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-14.1.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-15.1.png" alt="">
+                </div>
+                <div class="portfolio-imgs__mob">
+                    <img class="portfolio-img" src="../assets/imgs/interior-11.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-13.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-14.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-12.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-10.2.png" alt="">
+                    <img class="portfolio-img" src="../assets/imgs/interior-15.2.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="interior-form" id="write">
+            <div class="container">
+              <div class="form-wrapper">
+                <h3 class="contacts-form__title">
+                    Хотите сотрудничать с нами?
+                </h3>
+                <p class="contacts-form__desc">Оставьте контактные данные, мы свяжемся с вами и обсудим условия сотрудничества</p>
+                <form action="../form-handler.php" method="post">
+                  <input class="contacts-input" name="fullname" type="text" placeholder="Ваше имя" required pattern="[A-Za-zА-Яа-яЁё\s]{3,20}" maxlength="20" title="Имя должно содержать только буквы, быть длиной от 3 до 20 символов"/>
+                  <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
+                  <button class="contacts-button" type="submit" name="submit">Отправить</button>
+                  <label class="checkbox-container">
+                    <input type="checkbox" id="agree">
+                    <span class="checkmark"></span>
+                    Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
+                    </label>
+                </form>
+                <p class="connection">Связаться с нами напрямую</p>
+                <div class="contacts-links">
+                  <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+                  <a class="contacts-links__whatsup" href="https://wa.me/79960294525">Написать в WhatsApp</a>
+                </div>
+                <div class="contacts-links-2">
+                  <a class="contacts-links__vk" href="https://vk.com/glens_39">Группа ВКонтакте</a>
+                  <a class="contacts-links__tg" href="https://t.me/+79960294525">Написать в Telegram</a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a class="footer-logo" href="../index.html">
+            <img src="../assets/imgs/logo.svg" alt=""/>
+          </a>
+          <div class="footer-main__links">
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+            <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+            <a class="money" href="#write">Расчёт проекта</a>
+          </div>
+        </div>
+        <div class="footer-wrapper">
+          <div class="footer-address">
+            <p class="footer-address__street">
+                г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00
+            </p>
+            <a class="whatsapp" href="https://wa.me/79960294525 "><img src="../assets/imgs/whatsapp.svg" alt="" /></a>
+            <a class="tg" href="https://t.me/+79960294525"><img src="../assets/imgs/tg.svg" alt="" /></a>
+            <a class="vk" href="https://vk.com/glens_39"><img src="../assets/imgs/vk.svg" alt="" /></a>
+            <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+          </div>
+          <nav class="footer-nav">
+            <div>
+              <ul class="footer-nav__list dis">
+                <li><a class="footer-nav__list-link" href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/windows-all.html">Алюминиевые окна</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/windows-glazed.html">Стеклопакеты</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="footer-nav__title"><a href="../index.html">Частным заказчикам</a></h4>
+            </div>
+            <div>
+              <ul class="footer-nav__list dis">
+                <li><a class="footer-nav__list-link" href="..pages/contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer-mob">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div>
+            <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt=""></a>
+            <p class="footer-address__street">
+              г. Калининград ул. 9 Апреля, 88А (второй этаж) <br/> пн-пт 9.00-18.00 сб. 10.00-15.00
+            </p>
+            <a class="tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+          </div>
+          <a class="money" href="#write">Расчёт проекта</a>
+        </div>
+        <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>

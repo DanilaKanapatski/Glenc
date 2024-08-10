@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="../styles/popap.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/contacts-page.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon.png">
   </head>
   <body>
     <header class="header-desc">
       <div class="container">
         <nav class="main-nav">
           <a class="header-logo" href="../index.html">
-            <img src="../assets/imgs/logo.jpg" alt="logo" />
+            <img src="../assets/imgs/logo.svg" alt="logo" />
           </a>
           <p class="address">
             г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб.
@@ -27,13 +30,13 @@
           <div class="popup" id="popup">
             <span class="close" id="closePopup"></span>
             <h2>Оставьте свой номер телефона, мы вам перезвоним</h2>
-            <form action="form-handler.php" method="post">
-              <input type="text" placeholder="Ваш номер телефона" />
+            <form action="../form-handler.php" method="post">
+              <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
               <button type="submit">Отправить</button>
               <label class="checkbox-container">
                 <input type="checkbox">
                 <span class="checkmark"></span>
-                Нажимая кнопку вы соглашаетесь с условиями <a href="#">Политики конфиденциальности</a>
+                Нажимая кнопку вы соглашаетесь с условиями <a href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политики конфиденциальности</a>
             </label>
             </form>
           </div>
@@ -46,26 +49,26 @@
             <li>
               <a class="header-link" href="">Окна</a>
               <div class="dropdown-content">
-                <a href="#">Окна ПВХ</a>
-                <a href="#">Окна алюминиевые</a>
+                <a href="../pages/windows-pvx.html">Окна ПВХ</a>
+                <a href="../pages/windows-all.html">Окна алюминиевые</a>
               </div>
             </li>
             <li>
               <a class="header-link" href="">Двери</a>
               <div class="dropdown-content">
-                <a href="#">Двери ПВХ</a>
-                <a href="#">Двери алюминиевые</a>
+                <a href="../pages/doors-pvx.html">Двери ПВХ</a>
+                <a href="../pages/doors-all.html">Двери алюминиевые</a>
               </div>
             </li>
-            <li><a class="header-link" href="">Раздвижные двери</a></li>
-            <li><a class="header-link" href="/pages/cottages.html">Коттеджи</a></li>
-            <li><a class="header-link" href="">Услуги</a></li>
+            <li><a class="header-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+            <li><a class="header-link" href="../pages/cottages.html">Коттеджи</a></li>
+            <li><a class="header-link" href="../pages/services.html">Услуги</a></li>
             <li><a class="header-link" href="../pages/examples.html">Вдохновляющие примеры</a></li>
-            <li><a class="header-link" href="">Интерьерные решения</a></li>
+            <li><a class="header-link" href="../pages/interior.html">Интерьерные решения</a></li>
             <li>
-              <a class="header-link" href="">Дизайнерам и архитекторам</a>
+              <a class="header-link" href="../pages/designers.html">Дизайнерам и архитекторам</a>
             </li>
-            <li><a class="header-link" href="">Контакты</a></li>
+            <li><a class="header-link" href="../pages/contacts.html">Контакты</a></li>
           </ul>
         </div>
       </nav>
@@ -74,13 +77,13 @@
       <div class="container">
         <div class="header-container">
           <div class="logo">
-              <a href="../index.html"><img src="../assets/imgs/logo-mob.jpg" alt="Glens"></a>
+            <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt="Glens"></a>
           </div>
           <div class="contact-info">
               <p class="address">г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00</p>
           </div>
           <div class="call-button">
-            <button id="orderCall">Заказать звонок</button>
+            <a href="#write" id="orderCall">Заказать звонок</a>
           </div>
           <div>
             <a class="header-tel tel" href="tel:+74012971510">+7 (4012) 97-15-10</a>
@@ -98,25 +101,25 @@
             <li class="dropdown">
               <a href="#" onclick="toggleDropdown('dropdown-1')">Окна</a>
               <ul id="dropdown-1" class="dropdown-content__mob hidden">
-                  <li><a href="#">Окна ПВХ</a></li>
-                  <li><a href="#">Окна алюминиевые</a></li>
+                  <li><a href="../pages/windows-pvx.html">Окна ПВХ</a></li>
+                  <li><a href="../pages/windows-all.html">Окна алюминиевые</a></li>
             </ul>
           </li>
             <li class="dropdown">
               <a href="#" onclick="toggleDropdown('dropdown-2')">Двери</a>
               <ul id="dropdown-2" class="dropdown-content__mob hidden">
-                  <li><a href="#">Двери ПВХ</a></li>
-                  <li><a href="#">Двери алюминиевые</a></li>
+                  <li><a href="../pages/doors-pvx.html">Двери ПВХ</a></li>
+                  <li><a href="../pages/doors-all.html">Двери алюминиевые</a></li>
               </ul>
             </li>
-              <li><a href="#">Раздвижные двери</a></li>
-              <li><a href="/pages/cottages.html">Коттеджи</a></li>
-              <li><a href="#">Услуги</a></li>
+              <li><a href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+              <li><a href="../pages/cottages.html">Коттеджи</a></li>
+              <li><a href="../pages/services.html">Услуги</a></li>
               <li><a href="../pages/examples.html">Вдохновляющие примеры</a></li>
-              <li><a href="#">Интерьерные решения</a></li>
-              <li><a href="#">Дизайнерам и архитекторам</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><a class="btn-header__mob" href="#">Рассчитать стоимость</a></li>
+              <li><a href="../pages/interior.html">Интерьерные решения</a></li>
+              <li><a href="../pages/designers.html">Дизайнерам и архитекторам</a></li>
+              <li><a href="../pages/contacts.html">Контакты</a></li>
+              <li><a class="btn-header__mob" href="#write">Рассчитать стоимость</a></li>
           </ul>
       </nav>
     </div>
@@ -125,15 +128,15 @@
         <section class="contacts-info">
             <div class="container">
                 <div class="contacts-info__links">
-                    <a class="pages-link" href="">Главная</a>
+                    <a class="pages-link" href="../index.html">Главная</a>
                     <span><img src="../assets/imgs/arrow-link.svg" alt=""></span>
-                    <a class="pages-link" href="">Контакты</a>
+                    <a class="pages-link" href="../pages/contacts.html">Контакты</a>
                 </div>
                 <h1 class="contacts-info__title">Свяжитесь с нами любым удобным способом для обсуждения деталей проекта или сотрудничества</h1>
                 <ul class="contacts-info__list">
                     <li class="contacts-info__wrapper">
                         <p class="contacts-info__list-text">Телефон для связи и WhatsApp:</p>
-                        <p class="contacts-info__list-desc">+7 (4012) 97-15-10</p>
+                        <p class="contacts-info__list-desc"><a href="https://wa.me/79960294525 ">+7 (4012) 97-15-10</a></p>
                     </li>
                     <li class="contacts-info__wrapper">
                         <p class="contacts-info__list-text">Адрес:</p>
@@ -141,7 +144,7 @@
                     </li>
                     <li class="contacts-info__wrapper">
                         <p class="contacts-info__list-text">Почта:</p>
-                        <p class="contacts-info__list-desc">okna@glens39.ru</p>
+                        <p class="contacts-info__list-desc"><a href="mailto:okna@glens39.ru">okna@glens39.ru</a></p>
                     </li>
                     <li class="contacts-info__wrapper">
                         <p class="contacts-info__list-text">График работы:</p>
@@ -150,15 +153,15 @@
                 </ul>
             </div>
         </section>
-        <section class="contacts-form">
+        <section class="contacts-form" id="write">
             <div class="container">
               <div class="form-wrapper">
                 <h3 class="contacts-form__title">
                     Оставьте ваши контактные данные, мы перезвоним вам сами
                 </h3>
-                <form action="form-handler.php" method="post">
-                  <input class="contacts-input" name="fullname" type="text" placeholder="Ваше имя" />
-                  <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" />
+                <form action="../form-handler.php" method="post">
+                  <input class="contacts-input" name="fullname" type="text" placeholder="Ваше имя" required pattern="[A-Za-zА-Яа-яЁё\s]{3,20}" maxlength="20" title="Имя должно содержать только буквы, быть длиной от 3 до 20 символов"/>
+                  <input class="contacts-input" name="phone" type="tel" placeholder="Телефон" required pattern="[\+\d\s\(\)]{10,20}" maxlength="20" title="Телефон может содержать только цифры, пробелы, скобки и знак +, длиной от 10 до 20 символов" />
                   <button class="contacts-button" type="submit" name="submit">Отправить</button>
                   <label class="checkbox-container">
                     <input type="checkbox">
@@ -172,71 +175,73 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container">
-          <div class="footer-links">
-            <a class="footer-logo" href="index.html">
-              <img src="../assets/imgs/logo.jpg" alt=""/>
-            </a>
-            <div class="footer-main__links">
-              <a class="mail" href="">okna@glens39.ru</a>
-              <a class="tel" href="">+7 (4012) 97-15-10</a>
-              <a class="money" href="">Расчёт проекта</a>
-            </div>
-          </div>
-          <div class="footer-wrapper">
-            <div class="footer-address">
-              <p class="footer-address__street">
-                  г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00
-              </p>
-              <a class="whatsapp" href="#"><img src="../assets/imgs/whatsapp.svg" alt="" /></a>
-              <a class="politics" href="">Политика конфиденциальности</a>
-            </div>
-            <nav class="footer-nav">
-              <div>
-                <h4 class="footer-nav__title">Продукция</h4>
-                <ul class="footer-nav__list">
-                  <li><a class="footer-nav__list-link" href="">Окна</a></li>
-                  <li><a class="footer-nav__list-link" href="">Двери</a></li>
-                  <li><a class="footer-nav__list-link" href="">Раздвижные двери</a></li>
-                  <li><a class="footer-nav__list-link" href="/pages/cottages.html">Коттеджи</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="footer-nav__title">Услуги</h4>
-                <ul class="footer-nav__list">
-                  <li><a class="footer-nav__list-link" href="">Замер</a></li>
-                  <li><a class="footer-nav__list-link" href="">Консультация</a></li>
-                  <li><a class="footer-nav__list-link" href="">Монтаж</a></li>
-                  <li><a class="footer-nav__list-link" href="">Гарантия</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="footer-nav__title">Другие разделы</h4>
-                <ul class="footer-nav__list">
-                  <li><a class="footer-nav__list-link" href="../pages/examples.html">Вдохновляющие примеры</a></li>
-                  <li><a class="footer-nav__list-link" href="">Дизайнерам и архитекторам</a></li>
-                  <li><a class="footer-nav__list-link" href="">Контакты</a></li>
-                </ul>
-              </div>
-            </nav>
+      <div class="container">
+        <div class="footer-links">
+          <a class="footer-logo" href="../index.html">
+            <img src="../assets/imgs/logo.svg" alt=""/>
+          </a>
+          <div class="footer-main__links">
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
+            <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+            <a class="money" href="#write">Расчёт проекта</a>
           </div>
         </div>
+        <div class="footer-wrapper">
+          <div class="footer-address">
+            <p class="footer-address__street">
+                г. Калининград ул. 9 Апреля, 88А (второй этаж) пн-пт 9.00-18.00 сб. 10.00-15.00
+            </p>
+            <a class="whatsapp" href="https://wa.me/79960294525 "><img src="../assets/imgs/whatsapp.svg" alt="" /></a>
+            <a class="tg" href="https://t.me/+79960294525"><img src="../assets/imgs/tg.svg" alt="" /></a>
+            <a class="vk" href="https://vk.com/glens_39"><img src="../assets/imgs/vk.svg" alt="" /></a>
+            <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+          </div>
+          <nav class="footer-nav">
+            <div>
+              <h4 class="footer-nav__title">Продукция</h4>
+              <ul class="footer-nav__list">
+                <li><a class="footer-nav__list-link" href="../pages/windows-all.html">Окна</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/doors-all.html">Двери</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/doors-sliding.html">Раздвижные двери</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/cottages.html">Коттеджи</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="footer-nav__title">Услуги</h4>
+              <ul class="footer-nav__list">
+                <li><a class="footer-nav__list-link" href="../pages/services.html">Замер</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/services.html">Консультация</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/services.html">Монтаж</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/services.html">Гарантия</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="footer-nav__title">Другие разделы</h4>
+              <ul class="footer-nav__list">
+                <li><a class="footer-nav__list-link" href="../pages/examples.html">Вдохновляющие примеры</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/designers.html">Дизайнерам и архитекторам</a></li>
+                <li><a class="footer-nav__list-link" href="../pages/contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
     </footer>
     <footer class="footer-mob">
-        <div class="container">
-          <div class="footer-wrapper">
-            <div>
-              <a href=""><img src="../assets/imgs/logo-mob.jpg" alt=""></a>
-              <p class="footer-address__street">
-                г. Калининград ул. 9 Апреля, 88А (второй этаж) <br/> пн-пт 9.00-18.00 сб. 10.00-15.00
-              </p>
-              <a class="tel" href="">+7 (4012) 97-15-10</a>
-              <a class="mail" href="">okna@glens39.ru</a>
-            </div>
-            <a class="money" href="">Расчёт проекта</a>
+      <div class="container">
+        <div class="footer-wrapper">
+          <div>
+            <a href="../index.html"><img src="../assets/imgs/logo-mob.svg" alt=""></a>
+            <p class="footer-address__street">
+              г. Калининград ул. 9 Апреля, 88А (второй этаж) <br/> пн-пт 9.00-18.00 сб. 10.00-15.00
+            </p>
+            <a class="tel" href="tel:+7 (4012) 97-15-10">+7 (4012) 97-15-10</a>
+            <a class="mail" href="mailto:okna@glens39.ru">okna@glens39.ru</a>
           </div>
-          <a class="politics" href="">Политика конфиденциальности</a>
+          <a class="money" href="#write">Расчёт проекта</a>
         </div>
+        <a class="politics" href="https://disk.yandex.ru/d/0DJ2Bz2CwMQhsA">Политика конфиденциальности</a>
+      </div>
     </footer>
     <script src="../script.js"></script>
 </body>
